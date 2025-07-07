@@ -2,7 +2,7 @@
 import Cta from '@/app/ui/Cta';
 import Div from '@/app/ui/Div';
 import FunFact from '@/app/ui/FunFact';
-import Hero from '@/app/ui/Hero';
+import Hero5 from '@/app/ui/Hero/Hero5';
 import LogoList from '@/app/ui/LogoList';
 import MovingText from '@/app/ui/MovingText';
 import SectionHeading from '@/app/ui/SectionHeading';
@@ -18,56 +18,56 @@ import Card from './ui/Card';
 // Hero Social Links
 const heroSocialLinks = [
   {
-    name: 'Behance',
+    name: 'Instagram',
     links: '/',
   },
   {
-    name: 'Twitter',
+    name: 'Facebook',
     links: '/',
   },
 ];
 // FunFact Data
 const funfaceData = [
   {
-    title: 'Global Happy Clients',
-    factNumber: '40K',
+    title: 'Zufriedene Patienten',
+    factNumber: '2000+',
   },
   {
-    title: 'Project Completed',
-    factNumber: '50K',
+    title: 'Transplantierte Grafts',
+    factNumber: '500K+',
   },
   {
-    title: 'Team Members',
-    factNumber: '245',
+    title: 'Jahre Erfahrung',
+    factNumber: '15',
   },
   {
-    title: 'Digital products',
-    factNumber: '550',
+    title: 'Erfolgsrate',
+    factNumber: '98%',
   },
 ];
 // Portfolio Data
 const portfolioData = [
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'Vorher-Nachher FUE',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_1.jpeg',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'DHI Ergebnis',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_2.jpeg',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'Natürliche Haarlinie',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_0.jpg',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'Vollständige Abdeckung',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_3.jpeg',
   },
@@ -77,15 +77,13 @@ export default function Home() {
   return (
     <>
       {/* Start Hero Section */}
-      <Hero
-        title="Creativity In <br/>Our Blood Line"
-        subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
-        btnText="Get a Quote"
+      <Hero5
+        title="Natürliche Haartransplantation<br />in Düsseldorf"
+        subtitle="Modernste FUE und DHI Techniken für dauerhafte Ergebnisse. Vertrauen Sie auf unsere langjährige Erfahrung und Expertise."
         btnLink="/contact"
-        scrollDownId="#service"
-        socialLinksHeading="Follow Us"
+        btnText="Beratung buchen"
+        socialLinksHeading="Folgen Sie uns"
         heroSocialLinks={heroSocialLinks}
-        bgImageUrl="/images/hero_bg.jpeg"
       />
       {/* End Hero Section */}
 
@@ -93,8 +91,8 @@ export default function Home() {
       <div className="container">
         <FunFact
           variant="cs-type1"
-          title="Our fun fact"
-          subtitle="Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
+          title="Unsere Erfolge"
+          subtitle="Medical Inn Hair ist Ihr vertrauensvoller Partner für professionelle Haartransplantationen. Mit modernster Technik und langjähriger Erfahrung erzielen wir natürliche und dauerhafte Ergebnisse."
           data={funfaceData}
         />
       </div>
@@ -107,9 +105,9 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="Services we can help you with"
-                subtitle="What Can We Do"
-                btnText="See All Services"
+                title="Behandlungen die wir anbieten"
+                subtitle="Unsere Leistungen"
+                btnText="Alle Behandlungen"
                 btnLink="/service"
               />
               <Spacing lg="90" md="45" />
@@ -119,7 +117,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="UI/UX design"
+                    title="FUE Methode"
                     link="/service/service-details"
                     src="/images/service_1.jpeg"
                     alt="Service"
@@ -129,7 +127,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="React.js Development"
+                    title="DHI Technik"
                     link="/service/service-details"
                     src="/images/service_2.jpeg"
                     alt="Service"
@@ -138,7 +136,7 @@ export default function Home() {
                 </Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Digital Marketing"
+                    title="PRP Therapie"
                     link="/service/service-details"
                     src="/images/service_3.jpeg"
                     alt="Service"
@@ -148,7 +146,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Technology"
+                    title="Nachsorge"
                     link="/service/service-details"
                     src="/images/service_4.jpeg"
                     alt="Service"
@@ -168,8 +166,8 @@ export default function Home() {
       <Div>
         <Div className="container">
           <SectionHeading
-            title="Portfolio to explore"
-            subtitle="Latest Projects"
+            title="Unsere Ergebnisse"
+            subtitle="Erfolgreiche Behandlungen"
             variant="cs-style1 text-center"
           />
           <Spacing lg="90" md="45" />
@@ -188,8 +186,8 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="We get multiple awards"
-                subtitle="Our Awards"
+                title="Auszeichnungen und Zertifikate"
+                subtitle="Unsere Qualität"
                 variant="cs-style1"
               />
               <Spacing lg="90" md="45" />
@@ -206,8 +204,8 @@ export default function Home() {
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-          Our agile process is ability to adapt and respond to change. Agile
-          organizations view change as an opportunity, not a threat.
+          Unser professioneller Ansatz garantiert natürliche Ergebnisse.
+          Vertrauen Sie auf unsere Expertise für Ihre Haartransplantation.
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
@@ -221,8 +219,8 @@ export default function Home() {
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="Awesome team <br/>members"
-          subtitle="Our Team"
+          title="Unser erfahrenes <br/>Expertenteam"
+          subtitle="Unser Team"
           variant="cs-style1"
         />
         <Spacing lg="85" md="45" />
@@ -244,9 +242,9 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="Explore recent publication"
-                subtitle="Our Blog"
-                btnText="View More Blog"
+                title="Aktuelle Beiträge und Tipps"
+                subtitle="Ratgeber"
+                btnText="Mehr Artikel"
                 btnLink="/blog"
               />
               <Spacing lg="90" md="45" />
@@ -263,7 +261,7 @@ export default function Home() {
 
       {/* Start MovingText Section */}
       <Spacing lg="125" md="70" />
-      <MovingText text="Our reputed world wide partners" />
+      <MovingText text="Vertrauensvolle Partnerschaften für beste Ergebnisse" />
       <Spacing lg="105" md="70" />
       {/* End MovingText Section */}
 
@@ -277,8 +275,8 @@ export default function Home() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta
-          title="Let's disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
+          title="Lassen Sie uns Ihr <br />Haar<i>traum</i> verwirklichen"
+          btnText="Beratungstermin"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />

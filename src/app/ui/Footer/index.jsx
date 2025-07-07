@@ -8,30 +8,30 @@ import TextWidget from '../Widget/TextWidget';
 
 const copyrightLinks = [
   {
-    title: 'Terms of Use',
+    title: 'Nutzungsbedingungen',
     href: '/',
   },
   {
-    title: 'Privacy Policy',
+    title: 'Datenschutz',
     href: '/',
   },
 ];
 
 const serviceMenu = [
   {
-    title: 'UI/UX design',
+    title: 'FUE Methode',
     href: '/service/service-details',
   },
   {
-    title: 'WP development',
+    title: 'DHI Technik',
     href: '/service/service-details',
   },
   {
-    title: 'Digital marketing',
+    title: 'PRP Therapie',
     href: '/service/service-details',
   },
   {
-    title: 'React development',
+    title: 'Nachsorge',
     href: '/service/service-details',
   },
 ];
@@ -49,27 +49,27 @@ export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
                 <TextWidget
                   logoSrc="/images/footer_logo.svg"
                   logoAlt="Logo"
-                  text="Welcome to arino sed ut perspiciae omunde omnis iste natus error sitort voluptatem accusantium."
+                  text="Medical Inn Hair - Ihr Spezialist für Haartransplantationen in Düsseldorf. Modernste Techniken für natürliche Ergebnisse."
                 />
                 <SocialWidget />
               </Div>
             </Div>
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
-                <MenuWidget menuItems={serviceMenu} menuHeading="Services" />
+                <MenuWidget menuItems={serviceMenu} menuHeading="Behandlungen" />
               </Div>
             </Div>
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
-                <ContactInfoWidget title="Contact Us" />
+                <ContactInfoWidget title="Kontakt" />
               </Div>
             </Div>
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
                 <Newsletter
-                  title="Subscribe"
-                  subtitle="At vero eos et accusamus et iusto odio as part dignissimos ducimus qui blandit."
-                  placeholder="example@gmail.com"
+                  title="Newsletter"
+                  subtitle="Bleiben Sie über neue Behandlungsmethoden und Angebote informiert."
+                  placeholder="ihre@email.de"
                 />
               </Div>
             </Div>
@@ -80,7 +80,7 @@ export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
         <Div className="cs-bottom_footer">
           <Div className="cs-bottom_footer_left">
             <Div className="cs-copyright">
-              Copyright © {`${date}`} Laralink.
+              Copyright © {`${date}`} Medical Inn Hair.
             </Div>
           </Div>
           <Div className="cs-bottom_footer_right">

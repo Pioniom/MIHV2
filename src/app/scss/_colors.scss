@@ -1,0 +1,61 @@
+// 🎨 Medical Inn Hair - Dynamic Color System
+// Live-editierbare Farben über Color Editor
+
+:root {
+  --color-primary: #69cce6;
+  --color-accent: #69cce6;
+  --color-background: #ffffff;
+  --color-text: #333333;
+  --color-surface: #f8f9fa;
+  --color-border: #e9ecef;
+}
+
+// CSS Custom Properties für alle Komponenten
+.btn-primary,
+.button-primary,
+.cs-btn.cs-style1 {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+}
+
+.text-accent,
+.cs-accent-color {
+  color: var(--color-accent) !important;
+}
+
+.bg-accent {
+  background-color: var(--color-accent) !important;
+}
+
+// Hero spezifische Farbanwendungen
+.cs-hero_title span {
+  color: var(--color-accent) !important;
+}
+
+.cs-hero_subtitle {
+  color: var(--color-primary) !important;
+}
+
+// Navigation
+.navbar-brand,
+.nav-link:hover {
+  color: var(--color-accent) !important;
+}
+
+// Buttons generell
+button,
+.btn {
+  &.btn-primary,
+  &.primary {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+  }
+}
+
+// Links
+a {
+  &:hover,
+  &:focus {
+    color: var(--color-accent) !important;
+  }
+}

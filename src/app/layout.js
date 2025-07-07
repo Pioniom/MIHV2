@@ -2,6 +2,7 @@
 import Header from "@/app/ui/Header";
 import CustomCursor from "@/app/ui/CustomCursor";
 import Footer from "@/app/ui/Footer";
+import ColorEngineProvider from "@/app/ui/ColorEngineProvider";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./scss/index.scss";
@@ -24,13 +25,15 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="author" content="Laralink" />
         <link rel="icon" href="/images/favicon.ico" sizes="any" />
-        <title>Arino Creative Agency Next JS Template</title>
+        <title>Medical Inn Hair - Haartransplantation Düsseldorf</title>
       </head>
       <body className={`${openSans.variable} ${poppins.variable}`}>
-        <Header />
-        <CustomCursor />
-        {children}
-        <Footer />
+        <ColorEngineProvider>
+          <Header />
+          <CustomCursor />
+          {children}
+          <Footer />
+        </ColorEngineProvider>
       </body>
     </html>
   );

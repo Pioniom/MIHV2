@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🎨 Medical Inn Hair - Color Editor</title>
+    <style>
+        body { font-family: system-ui; margin: 0; padding: 20px; background: #f5f5f5; }
+        .editor { background: white; padding: 30px; border-radius: 15px; max-width: 600px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .color-input { width: 80px; height: 50px; border: none; border-radius: 8px; cursor: pointer; margin: 10px 0; }
+        .btn { padding: 15px 25px; margin: 10px 5px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; color: white; }
+        .preview { width: 100%; height: 60px; border-radius: 8px; margin: 20px 0; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <div class="editor">
+        <h1>🎨 Medical Inn Hair - Color Studio</h1>
+        <p><strong>SOFORTIGER ZUGANG! Ändere die Farben und kopiere den Code!</strong></p>
+        
+        <h3>🎯 Hauptfarbe (Medical Inn Blau)</h3>
+        <input type="color" id="primary" value="#69cce6" class="color-input" onchange="updateColors()">
+        <span id="primaryHex">#69CCE6</span>
+        
+        <div id="preview" class="preview" style="background: #69cce6;">
+            VORSCHAU - Medical Inn Hair
+        </div>
+        
+        <h3>⚡ Schnell-Tests</h3>
+        <button class="btn" style="background: #e91e63;" onclick="setColor('#e91e63')">🌸 Pink</button>
+        <button class="btn" style="background: #2196f3;" onclick="setColor('#2196f3')">🔵 Blau</button>
+        <button class="btn" style="background: #4caf50;" onclick="setColor('#4caf50')">🟢 Grün</button>
+        <button class="btn" style="background: #ff9800;" onclick="setColor('#ff9800')">🟠 Orange</button>
+        <button class="btn" style="background: #9c27b0;" onclick="setColor('#9c27b0')">🟣 Lila</button>
+        
+        <h3>📋 CSS Code für deine Website:</h3>
+        <textarea id="cssCode" style="width: 100%; height: 100px; font-family: monospace; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+:root {
+  --color-primary: #69cce6;
+  --color-accent: #69cce6;
+}
+        </textarea>
+        
+        <br><br>
+        <button class="btn" style="background: #28a745;" onclick="copyCode()">📋 CSS Code Kopieren</button>
+        <button class="btn" style="background: #69cce6;" onclick="applyToMainSite()">🚀 Auf Hauptseite Anwenden</button>
+    </div>
+
+    <script>
+        function updateColors() {
+            const color = document.getElementById('primary').value;
+            document.getElementById('primaryHex').textContent = color.toUpperCase();
+            document.getElementById('preview').style.background = color;
+            updateCSSCode(color);
+        }
+        
+        function setColor(hex) {
+            document.getElementById('primary').value = hex;
+            updateColors();
+        }
+        
+        function updateCSSCode(color) {
+            document.getElementById('cssCode').value = `:root {
+  --color-primary: ${color};
+  --color-accent: ${color};
+}
+
+/* Für Medical Inn Hair Buttons */
+.btn-primary, .button-primary {
+  background-color: ${color} !important;
+}`;
+        }
+        
+        function copyCode() {
+            document.getElementById('cssCode').select();
+            document.execCommand('copy');
+            alert('✅ CSS Code wurde kopiert! Füge ihn in deine Website ein.');
+        }
+        
+        function applyToMainSite() {
+            const color = document.getElementById('primary').value;
+            // Öffne neues Fenster mit der Hauptseite und wende Farbe an
+            const newWindow = window.open('http://localhost:3000', '_blank');
+            setTimeout(() => {
+                if (newWindow) {
+                    newWindow.document.documentElement.style.setProperty('--color-primary', color);
+                    newWindow.document.documentElement.style.setProperty('--color-accent', color);
+                }
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

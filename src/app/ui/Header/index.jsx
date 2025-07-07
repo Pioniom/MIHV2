@@ -44,7 +44,7 @@ export default function Header({ variant }) {
                   >
                     <li className="menu-item-has-children">
                       <Link href="/" onClick={() => setMobileToggle(false)}>
-                        Home
+                        Startseite
                       </Link>
                       <DropDown>
                         <ul>
@@ -152,7 +152,7 @@ export default function Header({ variant }) {
                         href="/about"
                         onClick={() => setMobileToggle(false)}
                       >
-                        About
+                        Über uns
                       </Link>
                     </li>
                     <li className="menu-item-has-children">
@@ -160,7 +160,7 @@ export default function Header({ variant }) {
                         href="/service"
                         onClick={() => setMobileToggle(false)}
                       >
-                        Services
+                        Behandlungen
                       </Link>
                       <DropDown>
                         <ul>
@@ -169,7 +169,7 @@ export default function Header({ variant }) {
                               href="/service"
                               onClick={() => setMobileToggle(false)}
                             >
-                              Services
+                              Behandlungen
                             </Link>
                           </li>
                           <li>
@@ -177,7 +177,7 @@ export default function Header({ variant }) {
                               href="/service/service-details"
                               onClick={() => setMobileToggle(false)}
                             >
-                              Service Details
+                              Behandlungsdetails
                             </Link>
                           </li>
                         </ul>
@@ -188,7 +188,7 @@ export default function Header({ variant }) {
                         href="/portfolio"
                         onClick={() => setMobileToggle(false)}
                       >
-                        Portfolio
+                        Galerie
                       </Link>
                       <DropDown>
                         <ul>
@@ -197,7 +197,7 @@ export default function Header({ variant }) {
                               href="/portfolio"
                               onClick={() => setMobileToggle(false)}
                             >
-                              Portfolio
+                              Galerie
                             </Link>
                           </li>
                           <li>
@@ -205,7 +205,7 @@ export default function Header({ variant }) {
                               href="/portfolio/portfolio-details"
                               onClick={() => setMobileToggle(false)}
                             >
-                              Portfolio Details
+                              Galerie Details
                             </Link>
                           </li>
                         </ul>
@@ -213,7 +213,7 @@ export default function Header({ variant }) {
                     </li>
                     <li className="menu-item-has-children">
                       <Link href="/blog" onClick={() => setMobileToggle(false)}>
-                        Blog
+                        Ratgeber
                       </Link>
                       <DropDown>
                         <ul>
@@ -222,7 +222,7 @@ export default function Header({ variant }) {
                               href="/blog"
                               onClick={() => setMobileToggle(false)}
                             >
-                              Blog
+                              Ratgeber
                             </Link>
                           </li>
                           <li>
@@ -230,7 +230,7 @@ export default function Header({ variant }) {
                               href="/blog/blog-details"
                               onClick={() => setMobileToggle(false)}
                             >
-                              Blog Details
+                              Ratgeber Details
                             </Link>
                           </li>
                         </ul>
@@ -238,7 +238,7 @@ export default function Header({ variant }) {
                     </li>
                     <li className="menu-item-has-children">
                       <Link href="/" onClick={() => setMobileToggle(false)}>
-                        Pages
+                        Seiten
                       </Link>
                       <DropDown>
                         <ul>
@@ -247,7 +247,7 @@ export default function Header({ variant }) {
                               href="/contact"
                               onClick={() => setMobileToggle(false)}
                             >
-                              Contact
+                              Kontakt
                             </Link>
                           </li>
                           <li>
@@ -271,7 +271,7 @@ export default function Header({ variant }) {
                               href="/case-study/case-study-details"
                               onClick={() => setMobileToggle(false)}
                             >
-                              Case Study Details
+                              Fallstudien Details
                             </Link>
                           </li>
                           <li>
@@ -338,7 +338,7 @@ export default function Header({ variant }) {
           </Link>
           <Div className="cs-side_header_box">
             <h2 className="cs-side_header_heading">
-              Do you have a project in your <br /> mind? Keep connect us.
+              Benötigen Sie eine <br /> Haartransplantation? Kontaktieren Sie uns.
             </h2>
           </Div>
           <Div className="cs-side_header_box">
