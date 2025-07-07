@@ -1,0 +1,6 @@
+{
+  "/page": "app/page.js",
+  "/creative-portfolio/page": "app/creative-portfolio/page.js",
+  "/digital-agency/page": "app/digital-agency/page.js",
+  "/photography-agency/page": "app/photography-agency/page.js"
+}
