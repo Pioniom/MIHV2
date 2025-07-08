@@ -51,25 +51,25 @@ const portfolioData = [
     title: 'Vorher-Nachher FUE',
     subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_1.jpeg',
+    src: '/images/portfolio_1.webp',
   },
   {
     title: 'DHI Ergebnis',
     subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_2.jpeg',
+    src: '/images/portfolio_2.webp',
   },
   {
     title: 'Natürliche Haarlinie',
     subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_0.jpg',
+    src: '/images/portfolio_3webp.webp',
   },
   {
     title: 'Vollständige Abdeckung',
     subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
-    src: '/images/portfolio_3.jpeg',
+    src: '/images/portfolio_0.webp',
   },
 ];
 
@@ -78,7 +78,6 @@ export default function Home() {
     <>
       {/* Start Hero Section */}
       <Hero5
-        title="Natürliche Haartransplantation<br />in Düsseldorf"
         subtitle="Modernste FUE und DHI Techniken für dauerhafte Ergebnisse. Vertrauen Sie auf unsere langjährige Erfahrung und Expertise."
         btnLink="/contact"
         btnText="Beratung buchen"
@@ -119,7 +118,7 @@ export default function Home() {
                   <Card
                     title="FUE Methode"
                     link="/service/service-details"
-                    src="/images/service_1.jpeg"
+                    src="/images/service_1.webp"
                     alt="Service"
                   />
                   <Spacing lg="0" md="30" />
@@ -129,7 +128,7 @@ export default function Home() {
                   <Card
                     title="DHI Technik"
                     link="/service/service-details"
-                    src="/images/service_2.jpeg"
+                    src="/images/service_2.webp"
                     alt="Service"
                   />
                   <Spacing lg="0" md="30" />
@@ -138,7 +137,7 @@ export default function Home() {
                   <Card
                     title="PRP Therapie"
                     link="/service/service-details"
-                    src="/images/service_3.jpeg"
+                    src="/images/service_3.webp"
                     alt="Service"
                   />
                   <Spacing lg="0" md="30" />
@@ -148,7 +147,7 @@ export default function Home() {
                   <Card
                     title="Nachsorge"
                     link="/service/service-details"
-                    src="/images/service_4.jpeg"
+                    src="/images/service_4.webp"
                     alt="Service"
                   />
                   <Spacing lg="0" md="30" />
@@ -204,13 +203,12 @@ export default function Home() {
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-          Unser professioneller Ansatz garantiert natürliche Ergebnisse.
-          Vertrauen Sie auf unsere Expertise für Ihre Haartransplantation.
+          Natürliche Ergebnisse durch Expertise.
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
           videoSrc="https://www.youtube.com/watch?v=VcaAVWtP48A"
-          bgUrl="/images/video_bg.jpeg"
+          bgUrl="/images/video_bg.webp"
         />
       </Div>
       {/* End Video Block Section */}

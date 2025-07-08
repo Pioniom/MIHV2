@@ -1,0 +1,37 @@
+// Typewriter Animation für Hero
+.cs-typewriter-text {
+  color: var(--color-accent, #69cce6);
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  min-width: 150px;
+  min-height: 1.2em;
+  
+  &::after {
+    content: '|';
+    animation: blink 1s infinite;
+    margin-left: 2px;
+  }
+  
+  // Platzhalter für leeren Text
+  &:empty::before {
+    content: '\00a0'; // Non-breaking space
+    visibility: hidden;
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+// Hero Title spezifische Styles
+.cs-hero_title {
+  .cs-typewriter-text {
+    vertical-align: baseline;
+  }
+}
