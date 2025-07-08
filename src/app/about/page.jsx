@@ -7,30 +7,30 @@ import PageHeading from "@/app/ui/PageHeading";
 import SectionHeading from "@/app/ui/SectionHeading";
 import TeamSlider from "@/app/ui/Slider/TeamSlider";
 import Spacing from "@/app/ui/Spacing";
-import aboutImg from '../../../public/images/about_img_1.jpeg'
-import aboutImg2 from '../../../public/images/about_img_2.jpeg'
-import aboutImg3 from '../../../public/images/about_img_3.jpeg'
-import aboutImg4 from '../../../public/images/about_img_4.jpeg'
+import aboutImg from '../../../public/images/about_img_1.webp'
+import aboutImg2 from '../../../public/images/about_img_2.webp'
+import aboutImg3 from '../../../public/images/about_img_3.webp'
+import aboutImg4 from '../../../public/images/about_img_4.webp'
 
 
 
 
 const funfaceData = [
   {
-    title: 'Global Happy Clients',
-    factNumber: '40K',
+    title: 'Zufriedene Patienten',
+    factNumber: '2000+',
   },
   {
-    title: 'Project Completed',
-    factNumber: '50K',
+    title: 'Transplantierte Grafts',
+    factNumber: '500K+',
   },
   {
-    title: 'Team Members',
-    factNumber: '245',
+    title: 'Jahre Erfahrung',
+    factNumber: '15',
   },
   {
-    title: 'Digital products',
-    factNumber: '550',
+    title: 'Erfolgsrate',
+    factNumber: '98%',
   },
 ];
 
@@ -39,9 +39,9 @@ export default function AboutPage() {
     <>
       {/* Start Page Heading Section */}
       <PageHeading
-        title="About Us"
+        title="Über Medical Inn Hair"
         bgSrc="/images/about_hero_bg.jpeg"
-        pageLinkText="About Us"
+        pageLinkText="Über uns"
       />
       {/* End Page Heading Section */}
 
@@ -51,16 +51,15 @@ export default function AboutPage() {
         <Div className="row">
           <Div className="col-xl-5 col-lg-7">
             <SectionHeading
-              title="Your trusted partner for business"
-              subtitle="About Our Agency"
+              title="Ihr vertrauensvoller Partner für natürliche Haartransplantation"
+              subtitle="Über Medical Inn Hair"
             >
               <Spacing lg="30" md="20" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining. Through our years of experience, we’ve also learned
-                that while each channel.
+                Medical Inn Hair ist eine der führenden Kliniken für Haartransplantation in Düsseldorf. 
+                Wir unterscheiden uns durch unsere langjährige Erfahrung, modernste FUE und DHI Techniken 
+                sowie unseren ganzheitlichen Ansatz. Unser Expertenteam sorgt für natürliche und dauerhafte 
+                Ergebnisse mit höchsten Qualitätsstandards.
               </p>
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>
@@ -70,7 +69,7 @@ export default function AboutPage() {
           <Div className="col-lg-5 offset-xl-2">
             <Image
               src={aboutImg}
-              alt="About"
+              alt="Medical Inn Hair Klinik"
               className="w-100 cs-radius_15"
             />
             <Spacing lg="25" md="25" />
@@ -78,7 +77,7 @@ export default function AboutPage() {
           <Div className="col-lg-7">
             <Image
               src={aboutImg2}
-              alt="About"
+              alt="FUE Haartransplantation"
               className="w-100 cs-radius_15"
             />
             <Spacing lg="25" md="25" />
@@ -86,7 +85,7 @@ export default function AboutPage() {
           <Div className="col-lg-5">
             <Image
               src={aboutImg3}
-              alt="About"
+              alt="DHI Technik"
               className="w-100 cs-radius_15"
             />
             <Spacing lg="25" md="25" />
@@ -99,8 +98,8 @@ export default function AboutPage() {
       {/* Start Fun Fact Section */}
       <Div className="container">
         <FunFact
-          title="Our fun fact"
-          subtitle="Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
+          title="Unsere Erfolge sprechen für sich"
+          subtitle="Mit über 15 Jahren Erfahrung in der Haartransplantation haben wir tausenden von Patienten zu neuem Selbstvertrauen verholfen. Unsere Zahlen spiegeln unser Engagement für Exzellenz und Patientenzufriedenheit wider."
           data={funfaceData}
         />
       </Div>
@@ -115,7 +114,7 @@ export default function AboutPage() {
               <Div className="cs-image_layer_in">
                 <Image
                   src={aboutImg4}
-                  alt="About"
+                  alt="Haartransplantation Experte"
                   className="w-100 cs-radius_15"
                 />
               </Div>
@@ -124,23 +123,21 @@ export default function AboutPage() {
           </Div>
           <Div className="col-xl-5 offset-xl-1 col-lg-6">
             <SectionHeading
-              title="Highly experienced pepole with us"
-              subtitle="Why Choose Us"
+              title="Erfahrene Spezialisten für Ihre Haartransplantation"
+              subtitle="Warum Medical Inn Hair?"
             >
               <Spacing lg="30" md="20" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining. Through our years of experience, we’ve also learned
-                that while each channel.
+                Unsere Klinik steht für höchste medizinische Standards und innovative Behandlungsmethoden. 
+                Mit modernster FUE und DHI Technik erreichen wir natürliche Ergebnisse, die ein Leben lang halten. 
+                Unser erfahrenes Team aus Ärzten und Spezialisten begleitet Sie von der ersten Beratung bis zur 
+                vollständigen Heilung.
               </p>
               <Spacing lg="15" md="15" />
               <p className="cs-m0">
-                This is the main factor that sets us apart from our competition
-                and allows us to deliver a specialist business consultancy
-                service. Our team applies its wide-ranging experience to
-                determining.
+                In unserer Düsseldorfer Klinik kombinieren wir jahrelange Expertise mit den neuesten 
+                Technologien der Haartransplantation. Jeder Patient erhält eine individuelle Behandlung, 
+                die auf seine spezifischen Bedürfnisse zugeschnitten ist.
               </p>
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>
@@ -155,8 +152,8 @@ export default function AboutPage() {
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="Awesome team <br/>members"
-          subtitle="Our Team"
+          title="Unser Experten-<br/>Team"
+          subtitle="Unser Team"
           variant="cs-style1"
         />
         <Spacing lg="85" md="45" />
@@ -168,8 +165,8 @@ export default function AboutPage() {
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
+          title="Lassen Sie uns gemeinsam <br />Ihre <i>Haartransplantation</i> planen"
+          btnText="Beratungstermin buchen"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />

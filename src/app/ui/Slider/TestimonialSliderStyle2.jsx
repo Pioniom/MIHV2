@@ -8,34 +8,34 @@ const testimonialData = [
   {
     testimonialThumb: '/images/testimonial_1.jpeg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
-    ratings: '4',
+      'Die Haartransplantation bei Medical Inn Hair hat mein Leben verändert. Das Team war unglaublich professionell und einfühlsam. Die FUE-Methode war schmerzfrei und die Ergebnisse sind fantastisch. Nach 8 Monaten habe ich wieder volles, natürliches Haar.',
+    avatarName: 'Michael Schmidt',
+    avatarDesignation: 'Ingenieur',
+    ratings: '5',
   },
   {
     testimonialThumb: '/images/testimonial_2.jpeg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
+      'Endlich wieder Selbstvertrauen! Bei Medical Inn Hair fühlte ich mich vom ersten Beratungsgespräch an sehr gut aufgehoben. Die DHI-Technik ist wirklich beeindruckend und das Ergebnis übertrifft alle meine Erwartungen.',
+    avatarName: 'Sarah Müller',
+    avatarDesignation: 'Marketing Managerin',
     ratings: '5',
   },
   {
     testimonialThumb: '/images/testimonial_3.jpeg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
-    ratings: '4.5',
+      'Beste Entscheidung meines Lebens! Medical Inn Hair in Düsseldorf war die perfekte Wahl. Kompetente Beratung, modernste Technik und ein Ergebnis, das einfach natürlich aussieht.',
+    avatarName: 'Thomas Weber',
+    avatarDesignation: 'Rechtsanwalt',
+    ratings: '5',
   },
   {
     testimonialThumb: '/images/testimonial_1.jpeg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
-    ratings: '3.5',
+      'Unglaublich zufrieden mit dem Service und den Ergebnissen. Von der ersten Beratung bis zur Nachsorge war alles perfekt organisiert. Die Ärzte sind echte Experten und das neue Haar sieht völlig natürlich aus.',
+    avatarName: 'Andreas Hoffmann',
+    avatarDesignation: 'Geschäftsführer',
+    ratings: '5',
   },
 ];
 

@@ -1,0 +1,365 @@
+// Wizard Container
+.cs-wizard_container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 20px;
+  padding: 60px 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  }
+}
+
+// Wizard Header
+.cs-wizard_header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cs-wizard_title {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.cs-wizard_subtitle {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+// Progress Bar
+.cs-wizard_progress {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.cs-progress_line {
+  height: 3px;
+  background: #e9ecef;
+  border-radius: 2px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.cs-progress_fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  border-radius: 2px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cs-progress_steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cs-progress_step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.cs-step_circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  
+  .cs-step_pending & {
+    background: #e9ecef;
+    color: #6c757d;
+    border: 2px solid #e9ecef;
+  }
+  
+  .cs-step_active & {
+    background: var(--color-primary);
+    color: white;
+    border: 2px solid var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(105, 204, 230, 0.3);
+    transform: scale(1.1);
+  }
+  
+  .cs-step_completed & {
+    background: var(--color-accent);
+    color: white;
+    border: 2px solid var(--color-accent);
+  }
+}
+
+.cs-step_check {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cs-step_label {
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  transition: color 0.3s ease;
+  
+  .cs-step_pending & {
+    color: #6c757d;
+  }
+  
+  .cs-step_active & {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+  
+  .cs-step_completed & {
+    color: #28a745;
+  }
+}
+
+// Wizard Content
+.cs-wizard_content {
+  min-height: 400px;
+  margin-bottom: 40px;
+}
+
+.cs-wizard_step {
+  animation: fadeInSlide 0.5s ease-out;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cs-step_title {
+  color: #333;
+  text-align: center;
+}
+
+.cs-step_subtitle {
+  color: #666;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.cs-step_content {
+  .cs-form_field {
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 15px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    
+    &:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(105, 204, 230, 0.1);
+      outline: none;
+    }
+  }
+  
+  .cs-form_group {
+    margin-bottom: 25px;
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
+      font-size: 14px;
+    }
+  }
+}
+
+// Navigation
+.cs-wizard_navigation {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  border-top: 1px solid #e9ecef;
+}
+
+.cs-nav_buttons {
+  display: flex;
+  gap: 20px;
+  
+  .cs-btn {
+    min-width: 120px;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+    &.cs-type2 {
+      background: transparent;
+      border: 2px solid #e9ecef;
+      color: #666;
+      
+      &:hover {
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+        transform: translateY(-2px);
+      }
+    }
+    
+    &.cs-type1 {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+      border: none;
+      color: white;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(105, 204, 230, 0.4);
+      }
+    }
+  }
+}
+
+// Validation Errors
+.cs-validation_errors {
+  .cs-error_message {
+    font-size: 14px;
+    padding: 8px 15px;
+    background: rgba(220, 53, 69, 0.1);
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+}
+
+// Form Field Groups
+.cs-field_group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cs-field_group_three {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Radio and Checkbox Groups
+.cs-radio_group,
+.cs-checkbox_group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  
+  .cs-radio_item,
+  .cs-checkbox_item {
+    position: relative;
+    
+    input {
+      position: absolute;
+      opacity: 0;
+      
+      &:checked + label {
+        background: rgba(105, 204, 230, 0.1);
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+        
+        &::before {
+          background: var(--color-primary);
+          border-color: var(--color-primary);
+        }
+      }
+    }
+    
+    label {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      
+      &:hover {
+        border-color: var(--color-primary);
+        background: rgba(105, 204, 230, 0.05);
+      }
+      
+      &::before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        border: 2px solid #e9ecef;
+        border-radius: 50%;
+        margin-right: 12px;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  
+  .cs-checkbox_item label::before {
+    border-radius: 4px;
+  }
+}
+
+// Responsive Design
+@media (max-width: 991px) {
+  .cs-wizard_container {
+    padding: 40px 30px;
+  }
+  
+  .cs-progress_steps {
+    .cs-step_label {
+      font-size: 11px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .cs-wizard_container {
+    padding: 30px 20px;
+  }
+  
+  .cs-step_circle {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+  
+  .cs-nav_buttons {
+    flex-direction: column;
+    
+    .cs-btn {
+      width: 100%;
+    }
+  }
+}

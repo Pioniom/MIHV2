@@ -14,9 +14,9 @@ export default function BlogDetailsPage() {
     <>
     {/* Start Page Heading Section */}
       <PageHeading
-        title='Blog Single'
+        title='Ratgeber Details'
         bgSrc='/images/blog_details_hero_bg.jpeg'
-        pageLinkText='blog-details'
+        pageLinkText='ratgeber-details'
       />
       {/* End Page Heading Section */}
 
@@ -33,16 +33,16 @@ export default function BlogDetailsPage() {
               </Div>
               <Div className="cs-post_info">
                 <Div className="cs-post_meta cs-style1 cs-ternary_color cs-semi_bold cs-primary_font">
-                  <span className="cs-posted_by">07 Mar 2022</span>
-                  <Link href="/blog" className="cs-post_avatar">Tech</Link>
+                  <span className="cs-posted_by">20 Februar 2024</span>
+                  <Link href="/blog" className="cs-post_avatar">Nachsorge</Link>
                 </Div>
-                <h2 className="cs-post_title">Creative studio programm coming soon</h2>
-                <p>Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.</p>
+                <h2 className="cs-post_title">Nachsorge bei Haartransplantation: 10 wichtige Tipps für optimale Ergebnisse</h2>
+                <p>Die richtige Nachsorge nach einer Haartransplantation ist entscheidend für den langfristigen Erfolg des Eingriffs. Bei Medical Inn Hair in Düsseldorf begleiten wir Sie durch jeden Schritt der Heilungsphase und stellen sicher, dass Sie alle wichtigen Informationen für eine optimale Regeneration erhalten.</p>
                 <blockquote className="cs-primary_font">
-                  But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, who expound the actual teachings of the great explorer of the truth, the master.
-                  <small>Loren Mulari</small>
+                  "Eine sorgfältige Nachsorge ist der Schlüssel zu natürlichen und dauerhaften Ergebnissen. Jeder Patient erhält bei uns einen individuellen Nachsorgeplan für optimale Heilung."
+                  <small>Dr. med. Mehmet Atila, Medical Inn Hair</small>
                 </blockquote>
-                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated.</p>
+                <p>In den ersten Wochen nach der Haartransplantation ist besondere Vorsicht geboten. Die transplantierten Haarfollikel sind in dieser Zeit besonders empfindlich und benötigen Zeit, um sich in ihrer neuen Position zu etablieren. Eine sachgemäße Pflege fördert nicht nur die Heilung, sondern minimiert auch das Risiko von Komplikationen und sorgt für das bestmögliche ästhetische Ergebnis.</p>
                 <Div className="row">
                   <Div className="col-md-6">
                     <img src="/images/blog_details_img_1.jpeg" alt="Blog Details" className="cs-radius_15 w-100" />
@@ -53,27 +53,28 @@ export default function BlogDetailsPage() {
                     <Div className="cs-height_45 cs-height_lg_45" />
                   </Div>
                 </Div>
-                <h3>Art is powerful and imaginary source</h3>
-                <p>we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances.</p>
-                <p>So, blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain amount of people.</p>
+                <h3>Die wichtigsten Nachsorge-Tipps im Detail</h3>
+                <p>Die ersten 48 Stunden sind kritisch: Vermeiden Sie jeglichen Kontakt mit der behandelten Kopfhaut. Schlafen Sie mit erhöhtem Kopf und verwenden Sie die von uns empfohlenen Pflegeprodukte. Ab dem dritten Tag können Sie mit der sanften Reinigung beginnen, jedoch nur mit den speziell dafür vorgesehenen Lösungen.</p>
+                <p>Sport und körperliche Anstrengung sollten für mindestens zwei Wochen vermieden werden. Direkte Sonneneinstrahlung und Saunabesuche sind in den ersten vier Wochen tabu. Die transplantierten Haare werden nach etwa zwei bis drei Wochen ausfallen - das ist völlig normal und Teil des natürlichen Heilungsprozesses.</p>
               </Div>
             </Div>
             {/* End Details Post Content */}
 
             {/* Start Comment Section */}
             <Spacing lg='30' md='30'/>
-            <h2 className="cs-font_50 cs-m0">Leave A Reply</h2>
+            <h2 className="cs-font_50 cs-m0">Kommentar hinterlassen</h2>
             <Spacing lg='5' md='5'/>
-            <p className="cs-m0">Your email address will not be published. Required fields are marked *</p>
+            <p className="cs-m0">Ihre E-Mail-Adresse wird nicht veröffentlicht. Erforderliche Felder sind markiert *</p>
             <Spacing lg='40' md='30'/>
             <form className="row">
               <Div className="col-lg-6">
-                <label>Full Name*</label>
+                <label>Vollständiger Name*</label>
                 <input type="text" className="cs-form_field" />
                 <Div className="cs-height_20 cs-height_lg_20" />
-                <Div data-lastpass-icon-root="true" style={{position: 'relative !important', height: '0px !important', width: '0px !important', float: 'left !important'}} /></Div>
+                <Div data-lastpass-icon-root="true" style={{position: 'relative !important', height: '0px !important', width: '0px !important', float: 'left !important'}} />
+              </Div>
               <Div className="col-lg-6">
-                <label>Email*</label>
+                <label>E-Mail*</label>
                 <input type="text" className="cs-form_field" />
                 <Div className="cs-height_20 cs-height_lg_20" />
               </Div>
@@ -83,13 +84,13 @@ export default function BlogDetailsPage() {
                 <Div className="cs-height_20 cs-height_lg_20" />
               </Div>
               <Div className="col-lg-12">
-                <label>Write Your Comment*</label>
+                <label>Ihr Kommentar*</label>
                 <textarea cols={30} rows={7} className="cs-form_field" />
                 <Div className="cs-height_25 cs-height_lg_25" />
               </Div>
               <Div className="col-lg-12">
                 <button className="cs-btn cs-style1">
-                  <span>Send Message</span>
+                  <span>Kommentar senden</span>
                   <Icon icon="bi:arrow-right" />               
                 </button>
               </Div>
@@ -110,8 +111,8 @@ export default function BlogDetailsPage() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta 
-          title='Let’s disscuse make <br />something <i>cool</i> together' 
-          btnText='Apply For Meeting' 
+          title='Lassen Sie uns Ihre <br />Haar<i>transformation</i> besprechen' 
+          btnText='Beratung buchen' 
           btnLink='/contact' 
           bgSrc='/images/cta_bg.jpeg'
         />

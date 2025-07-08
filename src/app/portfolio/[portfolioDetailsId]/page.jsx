@@ -12,9 +12,9 @@ export default function PortfolioDetailsPage() {
   return (
     <>
       <PageHeading 
-        title='Portfolio Details'
+        title='Galerie Details'
         bgSrc='/images/service_hero_bg.jpeg'
-        pageLinkText='PORTFOLIO-DETAILS'
+        pageLinkText='GALERIE-DETAILS'
       />
       <Spacing lg='150' md='80'/>
       <Div className="container">
@@ -23,43 +23,43 @@ export default function PortfolioDetailsPage() {
         <Div className="row">
           <Div className="col-lg-6">
             <SectionHeading 
-              title='Graffiti wall artwork' 
-              subtitle='Creative' 
+              title='FUE Haartransplantation Ergebnis' 
+              subtitle='Vorher-Nachher' 
             >
               <Spacing lg='40' md='20'/>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium voltire doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+              <p>Diese FUE Haartransplantation zeigt ein beeindruckendes Ergebnis nach 12 Monaten. Mit der modernsten Follicular Unit Extraction Technik konnten wir eine natürliche Haarlinie rekonstruieren und optimale Haardichte erreichen. Der Patient erhielt 3.200 Grafts für eine vollständige Abdeckung der Frontlinie und des Scheitelbereichs.</p>
               <Spacing lg='10' md='10'/>
-              <p>Ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.</p>
+              <p>Das Ergebnis spricht für sich: Natürliches Wachstum, unauffällige Übergänge und eine Haarlinie, die perfekt zur Gesichtsform passt. Medical Inn Hair setzt bei jeder Behandlung auf höchste Präzision und individuelle Betreuung für langanhaltende Zufriedenheit.</p>
             </SectionHeading>
           </Div>
           <Div className="col-lg-5 offset-lg-1">
             <Spacing lg='60' md='40'/>
-            <h2 className='cs-font_30 cs-font_26_sm cs-m0'>Project Info -</h2>
+            <h2 className='cs-font_30 cs-font_26_sm cs-m0'>Behandlungsinfo -</h2>
             <Spacing lg='50' md='30'/>
             <Div className="row">
               <Div className="col-6">
-                <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Category:</h3>
-                <p className='cs-m0'>Artwork</p>
+                <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Methode:</h3>
+                <p className='cs-m0'>FUE Technik</p>
                 <Spacing lg='30' md='30'/>
               </Div>
               <Div className="col-6">
-                <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Location:</h3>
-                <p className='cs-m0'>United Kindom</p>
+                <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Standort:</h3>
+                <p className='cs-m0'>Düsseldorf</p>
                 <Spacing lg='30' md='30'/>
               </Div>
               <Div className="col-6">
-                <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Software:</h3>
-                <p className='cs-m0'>Adobe Illustrator</p>
+                <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Grafts:</h3>
+                <p className='cs-m0'>3.200 Grafts</p>
                 <Spacing lg='30' md='30'/>
               </Div>
               <Div className="col-6">
-                <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Dated:</h3>
-                <p className='cs-m0'>14-Aug-2022</p>
+                <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Datum:</h3>
+                <p className='cs-m0'>März 2024</p>
                 <Spacing lg='30' md='30'/>
               </Div>
               <Div className="col-6">
-                <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Client:</h3>
-                <p className='cs-m0'>Andreo Bowla</p>
+                <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Arzt:</h3>
+                <p className='cs-m0'>Dr. med. Mehmet Atila</p>
                 <Spacing lg='30' md='30'/>
               </Div>
             </Div>
@@ -68,16 +68,16 @@ export default function PortfolioDetailsPage() {
         <Spacing lg='65' md='10'/>
           <Div className="cs-page_navigation cs-center">
             <Div>
-              <Button btnLink='/portfolio/portfolio-details' btnText='Prev Project' variant='cs-type1'/>
+              <Button btnLink='/portfolio/portfolio-details' btnText='Vorheriges Ergebnis' variant='cs-type1'/>
             </Div>
             <Div>
-              <Button btnLink='/portfolio/portfolio-details' btnText='Next Project'/>
+              <Button btnLink='/portfolio/portfolio-details' btnText='Nächstes Ergebnis'/>
             </Div>
           </Div>
       </Div>
       <Spacing lg='145' md='80'/>
       <Cta 
-        title='agency@arino.com' 
+        title='info@medicalinnhair.de' 
         bgSrc='/images/cta_bg_2.jpeg'
         variant='rounded-0'
       />

@@ -6,44 +6,44 @@ import Timeline from '../Timeline';
 const timelineData = [
   [
     {
-      year: '2019',
-      name: 'Google awards',
-      position: 'Website of the day',
-      type: 'Mobile exelence',
-    },
-    {
-      year: '2021',
-      name: 'CSS awards design',
-      position: 'Honorable mention',
-      type: 'Desktop exelence',
-    },
-  ],
-  [
-    {
       year: '2020',
-      name: 'New technology innovation',
-      position: 'Honorable mention',
-      type: 'Desktop exelence',
+      name: 'ISHRS Zertifizierung',
+      position: 'International Society of Hair Restoration Surgery',
+      type: 'FUE Spezialisierung',
     },
     {
       year: '2022',
-      name: 'UI/UX design of the month',
-      position: 'Website of the day',
-      type: 'Mobile exelence',
+      name: 'DHI Zertifikat',
+      position: 'Direct Hair Implantation',
+      type: 'Advanced Technique',
+    },
+  ],
+  [
+    {
+      year: '2021',
+      name: 'Qualitätssiegel Düsseldorf',
+      position: 'Medizinische Exzellenz',
+      type: 'Patientensicherheit',
+    },
+    {
+      year: '2023',
+      name: 'ISO 9001:2015',
+      position: 'Qualitätsmanagement',
+      type: 'Zertifizierte Prozesse',
     },
   ],
   [
     {
       year: '2019',
-      name: 'Google awards',
-      position: 'Website of the day',
-      type: 'Mobile exelence',
+      name: 'Ärztekammer Zertifikat',
+      position: 'Fachbereich Haartransplantation',
+      type: 'Medizinische Qualifikation',
     },
     {
-      year: '2021',
-      name: 'CSS awards design',
-      position: 'Honorable mention',
-      type: 'Desktop exelence',
+      year: '2024',
+      name: 'Patient Choice Award',
+      position: 'Beste Haarklinik Düsseldorf',
+      type: 'Patientenzufriedenheit',
     },
   ],
 ];

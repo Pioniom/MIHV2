@@ -47,7 +47,7 @@ export default function Footer({ copyrightText, logoSrc, logoAlt, text }) {
             <Div className="col-lg-3 col-sm-6">
               <Div className="cs-footer_item">
                 <TextWidget
-                  logoSrc="/images/footer_logo.svg"
+                  logoSrc="/images/logo.webp"
                   logoAlt="Logo"
                   text="Medical Inn Hair - Ihr Spezialist für Haartransplantationen in Düsseldorf. Modernste Techniken für natürliche Ergebnisse."
                 />

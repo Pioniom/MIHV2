@@ -5,9 +5,9 @@ import Div from '../Div';
 import Team from '../Team';
 const teamData = [
   {
-    memberImage: '/images/member_1.jpeg',
-    memberName: 'Melon Bulgery',
-    memberDesignation: 'Product Designer',
+    memberImage: '/images/member_1.webp',
+    memberName: 'Nükhet Önal Taylan',
+    memberDesignation: 'CEO Medical Inn Hair',
     memberSocial: {
       linkedin: '/',
       twitter: '/',
@@ -16,9 +16,9 @@ const teamData = [
     },
   },
   {
-    memberImage: '/images/member_2.jpeg',
-    memberName: 'Olinaz Fushi',
-    memberDesignation: 'Product Designer',
+    memberImage: '/images/member_2.webp',
+    memberName: 'Dr. med. Mehmet Atila',
+    memberDesignation: 'CEO Medical Inn',
     memberSocial: {
       linkedin: '/',
       twitter: '/',
@@ -27,31 +27,9 @@ const teamData = [
     },
   },
   {
-    memberImage: '/images/member_3.jpeg',
-    memberName: 'David Elone',
-    memberDesignation: 'React Developer',
-    memberSocial: {
-      linkedin: '/',
-      twitter: '/',
-      youtube: '/',
-      facebook: '/',
-    },
-  },
-  {
-    memberImage: '/images/member_4.jpeg',
-    memberName: 'Melina Opole',
-    memberDesignation: 'WP Developer',
-    memberSocial: {
-      linkedin: '/',
-      twitter: '/',
-      youtube: '/',
-      facebook: '/',
-    },
-  },
-  {
-    memberImage: '/images/member_1.jpeg',
-    memberName: 'Melon Bulgery',
-    memberDesignation: 'Product Designer',
+    memberImage: '/images/member_3.webp',
+    memberName: 'Dr. Michael Schmidt',
+    memberDesignation: 'Spezialist FUE & DHI',
     memberSocial: {
       linkedin: '/',
       twitter: '/',
@@ -94,7 +72,7 @@ export default function TeamSlider() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     prevArrow: <SlickArrowLeft />,
     nextArrow: <SlickArrowRight />,

@@ -15,15 +15,15 @@ export default function ServiceDetailsPage() {
   return (
     <>
       <PageHeading 
-        title='Service Details'
+        title='Behandlungsdetails'
         bgSrc='/images/service_hero_bg.jpeg'
-        pageLinkText='SERVICE-DETAILS'
+        pageLinkText='BEHANDLUNGSDETAILS'
       />
       <Spacing lg='145' md='80'/>
       <Div className="container">
         <SectionHeading 
-          title='Design working process' 
-          subtitle='UI/UX Design' 
+          title='Unser Behandlungsprozess' 
+          subtitle='FUE Haartransplantation' 
           variant='cs-style1 text-center'
         />
         <Spacing lg='90' md='45'/>
@@ -31,24 +31,24 @@ export default function ServiceDetailsPage() {
           <Div className="col-lg-4">
             <IconBox
               icon='/images/icons/service_icon_1.svg'
-              title='Sketching'
-              subtitle='Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium also a doloremque laudantium, totam remain beatae vitae dictaro enim ipsam sunt explicabo.'
+              title='Beratung'
+              subtitle='Ausführliche Haaranalyse und individuelle Beratung. Wir besprechen Ihre Wünsche und erstellen einen maßgeschneiderten Behandlungsplan für optimale Ergebnisse.'
             />
             <Spacing lg='30' md='30'/>
           </Div>
           <Div className="col-lg-4">
             <IconBox
               icon='/images/icons/service_icon_2.svg'
-              title='Wireframing'
-              subtitle='Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium also a doloremque laudantium, totam remain beatae vitae dictaro enim ipsam sunt explicabo.'
+              title='Entnahme'
+              subtitle='Schonende Entnahme der Haarfollikel mit modernster FUE-Technik. Präzise und minimal-invasiv für schnelle Heilung und natürliche Ergebnisse.'
             />
             <Spacing lg='30' md='30'/>
           </Div>
           <Div className="col-lg-4">
             <IconBox
               icon='/images/icons/service_icon_3.svg'
-              title='Prototyping'
-              subtitle='Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium also a doloremque laudantium, totam remain beatae vitae dictaro enim ipsam sunt explicabo.'
+              title='Implantation'
+              subtitle='Kunstvolle Implantation der Grafts in die Empfängerregion. Unsere Experten achten auf natürliche Wuchsrichtung und optimale Haardichte.'
             />
             <Spacing lg='30' md='30'/>
           </Div>
@@ -64,31 +64,31 @@ export default function ServiceDetailsPage() {
             <Spacing lg='0' md='40'/>
           </Div>
           <Div className="col-lg-6 offset-xl-1">
-            <h2 className="cs-font_50 cs-m0">Below our most design related services</h2>
+            <h2 className="cs-font_50 cs-m0">Unsere Behandlungsmethoden im Überblick</h2>
             <Spacing lg='50' md='30'/>
             <Div className="row">
               <Div className="col-lg-6">
-                <Button btnLink='/service/service-details' btnText='Web page design' variant='cs-type2'/>
+                <Button btnLink='/service/service-details' btnText='FUE Methode' variant='cs-type2'/>
                 <Spacing lg='20' md='10'/>
-                <Button btnLink='/service/service-details' btnText='eCommerce design' variant='cs-type2'/>
+                <Button btnLink='/service/service-details' btnText='DHI Technik' variant='cs-type2'/>
                 <Spacing lg='20' md='10'/>
-                <Button btnLink='/service/service-details' btnText='Landing page' variant='cs-type2'/>
+                <Button btnLink='/service/service-details' btnText='PRP Therapie' variant='cs-type2'/>
                 <Spacing lg='20' md='10'/>
-                <Button btnLink='/service/service-details' btnText='Email template' variant='cs-type2'/>
+                <Button btnLink='/service/service-details' btnText='Saphir FUE' variant='cs-type2'/>
                 <Spacing lg='20' md='10'/>
-                <Button btnLink='/service/service-details' btnText='Application design' variant='cs-type2'/>
+                <Button btnLink='/service/service-details' btnText='Nachsorge' variant='cs-type2'/>
                 <Spacing lg='20' md='10'/>
-                <Button btnLink='/service/service-details' btnText='Illustration' variant='cs-type2'/>
+                <Button btnLink='/service/service-details' btnText='Haaranalyse' variant='cs-type2'/>
                 <Spacing lg='0' md='10'/>
               </Div>
               <Div className="col-lg-6">
-                <Button btnLink='/service/service-details' btnText='Infographic design' variant='cs-type2'/>
+                <Button btnLink='/service/service-details' btnText='Haarpigmentierung' variant='cs-type2'/>
                 <Spacing lg='20' md='10'/>
-                <Button btnLink='/service/service-details' btnText='Mobile apps design' variant='cs-type2'/>
+                <Button btnLink='/service/service-details' btnText='Augenbrauen Transplantation' variant='cs-type2'/>
                 <Spacing lg='20' md='10'/>
-                <Button btnLink='/service/service-details' btnText='Banner, brochure, card' variant='cs-type2'/>
+                <Button btnLink='/service/service-details' btnText='Bart Transplantation' variant='cs-type2'/>
                 <Spacing lg='20' md='10'/>
-                <Button btnLink='/service/service-details' btnText='Other design' variant='cs-type2'/>
+                <Button btnLink='/service/service-details' btnText='Revision & Korrektur' variant='cs-type2'/>
                 <Spacing lg='20' md='10'/>
               </Div>
             </Div>
@@ -105,8 +105,8 @@ export default function ServiceDetailsPage() {
           <Div className="row">
             <Div className="col-xl-5 col-lg-6">
               <SectionHeading
-                title='Some pre questions and answers' 
-                subtitle='FAQ’s'
+                title='Häufig gestellte Fragen' 
+                subtitle='FAQ'
               />
               <Spacing lg='90' md='45'/>
             </Div>
@@ -119,8 +119,8 @@ export default function ServiceDetailsPage() {
       <Spacing lg='150' md='80'/>
       <Div className="container">
         <Cta 
-          title='Let’s disscuse make <br />something <i>cool</i> together' 
-          btnText='Apply For Meeting' 
+          title='Lassen Sie uns Ihre <br />Haar<i>transformation</i> besprechen' 
+          btnText='Beratung buchen' 
           btnLink='/contact' 
           bgSrc='/images/cta_bg.jpeg'
         />

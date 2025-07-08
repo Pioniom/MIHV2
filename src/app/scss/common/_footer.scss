@@ -46,6 +46,10 @@
 }
 
 .cs-text_widget {
+  img {
+    max-width: 150px;
+    height: auto;
+  }
   p {
     margin: 0;
   }
@@ -184,4 +188,8 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .cs-text_widget img {
+    max-width: 120px;
+    height: auto;
+  }
 }

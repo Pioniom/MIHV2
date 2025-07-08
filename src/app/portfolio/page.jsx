@@ -10,92 +10,100 @@ import { useState } from "react";
 
 const portfolioData = [
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'FUE Haartransplantation',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_4.jpeg',
-    category: 'ui_ux_design',
+    category: 'fue_methode',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'DHI Technik Ergebnis',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_5.jpeg',
-    category: 'logo_design',
+    category: 'dhi_technik',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'Natürliche Haarlinie',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_6.jpeg',
-    category: 'web_design',
+    category: 'fue_methode',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'Vollständige Abdeckung',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_7.jpeg',
-    category: 'mobile_apps',
+    category: 'dhi_technik',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'Dichte Haarstruktur',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_8.jpeg',
-    category: 'ui_ux_design',
+    category: 'fue_methode',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'Augenbrauen Transplantation',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_9.jpeg',
-    category: 'web_design',
+    category: 'augenbrauen',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'Bart Transplantation',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_10.jpeg',
-    category: 'logo_design',
+    category: 'bart',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'Korrektur-Behandlung',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_4.jpeg',
-    category: 'ui_ux_design',
+    category: 'korrektur',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'PRP Therapie Ergebnis',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_5.jpeg',
-    category: 'logo_design',
+    category: 'prp_therapie',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'Langzeitergebnis',
+    subtitle: 'Details ansehen',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_6.jpeg',
-    category: 'web_design',
+    category: 'fue_methode',
   },
 ];
 const categoryMenu = [
   {
-    title: 'Web Design',
-    category: 'web_design',
+    title: 'FUE Methode',
+    category: 'fue_methode',
   },
   {
-    title: 'UI/UX Design',
-    category: 'ui_ux_design',
+    title: 'DHI Technik',
+    category: 'dhi_technik',
   },
   {
-    title: 'Mobile Apps',
-    category: 'mobile_apps',
+    title: 'Augenbrauen',
+    category: 'augenbrauen',
   },
   {
-    title: 'Logo Design',
-    category: 'logo_design',
+    title: 'Bart',
+    category: 'bart',
+  },
+  {
+    title: 'PRP Therapie',
+    category: 'prp_therapie',
+  },
+  {
+    title: 'Korrektur',
+    category: 'korrektur',
   },
 ];
 
@@ -106,18 +114,18 @@ export default function PortfolioPage() {
   return (
     <>
       <PageHeading
-        title="Portfolio"
+        title="Galerie"
         bgSrc="/images/portfolio_hero_bg.jpeg"
-        pageLinkText="Portfolio"
+        pageLinkText="Galerie"
       />
       <Spacing lg="145" md="80" />
       <Div className="container">
         <Div className="cs-portfolio_1_heading">
-          <SectionHeading title="Some recent work" subtitle="Our Portfolio" />
+          <SectionHeading title="Unsere Behandlungsergebnisse" subtitle="Unsere Galerie" />
           <Div className="cs-filter_menu cs-style1">
             <ul className="cs-mp0 cs-center">
               <li className={active === 'all' ? 'active' : ''}>
-                <span onClick={() => setActive('all')}>All</span>
+                <span onClick={() => setActive('all')}>Alle</span>
               </li>
               {categoryMenu.map((item, index) => (
                 <li
@@ -169,7 +177,7 @@ export default function PortfolioPage() {
                 className="cs-text_btn"
                 onClick={() => setItemShow(itemShow + 3)}
               >
-                <span>Load More</span>
+                <span>Mehr laden</span>
                 <Icon icon="bi:arrow-right" />
               </span>
             </>
@@ -178,7 +186,7 @@ export default function PortfolioPage() {
       </Div>
       <Spacing lg="145" md="80" />
       <Cta
-        title="agency@arino.com"
+        title="info@medicalinnhair.de"
         bgSrc="/images/cta_bg_2.jpeg"
         variant="rounded-0"
       />

@@ -11,31 +11,31 @@ import Spacing from "@/app/ui/Spacing";
 const postData = [
   {
     thumb: '/images/post_4.jpeg',
-    title: 'A.I will take all human job within next year',
+    title: 'FUE vs. DHI: Welche Haartransplantations-Methode ist die richtige für Sie?',
     subtitle:
-      'Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.',
-    date: '07 Mar 2022',
-    category: 'Tech',
+      'Die Wahl der richtigen Haartransplantations-Methode ist entscheidend für ein optimales Ergebnis. FUE und DHI sind die modernsten Techniken, die jeweils ihre spezifischen Vorteile bieten. In diesem Ratgeber erklären wir die Unterschiede, Vor- und Nachteile beider Methoden und helfen Ihnen bei der Entscheidung für die passende Behandlung.',
+    date: '15 März 2024',
+    category: 'Behandlungsmethoden',
     categoryHref: '/blog',
     href: '/blog/blog-details',
   },
   {
     thumb: '/images/post_5.jpeg',
-    title: 'Creative studio programm coming soon',
+    title: 'Nachsorge bei Haartransplantation: 10 wichtige Tipps für optimale Ergebnisse',
     subtitle:
-      'Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.',
-    date: '05 Mar 2022',
-    category: 'Photography',
+      'Die richtige Nachsorge ist entscheidend für den Erfolg Ihrer Haartransplantation. Von der ersten Woche nach dem Eingriff bis zu den folgenden Monaten gibt es wichtige Regeln zu beachten. Erfahren Sie, wie Sie die Heilung fördern, Komplikationen vermeiden und das bestmögliche Ergebnis erzielen.',
+    date: '20 Februar 2024',
+    category: 'Nachsorge',
     categoryHref: '/blog',
     href: '/blog/blog-details',
   },
   {
     thumb: '/images/post_6.jpeg',
-    title: 'Artistic mind will be great for creation',
+    title: 'PRP-Therapie: Natürliche Haarwachstumsförderung ohne Operation',
     subtitle:
-      'Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.',
-    date: '04 Mar 2022',
-    category: 'Tech',
+      'Die PRP-Therapie (Platelet Rich Plasma) ist eine innovative, nicht-operative Behandlung zur Förderung des Haarwachstums. Mit Ihrem eigenen Blutplasma stimulieren wir die Haarfollikel natürlich. Erfahren Sie mehr über den Ablauf, die Vorteile und für wen diese Therapie geeignet ist.',
+    date: '05 Januar 2024',
+    category: 'Therapien',
     categoryHref: '/blog',
     href: '/blog/blog-details',
   },
@@ -45,9 +45,9 @@ export default function BlogPage() {
   return (
     <>
       <PageHeading
-        title="Our Blog"
+        title="Ratgeber"
         bgSrc="/images/blog_hero_bg.jpeg"
-        pageLinkText="Blog"
+        pageLinkText="Ratgeber"
       />
       <Spacing lg="150" md="80" />
       <Div className="container">
@@ -79,8 +79,8 @@ export default function BlogPage() {
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
+          title="Lassen Sie uns Ihre <br />Haar<i>transformation</i> besprechen"
+          btnText="Beratung buchen"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />

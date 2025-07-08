@@ -146,7 +146,8 @@ const FloatingTrigger = ({
     }
   };
 
-  if (!isVisible || !engineReady) return null;
+  // Color Editor disabled for production
+  if (!isVisible || !engineReady || true) return null;
 
   return (
     <>
