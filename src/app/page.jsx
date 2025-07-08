@@ -161,6 +161,15 @@ export default function Home() {
       </Div>
       {/* End Service Section */}
 
+      {/* Start MovingText Section */}
+      <Spacing lg="100" md="60" />
+      <MovingText 
+        text="MEDICAL INN HAIR" 
+        variant="cs-type3"
+      />
+      <Spacing lg="100" md="60" />
+      {/* End MovingText Section */}
+
       {/* Start Portfolio Section */}
       <Spacing lg="150" md="50" />
       <Div>

@@ -55,6 +55,20 @@
     -webkit-text-fill-color: transparent;
   }
 }
+
+.cs-moving_text_wrap.cs-type3 {
+  background: #181818;
+  padding: 40px 0;
+  color: #333;
+  -webkit-text-stroke: initial;
+  
+  .cs-moving_text {
+    color: #333;
+    background: none;
+    -webkit-text-fill-color: #333;
+    animation: slide-left 25s linear infinite;
+  }
+}
 .cs-reverse_animation {
   animation-direction: reverse !important;
 }
