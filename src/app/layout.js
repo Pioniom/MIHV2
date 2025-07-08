@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="author" content="Laralink" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="icon" href="/images/favicon.ico" sizes="any" />
         <title>Medical Inn Hair - Haartransplantation Düsseldorf</title>
       </head>
