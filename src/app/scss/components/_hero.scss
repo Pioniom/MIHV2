@@ -722,7 +722,7 @@
   }
   .cs-hero.cs-style3 {
     min-height: 100vh;
-    padding: 80px 0;
+    padding: 120px 0 80px;
   }
   .cs-hero.cs-style1.cs-type2 {
     .cs-hero_title {
@@ -733,6 +733,12 @@
     padding: 80px 15px 80px 100px;
   }
 }
+@media screen and (max-width: 767px) {
+  .cs-hero.cs-style3 {
+    padding: 140px 0 80px;
+  }
+}
+
 @media screen and (max-width: 575px) {
   .cs-hero.cs-style1 {
     .cs-hero_title {
@@ -755,6 +761,8 @@
     }
   }
   .cs-hero.cs-style3 {
+    padding: 160px 0 80px;
+    
     .cs-hero_title {
       font-size: 27px;
       margin-bottom: 25px;
