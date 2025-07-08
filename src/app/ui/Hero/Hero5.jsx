@@ -44,16 +44,13 @@ export default function Hero5({
     return () => clearTimeout(timer);
   }, [currentText, isDeleting, currentWordIndex, typingSpeed, typewriterWords]);
 
-  const displayTitle = `<span class="cs-typewriter-text">${currentText || '\u00a0'}</span><br />Haartransplantation<br />auf höchstem Niveau`;
+  const displayTitle = `<span class="cs-typewriter-text">${currentText || '\u00a0'}</span><br /><span class="cs-hero-subtitle-text">Haartransplantation<br />auf höchstem Niveau</span>`;
 
   return (
     <Div
-      className="cs-hero cs-style3 cs-bg cs-fixed_bg cs-shape_wrap_1"
+      className="cs-hero cs-style3 cs-bg cs-fixed_bg"
       id="home"
     >
-      <Div className="cs-shape_1" />
-      <Div className="cs-shape_1" />
-      <Div className="cs-shape_1" />
       <Div className="cs-circle_1" />
       <Div className="cs-circle_2" />
       <Div className="container">
