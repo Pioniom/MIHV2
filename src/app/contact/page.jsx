@@ -10,7 +10,11 @@ import PersonalInfoStep from "@/app/ui/Wizard/BookingWizard/PersonalInfoStep";
 import TreatmentStep from "@/app/ui/Wizard/BookingWizard/TreatmentStep";
 import AppointmentStep from "@/app/ui/Wizard/BookingWizard/AppointmentStep";
 import MedicalHistoryStep from "@/app/ui/Wizard/ConsultationWizard/MedicalHistoryStep";
-import HairAnalysisStep from "@/app/ui/Wizard/ConsultationWizard/HairAnalysisStep";
+import HairLossStep from "@/app/ui/Wizard/ConsultationWizard/HairLossStep";
+import PhotoUploadStep from "@/app/ui/Wizard/ConsultationWizard/PhotoUploadStep";
+import ExpectationsStep from "@/app/ui/Wizard/ConsultationWizard/ExpectationsStep";
+import ConsentStep from "@/app/ui/Wizard/ConsultationWizard/ConsentStep";
+import ReviewStep from "@/app/ui/Wizard/ConsultationWizard/ReviewStep";
 
 const bookingSteps = [
   {
@@ -42,9 +46,29 @@ const consultationSteps = [
     component: MedicalHistoryStep
   },
   {
-    id: 'analysis',
+    id: 'hairloss',
     title: 'Haaranalyse',
-    component: HairAnalysisStep
+    component: HairLossStep
+  },
+  {
+    id: 'photos',
+    title: 'Fotos',
+    component: PhotoUploadStep
+  },
+  {
+    id: 'expectations',
+    title: 'Erwartungen',
+    component: ExpectationsStep
+  },
+  {
+    id: 'consent',
+    title: 'Einverständnis',
+    component: ConsentStep
+  },
+  {
+    id: 'review',
+    title: 'Übersicht',
+    component: ReviewStep
   }
 ];
 
@@ -116,7 +140,7 @@ export default function ContactPage() {
             
             <Div className="row">
               <Div className="col-lg-6">
-                <Div className="cs-contact_option cs-style1">
+                <Div className="cs-contact_option">
                   <Div className="cs-contact_option_icon">
                     <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -128,7 +152,7 @@ export default function ContactPage() {
                     Ideal für erste Informationen und Behandlungsplanung.
                   </p>
                   <button 
-                    className="cs-btn cs-style1"
+                    className="cs-text_btn cs-type1"
                     onClick={() => setActiveWizard('booking')}
                   >
                     <span>Termin vereinbaren</span>
@@ -138,7 +162,7 @@ export default function ContactPage() {
               </Div>
               
               <Div className="col-lg-6">
-                <Div className="cs-contact_option cs-style1">
+                <Div className="cs-contact_option">
                   <Div className="cs-contact_option_icon">
                     <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M9 12h6m-6 4h6m2 5l-5-5H7a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -150,7 +174,7 @@ export default function ContactPage() {
                     Behandlungsvorbereitung. Spart Zeit beim Termin.
                   </p>
                   <button 
-                    className="cs-btn cs-style1"
+                    className="cs-text_btn cs-type2"
                     onClick={() => setActiveWizard('consultation')}
                   >
                     <span>Bogen ausfüllen</span>
@@ -165,7 +189,7 @@ export default function ContactPage() {
         {activeWizard === 'booking' && (
           <>
             <button 
-              className="cs-back_btn cs-type2"
+              className="cs-back_btn"
               onClick={resetWizards}
             >
               ← Zurück zur Auswahl
@@ -185,7 +209,7 @@ export default function ContactPage() {
         {activeWizard === 'consultation' && (
           <>
             <button 
-              className="cs-back_btn cs-type2"
+              className="cs-back_btn"
               onClick={resetWizards}
             >
               ← Zurück zur Auswahl

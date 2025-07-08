@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Div from '../Div';
 import WizardProgress from './WizardProgress';
 import WizardNavigation from './WizardNavigation';
@@ -57,7 +57,7 @@ export default function WizardContainer({
       
       <Div className="cs-wizard_content">
         {currentStepComponent && currentStepComponent.component && 
-          currentStepComponent.component({
+          React.createElement(currentStepComponent.component, {
             formData,
             updateFormData,
             nextStep,

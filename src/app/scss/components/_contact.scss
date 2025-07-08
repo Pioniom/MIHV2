@@ -1,12 +1,12 @@
 // Contact Options
 .cs-contact_option {
-  background: white;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
   border-radius: 20px;
   padding: 50px 40px;
   text-align: center;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: 2px solid #333;
   position: relative;
   overflow: hidden;
   
@@ -58,12 +58,12 @@
 .cs-option_title {
   font-size: 24px;
   font-weight: 700;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
 .cs-option_desc {
-  color: #666;
+  color: #cccccc;
   line-height: 1.7;
   margin-bottom: 30px;
   font-size: 16px;
@@ -165,12 +165,12 @@
 .cs-consultation_wizard {
   .cs-wizard_progress {
     .cs-step_circle {
-      background: linear-gradient(135deg, #6f42c1 0%, #8e44ad 100%);
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
     }
     
     .cs-step_active .cs-step_circle {
-      background: linear-gradient(135deg, #6f42c1 0%, #8e44ad 100%);
-      box-shadow: 0 0 0 4px rgba(111, 66, 193, 0.3);
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+      box-shadow: 0 0 0 4px rgba(105, 204, 230, 0.3);
     }
     
     .cs-step_completed .cs-step_circle {
@@ -178,7 +178,7 @@
     }
     
     .cs-step_active .cs-step_label {
-      color: #6f42c1;
+      color: var(--color-primary);
     }
   }
 }
@@ -193,8 +193,8 @@
   }
   
   .cs-consultation_wizard & .cs-form_field:focus {
-    border-color: #6f42c1;
-    box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.1);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(105, 204, 230, 0.1);
   }
 }
 
