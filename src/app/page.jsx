@@ -50,25 +50,25 @@ const portfolioData = [
   {
     title: 'Vorher-Nachher FUE',
     subtitle: 'Details ansehen',
-    href: '/portfolio/portfolio-details',
+    href: '/portfolio/vorher-nachher-fue',
     src: '/images/portfolio_1.webp',
   },
   {
     title: 'DHI Ergebnis',
     subtitle: 'Details ansehen',
-    href: '/portfolio/portfolio-details',
+    href: '/portfolio/dhi-ergebnis',
     src: '/images/portfolio_2.webp',
   },
   {
     title: 'Natürliche Haarlinie',
     subtitle: 'Details ansehen',
-    href: '/portfolio/portfolio-details',
+    href: '/portfolio/natuerliche-haarlinie',
     src: '/images/portfolio_3webp.webp',
   },
   {
     title: 'Vollständige Abdeckung',
     subtitle: 'Details ansehen',
-    href: '/portfolio/portfolio-details',
+    href: '/portfolio/vollstaendige-abdeckung',
     src: '/images/portfolio_0.webp',
   },
 ];
@@ -162,16 +162,16 @@ export default function Home() {
       {/* End Service Section */}
 
       {/* Start MovingText Section */}
-      <Spacing lg="100" md="60" />
+      <Spacing lg="60" md="40" />
       <MovingText 
         text="MEDICAL INN HAIR" 
         variant="cs-type3"
       />
-      <Spacing lg="100" md="60" />
+      <Spacing lg="30" md="20" />
       {/* End MovingText Section */}
 
       {/* Start Portfolio Section */}
-      <Spacing lg="150" md="50" />
+      <Spacing lg="80" md="40" />
       <Div>
         <Div className="container">
           <SectionHeading

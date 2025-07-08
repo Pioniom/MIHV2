@@ -11,47 +11,41 @@ export default function CaseStudyDetailsPage() {
   return (
     <>
       <PageHeading
-        title="Case Study Details"
+        title="Fallstudien Details"
         bgSrc="/images/contact_hero_bg.jpeg"
-        pageLinkText="Case Study Details"
+        pageLinkText="Fallstudien Details"
       />
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="Importance of storytelling and influencer marketing in social media marketing"
-          subtitle="Marketing"
+          title="Erfolgreiche Haartransplantation - Ein komplexer Fall mit außergewöhnlichen Ergebnissen"
+          subtitle="Fallstudie"
           variant="cs-style1 text-center"
         />
         <Spacing lg="90" md="45" />
         <Image
           src={imgUrl}
-          alt="Thumb"
+          alt="Haartransplantation Ergebnis"
           className="w-100 cs-radius_15"
           placeholder="blur"
         />
         <Spacing lg="140" md="80" />
-        <h2 className="cs-font_38 text-center">Case Study Overview</h2>
+        <h2 className="cs-font_38 text-center">Fallstudie Übersicht</h2>
         <Spacing lg="60" md="45" />
         <p className="cs-m0">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium voltire doloremque laudantium, totam rem aperiam, eaque
-          ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt. Ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora
-          incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
-          enim ad minima veniam, quis nostrum exercitationem ullam corporis
-          suscipit.Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-          odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-          voluptatem sequi nesciunt. Ipsum quia dolor sit amet, consectetur
+          Diese Fallstudie zeigt die erfolgreiche Behandlung eines 34-jährigen Patienten mit fortgeschrittenem Haarausfall (Norwood-Skala VII). 
+          Der Patient litt unter einem extremen Haarverlust, der sowohl die Frontlinie als auch den gesamten Oberkopf betraf. 
+          Nach einer detaillierten Analyse entschieden wir uns für eine Kombinationsbehandlung aus FUE und DHI Methoden, um optimale Ergebnisse zu erzielen.
+          <br /><br />
+          Die Herausforderung lag in der großflächigen Abdeckung bei begrenztem Spenderbereich. Durch innovative Techniken und präzise Planung 
+          konnten wir 4.200 hochqualitative Grafts transplantieren und eine natürliche, dichte Haarpracht wiederherstellen.
         </p>
         <Spacing lg="65" md="45" />
         <Div className="row">
           <Div className="col-sm-6">
             <img
               src="/images/case_study_img_2.jpeg"
-              alt="Thumb"
+              alt="Vorher Zustand"
               className="w-100 cs-radius_5"
             />
             <Spacing lg="25" md="25" />
@@ -59,7 +53,7 @@ export default function CaseStudyDetailsPage() {
           <Div className="col-sm-6">
             <img
               src="/images/case_study_img_3.jpeg"
-              alt="Thumb"
+              alt="Nachher Ergebnis"
               className="w-100 cs-radius_5"
             />
             <Spacing lg="25" md="25" />
@@ -72,30 +66,28 @@ export default function CaseStudyDetailsPage() {
         <Div className="cs-shape_2"></Div>
         <Div className="container">
           <Spacing lg="145" md="80" />
-          <h2 className="cs-font_38 text-center">Case Study Research</h2>
+          <h2 className="cs-font_38 text-center">Behandlungsanalyse</h2>
           <Spacing lg="90" md="45" />
           <Div className="row align-items-center cs-column_reverse_lg">
             <Div className="col-lg-5">
-              <h3 className="cs-font_30 cs-m0">Marketing strategy</h3>
+              <h3 className="cs-font_30 cs-m0">Behandlungsstrategie</h3>
               <Spacing lg="45" md="30" />
               <p className="cs-m0">
-                Our goal perspiciatis unde omnis iste natus error sit voluptatem
-                bolaru accusantium voltire doloremque laudantium, totam rem
-                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                voluptatem. <br />
+                Unser Ansatz basierte auf einer gründlichen Analyse der Spenderzone und der zu behandelnden Bereiche. 
+                Wir entwickelten eine maßgeschneiderte Strategie, die FUE-Saphir-Technologie für die Hauptbereiche und 
+                DHI-Choi-Pen-Technik für die präzise Haarlinienerstellung kombinierte.
                 <br />
-                Most cases aspernatur aut odit aut fugit, sed quia consequuntur
-                magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsum
-                quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                numquam eius modi tempora incidunt ut labore et dolore.
+                <br />
+                Die Behandlung erfolgte in einer Session über 8 Stunden mit unserem erfahrenen Team unter Leitung von 
+                Dr. med. Mehmet Atila. Besonderes Augenmerk lag auf der natürlichen Haarrichtung und der optimalen 
+                Graftverteilung für maximale Dichte.
               </p>
             </Div>
             <Div className="col-lg-6 offset-lg-1 text-center">
               <Div className="cs-portfolio_img_in cs-shine_hover_1 rounded-circle">
                 <img
                   src="/images/case_study_img_4.png"
-                  alt="Case study"
+                  alt="Behandlungsprozess"
                   className="w-100"
                 />
               </Div>
@@ -108,26 +100,24 @@ export default function CaseStudyDetailsPage() {
               <Div className="cs-portfolio_img_in cs-shine_hover_1 rounded-circle">
                 <img
                   src="/images/case_study_img_5.png"
-                  alt="Case study"
+                  alt="Nachsorge Konzept"
                   className="w-100"
                 />
               </Div>
               <Spacing lg="0" md="40" />
             </Div>
             <Div className="col-lg-5 offset-lg-1">
-              <h3 className="cs-font_30 cs-m0">Branding guideline</h3>
+              <h3 className="cs-font_30 cs-m0">Nachsorge Konzept</h3>
               <Spacing lg="45" md="30" />
               <p className="cs-m0">
-                Our goal perspiciatis unde omnis iste natus error sit voluptatem
-                bolaru accusantium voltire doloremque laudantium, totam rem
-                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                voluptatem. <br />
+                Ein umfassendes Nachsorge-Programm war entscheidend für den Erfolg dieser komplexen Behandlung. 
+                Der Patient erhielt detaillierte Pflegeanweisungen und wurde regelmäßig in unserem Düsseldorfer 
+                Zentrum betreut. PRP-Therapie-Sitzungen unterstützten die Heilung und das Haarwachstum.
                 <br />
-                Most cases aspernatur aut odit aut fugit, sed quia consequuntur
-                magni dolores eos qui ratione voluptatem sequi nesciunt. Ipsum
-                quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                numquam eius modi tempora incidunt ut labore et dolore.
+                <br />
+                Nach 12 Monaten zeigten sich die finalen Ergebnisse: eine vollständige Transformation mit 
+                natürlicher Haardichte und perfekter Integration der transplantierten Bereiche. Die Patientenzufriedenheit 
+                war außergewöhnlich hoch.
               </p>
             </Div>
           </Div>
@@ -137,22 +127,20 @@ export default function CaseStudyDetailsPage() {
       <Spacing lg="140" md="80" />
       <Div className="container text-center">
         <Div className="row col-lg-10 offset-lg-1">
-          <h2 className="cs-font_38 cs-m0">Result of The Case Study</h2>
+          <h2 className="cs-font_38 cs-m0">Ergebnis der Fallstudie</h2>
           <Spacing lg="60" md="45" />
           <p className="cs-m0">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium voltire doloremque laudantium, totam rem aperiam, eaque
-            ipsa quae ab illo inventore veritatis et quasi architecto beatae
-            vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
-            sit asperna aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Ipsum quia dolor sit
-            amet, consectetur, adipisci velit, sed quia non numquam eius modi
-            tempora incidunt ut labore et dolore magnam aliquam quaerat
-            voluptatem. Ut enim ad nima veniam, quis nostrum exercitationem
-            ullam corporis suscipit.Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Ipsum quia dolor sit
-            amet, consectetur
+            Das Endergebnis nach 12 Monaten übertraf alle Erwartungen. Der Patient erzielte eine natürliche 
+            Haardichte von 85-90 Grafts pro cm² in den transplantierten Bereichen. Die Anwuchsrate betrug 
+            beeindruckende 96%, was deutlich über dem Branchendurchschnitt liegt.
+            <br /><br />
+            Diese Fallstudie demonstriert die Expertise von Medical Inn Hair bei der Behandlung komplexer 
+            Haarausfälle. Durch die Kombination modernster Techniken, individueller Behandlungsplanung und 
+            umfassender Nachsorge erzielen wir auch bei schwierigsten Ausgangssituationen hervorragende Ergebnisse.
+            <br /><br />
+            Der Patient berichtete von einem deutlich gestärkten Selbstbewusstsein und einer verbesserten 
+            Lebensqualität. Seine Zufriedenheit mit dem Ergebnis und unserem Service spiegelt unseren 
+            Anspruch an höchste Qualität in der Haartransplantation wider.
           </p>
         </Div>
       </Div>
@@ -160,8 +148,8 @@ export default function CaseStudyDetailsPage() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
+          title="Lassen Sie uns Ihren <br />Fall <i>analysieren</i>"
+          btnText="Beratung buchen"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />
