@@ -44,6 +44,15 @@ export default function AIAnalyzerPage() {
   const [error, setError] = useState(null);
   const [dragActive, setDragActive] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
+  const [showEmailForm, setShowEmailForm] = useState(false);
+  const [emailFormData, setEmailFormData] = useState({
+    name: '',
+    age: '',
+    email: '',
+    consentGiven: false
+  });
+  const [isEmailSubmitting, setIsEmailSubmitting] = useState(false);
+  const [emailSuccess, setEmailSuccess] = useState(false);
   const fileInputRef = useRef(null);
 
   // Bestimme die korrekte API-URL basierend auf der Umgebung
@@ -164,6 +173,64 @@ export default function AIAnalyzerPage() {
       setError(`Bei der Analyse ist ein Fehler aufgetreten: ${errorMessage}`);
     } finally {
       setIsAnalyzing(false);
+    }
+  };
+
+  // E-Mail Handler
+  const handleEmailSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!emailFormData.name || !emailFormData.age || !emailFormData.email || !emailFormData.consentGiven) {
+      alert('Bitte füllen Sie alle Felder aus und stimmen Sie der Datenschutzerklärung zu.');
+      return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(emailFormData.email)) {
+      alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+      return;
+    }
+
+    setIsEmailSubmitting(true);
+    try {
+      const response = await fetch('/.netlify/functions/send-analysis-result', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userInfo: {
+            name: emailFormData.name,
+            age: emailFormData.age,
+            email: emailFormData.email
+          },
+          analysisResult: analysisText,
+          consentGiven: emailFormData.consentGiven
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Fehler beim Senden der E-Mail');
+      }
+
+      const result = await response.json();
+      
+      if (result.success) {
+        setEmailSuccess(true);
+        setShowEmailForm(false);
+        setEmailFormData({
+          name: '',
+          age: '',
+          email: '',
+          consentGiven: false
+        });
+      } else {
+        throw new Error(result.message || 'Unbekannter Fehler');
+      }
+    } catch (error) {
+      console.error('Email submission error:', error);
+      alert('Fehler beim Senden der E-Mail. Bitte versuchen Sie es erneut.');
+    } finally {
+      setIsEmailSubmitting(false);
     }
   };
 
@@ -563,6 +630,119 @@ export default function AIAnalyzerPage() {
                     <span className="cs-badge_sub">We build AI Agents</span>
                   </a>
                 </Div>
+
+                {/* E-Mail Button */}
+                <Div className="cs-email_section">
+                  <Div className="text-center">
+                    <button 
+                      className="cs-btn cs-style2"
+                      onClick={() => setShowEmailForm(true)}
+                    >
+                      <span>📧 Analyse per E-Mail erhalten</span>
+                    </button>
+                  </Div>
+                </Div>
+              </Div>
+            )}
+
+            {/* E-Mail Formular */}
+            {showEmailForm && (
+              <Div className="cs-email_form_container">
+                <Div className="cs-email_form">
+                  <h4 className="cs-form_title">Analyse per E-Mail erhalten</h4>
+                  <p className="cs-form_subtitle">
+                    Erhalten Sie Ihre detaillierte Haaranalyse bequem per E-Mail
+                  </p>
+                  
+                  <form onSubmit={handleEmailSubmit}>
+                    <Div className="cs-form_group">
+                      <input
+                        type="text"
+                        placeholder="Ihr Name"
+                        value={emailFormData.name}
+                        onChange={(e) => setEmailFormData({...emailFormData, name: e.target.value})}
+                        required
+                      />
+                    </Div>
+                    
+                    <Div className="cs-form_group">
+                      <input
+                        type="number"
+                        placeholder="Ihr Alter"
+                        value={emailFormData.age}
+                        onChange={(e) => setEmailFormData({...emailFormData, age: e.target.value})}
+                        required
+                        min="18"
+                        max="100"
+                      />
+                    </Div>
+                    
+                    <Div className="cs-form_group">
+                      <input
+                        type="email"
+                        placeholder="Ihre E-Mail-Adresse"
+                        value={emailFormData.email}
+                        onChange={(e) => setEmailFormData({...emailFormData, email: e.target.value})}
+                        required
+                      />
+                    </Div>
+                    
+                    <Div className="cs-form_group">
+                      <label className="cs-checkbox_label">
+                        <input
+                          type="checkbox"
+                          checked={emailFormData.consentGiven}
+                          onChange={(e) => setEmailFormData({...emailFormData, consentGiven: e.target.checked})}
+                          required
+                        />
+                        <span className="cs-checkbox_text">
+                          Ich stimme der Verarbeitung meiner Daten zur Zusendung der Analyse-Ergebnisse zu. 
+                          Die Daten werden nicht an Dritte weitergegeben.
+                        </span>
+                      </label>
+                    </Div>
+                    
+                    <Div className="cs-form_actions">
+                      <button 
+                        type="submit" 
+                        className="cs-btn cs-style1"
+                        disabled={isEmailSubmitting}
+                      >
+                        <span>{isEmailSubmitting ? 'Senden...' : 'Analyse per E-Mail senden'}</span>
+                      </button>
+                      <button 
+                        type="button" 
+                        className="cs-btn cs-style2"
+                        onClick={() => setShowEmailForm(false)}
+                        disabled={isEmailSubmitting}
+                      >
+                        <span>Abbrechen</span>
+                      </button>
+                    </Div>
+                  </form>
+                </Div>
+              </Div>
+            )}
+
+            {/* E-Mail Erfolg */}
+            {emailSuccess && (
+              <Div className="cs-email_success">
+                <Div className="cs-success_icon">
+                  <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </Div>
+                <h4 className="cs-success_title">E-Mail erfolgreich gesendet!</h4>
+                <p className="cs-success_text">
+                  Ihre Haaranalyse wurde an <strong>{emailFormData.email}</strong> gesendet. 
+                  Bitte überprüfen Sie auch Ihren Spam-Ordner.
+                </p>
+                <button 
+                  className="cs-btn cs-style1"
+                  onClick={() => setEmailSuccess(false)}
+                >
+                  <span>Neue Analyse</span>
+                </button>
               </Div>
             )}
           </Div>

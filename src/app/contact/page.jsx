@@ -80,16 +80,47 @@ export default function ContactPage() {
   const handleBookingComplete = async (formData) => {
     setIsSubmitting(true);
     try {
-      // Here you would typically send the data to your backend
-      console.log('Booking data:', formData);
+      // Kontaktformular-Daten für einfache Terminbuchung
+      const contactData = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        subject: `Terminbuchung - ${formData.appointmentType || 'Beratung'}`,
+        message: `Terminwunsch: ${formData.preferredDate} um ${formData.preferredTime}
+        
+Alternative: ${formData.alternativeDate || 'Keine'}
+Behandlungsart: ${formData.appointmentType || 'Allgemeine Beratung'}
+Geschlecht: ${formData.gender || 'Nicht angegeben'}
+Geburtsdatum: ${formData.birthDate || 'Nicht angegeben'}
+
+Datenschutz: ${formData.dataConsent ? 'Zugestimmt' : 'Nicht zugestimmt'}
+Newsletter: ${formData.newsletterConsent ? 'Ja' : 'Nein'}`
+      };
+
+      const response = await fetch('/.netlify/functions/contact-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contactData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Fehler beim Senden der Terminbuchung');
+      }
+
+      const result = await response.json();
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setSubmitSuccess(true);
-      setActiveWizard(null);
+      if (result.success) {
+        setSubmitSuccess(true);
+        setActiveWizard(null);
+      } else {
+        throw new Error(result.message || 'Unbekannter Fehler');
+      }
     } catch (error) {
       console.error('Error submitting booking:', error);
+      alert('Fehler beim Senden der Terminbuchung. Bitte versuchen Sie es erneut.');
     } finally {
       setIsSubmitting(false);
     }
@@ -98,16 +129,76 @@ export default function ContactPage() {
   const handleConsultationComplete = async (formData) => {
     setIsSubmitting(true);
     try {
-      // Here you would typically send the data to your backend
-      console.log('Consultation data:', formData);
+      // Beratungsbogen-Daten für send-email Netlify Function
+      const consultationData = {
+        fullName: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        phone: formData.phone,
+        dateOfBirth: formData.birthDate,
+        gender: formData.gender,
+        
+        // Medizinische Vorgeschichte
+        medicalConditions: formData.medicalConditions || [],
+        medications: formData.currentMedications || [],
+        allergies: formData.allergies || [],
+        smoking: formData.smoking,
+        alcohol: formData.alcohol,
+        
+        // Haarausfall Details
+        hairLossAge: formData.ageAtOnset,
+        hairLossPattern: formData.pattern,
+        hairLossReasons: formData.causes || [],
+        familyHistory: formData.familyHistory,
+        previousHairLossTreatments: formData.previousTreatments || [],
+        
+        // Fotos
+        photos: formData.photos || [],
+        photoDescription: formData.photoDescription,
+        
+        // Erwartungen
+        desiredDensity: formData.desiredDensity,
+        expectations: formData.specificConcerns,
+        additionalInfo: formData.finalComments,
+        preferredDate: formData.treatmentTimeframe,
+        
+        // Einverständnisse
+        dataProcessingConsent: formData.dataProcessingConsent,
+        consultationConsent: formData.consultationConsent,
+        marketingConsent: formData.marketingConsent,
+        termsAccepted: formData.termsAccepted
+      };
+
+      // FormData für Multipart-Upload (wegen Fotos)
+      const formDataToSend = new FormData();
+      formDataToSend.append('formData', JSON.stringify(consultationData));
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Fotos hinzufügen falls vorhanden
+      if (formData.photos && formData.photos.length > 0) {
+        formData.photos.forEach((photo, index) => {
+          formDataToSend.append(`photo_${index}`, photo);
+        });
+      }
+
+      const response = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        body: formDataToSend
+      });
+
+      if (!response.ok) {
+        throw new Error('Fehler beim Senden des Beratungsbogens');
+      }
+
+      const result = await response.json();
       
-      setSubmitSuccess(true);
-      setActiveWizard(null);
+      if (result.success) {
+        setSubmitSuccess(true);
+        setActiveWizard(null);
+      } else {
+        throw new Error(result.message || 'Unbekannter Fehler');
+      }
     } catch (error) {
       console.error('Error submitting consultation:', error);
+      alert('Fehler beim Senden des Beratungsbogens. Bitte versuchen Sie es erneut.');
     } finally {
       setIsSubmitting(false);
     }

@@ -1,16 +1,15 @@
 {
-  "name": "medicalinnhair-functions",
+  "name": "netlify-functions",
   "version": "1.0.0",
   "description": "Netlify Functions for Medical Inn Hair",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "dependencies": {
-    "ai": "^4.3.16",
-    "@openrouter/ai-sdk-provider": "^0.7.2"
-  },
-  "keywords": ["netlify", "functions", "ai", "hair-analysis"],
-  "author": "Medical Inn Hair",
-  "license": "MIT"
+    "@netlify/functions": "^2.4.1",
+    "@openrouter/ai-sdk-provider": "^0.0.5",
+    "ai": "^3.4.7",
+    "busboy": "^1.6.0",
+    "multiparty": "^4.2.3",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.13"
+  }
 }

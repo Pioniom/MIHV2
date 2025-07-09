@@ -1,0 +1,10 @@
+{
+  "name": "send-email-function",
+  "version": "1.0.0",
+  "description": "Serverless-Funktion zum Versenden des Beratungsbogens per E-Mail",
+  "main": "send-email.js",
+  "dependencies": {
+    "multiparty": "^4.2.3",
+    "nodemailer": "^6.9.13"
+  }
+}
