@@ -151,6 +151,11 @@ export default function Header({ variant }) {
                         Ratgeber
                       </Link>
                     </li>
+                    <li>
+                      <Link href="/pricing" onClick={() => setMobileToggle(false)}>
+                        Preise
+                      </Link>
+                    </li>
                     <li className="menu-item-has-children">
                       <Link href="/" onClick={() => setMobileToggle(false)}>
                         Unternehmen

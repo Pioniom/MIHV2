@@ -23,7 +23,7 @@ export default function PricingTable({
           </h3>
           <span className="cs-accent_color">{timeline}</span>
         </Div>
-        <Div className="cs-price_text">Per subscriber per year</Div>
+        <Div className="cs-price_text">Preise variieren</Div>
       </Div>
       <ul className="cs-pricing_feature cs-mp0">
         {features.map((feature, index) => (

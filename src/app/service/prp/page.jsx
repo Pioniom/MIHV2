@@ -88,10 +88,23 @@ export default function PRPPage() {
                 </ul>
               </Div>
             </Div>
+            <Spacing lg='40' md='30'/>
+            <h3 className="cs-font_30 cs-m0">Vielseitige PRP Anwendungen</h3>
+            <Spacing lg='30' md='20'/>
+            <Div className="row">
+              <Div className="col-lg-12">
+                <p className="cs-m0"><strong>Nachbehandlung Haartransplantation:</strong> PRP als optimale Nachbehandlung nach FUE/DHI Transplantationen für bessere Graft-Anwachsrate und schnellere Heilung.</p>
+                <Spacing lg='15' md='15'/>
+                <p className="cs-m0"><strong>Diffuser Haarausfall:</strong> Behandlung von dünner werdendem Haar durch Stärkung vorhandener Haarfollikel und natürliche Wachstumsförderung.</p>
+                <Spacing lg='15' md='15'/>
+                <p className="cs-m0"><strong>Bartbereich & Augenbrauen:</strong> PRP Therapie zur Verdichtung und Stärkung vorhandener Haare für vollere Augenbrauen und dichteren Bart.</p>
+              </Div>
+            </Div>
           </Div>
         </Div>
       </Div>
       <Spacing lg='150' md='80'/>
+      
       <TestimonialSlider />
       <Spacing lg='145' md='80'/>
       <Div className="container cs-shape_wrap_4">

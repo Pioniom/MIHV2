@@ -5,85 +5,119 @@ import Section from '../Div'
 import Spacing from '../Spacing'
 
 export default function PricingTableList() {
-  const [tab, setTab] = useState('monthly')
+  const [tab, setTab] = useState('fue')
   return (
     <Section className="position-relative">
       <ul className="cs-tab_links cs-style1 cs-mp0 cs-primary_font">
-        <li className={tab === 'monthly' ? "active" : ""} onClick={()=>setTab('monthly')}>Monthly</li>
-        <li className={tab === 'yearly' ? "active" : ""} onClick={()=>setTab('yearly')}>Yearly</li>
+        <li className={tab === 'fue' ? "active" : ""} onClick={()=>setTab('fue')}>FUE Saphir</li>
+        <li className={tab === 'dhi' ? "active" : ""} onClick={()=>setTab('dhi')}>DHI Technik</li>
+        <li className={tab === 'prp' ? "active" : ""} onClick={()=>setTab('prp')}>PRP Therapie</li>
       </ul>
       <Section className="row">
         <Section className="col-lg-4">
-          {tab==='monthly' && (
+          {tab==='fue' && (
             <PricingTable 
-              title='Standard'
-              price='29'
-              currency='$'
-              timeline='monthly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
-              btnText='Purchase Now'
-              btnLink='/'
+              title='Geheimratsecken'
+              price='3.500 - 4.000'
+              currency='€'
+              timeline='500 - 1.500 Grafts'
+              features={['Ausführliche Voruntersuchung', 'FUE Saphir Technik', 'Lokale Anästhesie', 'Nachsorgeset inklusive', 'Kontrolluntersuchungen', 'Persönliche Betreuung']}
+              btnText='Beratung buchen'
+              btnLink='/contact'
             />
           )}
-          {tab==='yearly' && (
+          {tab==='dhi' && (
             <PricingTable 
-              title='Standard'
-              price='59'
-              currency='$'
-              timeline='yearly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
-              btnText='Purchase Now'
-              btnLink='/'
+              title='Geheimratsecken'
+              price='4.500 - 5.000'
+              currency='€'
+              timeline='500 - 1.500 Grafts'
+              features={['Ausführliche Voruntersuchung', 'DHI Technik', 'Lokale Anästhesie', 'Nachsorgeset inklusive', 'Kontrolluntersuchungen', 'Persönliche Betreuung']}
+              btnText='Beratung buchen'
+              btnLink='/contact'
             />
           )}
-          <Spacing lg='25' md='25'/>
-        </Section>
-        <Section className="col-lg-4">
-         {tab==='monthly' && (
+          {tab==='prp' && (
             <PricingTable 
-              title='Professional'
-              price='199'
-              currency='$'
-              timeline='monthly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
-              btnText='Purchase Now'
-              btnLink='/'
-            />
-          )}
-          {tab==='yearly' && (
-            <PricingTable 
-              title='Professional'
-              price='399'
-              currency='$'
-              timeline='yearly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
-              btnText='Purchase Now'
-              btnLink='/'
+              title='Einzelsitzung'
+              price='250'
+              currency='€'
+              timeline='pro Sitzung'
+              features={['Eigenblutbehandlung', 'Wachstumsfaktoren', 'Minimal-invasiv', 'Keine Ausfallzeiten', 'Natürliche Behandlung', 'Sofort anwendbar']}
+              btnText='Beratung buchen'
+              btnLink='/contact'
             />
           )}
           <Spacing lg='25' md='25'/>
         </Section>
         <Section className="col-lg-4">
-          {tab==='monthly' && (
+         {tab==='fue' && (
             <PricingTable 
-              title='Ultimate'
-              price='299'
-              currency='$'
-              timeline='monthly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
-              btnText='Purchase Now'
-              btnLink='/'
+              title='Halbglatze'
+              price='4.500 - 7.000'
+              currency='€'
+              timeline='2.500 - 4.500 Grafts'
+              features={['Ausführliche Voruntersuchung', 'FUE Saphir Technik', 'Lokale Anästhesie', 'Nachsorgeset inklusive', 'Kontrolluntersuchungen', 'Persönliche Betreuung']}
+              btnText='Beratung buchen'
+              btnLink='/contact'
             />
           )}
-          {tab==='yearly' && (
+          {tab==='dhi' && (
             <PricingTable 
-              title='Ultimate'
-              price='599'
-              currency='$'
-              timeline='yearly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
-              btnText='Purchase Now'
-              btnLink='/'
+              title='Halbglatze'
+              price='5.500 - 8.000'
+              currency='€'
+              timeline='2.500 - 4.500 Grafts'
+              features={['Ausführliche Voruntersuchung', 'DHI Technik', 'Lokale Anästhesie', 'Nachsorgeset inklusive', 'Kontrolluntersuchungen', 'Persönliche Betreuung']}
+              btnText='Beratung buchen'
+              btnLink='/contact'
+            />
+          )}
+          {tab==='prp' && (
+            <PricingTable 
+              title='3er Paket'
+              price='220'
+              currency='€'
+              timeline='pro Sitzung'
+              features={['Eigenblutbehandlung', 'Wachstumsfaktoren', 'Minimal-invasiv', 'Keine Ausfallzeiten', 'Natürliche Behandlung', 'Paketpreis-Vorteil']}
+              btnText='Beratung buchen'
+              btnLink='/contact'
+            />
+          )}
+          <Spacing lg='25' md='25'/>
+        </Section>
+        <Section className="col-lg-4">
+          {tab==='fue' && (
+            <PricingTable 
+              title='Weit fortgeschritten'
+              price='7.000 - 8.000'
+              currency='€'
+              timeline='> 4.500 Grafts'
+              features={['Ausführliche Voruntersuchung', 'FUE Saphir Technik', 'Lokale Anästhesie', 'Nachsorgeset inklusive', 'Kontrolluntersuchungen', 'Persönliche Betreuung']}
+              btnText='Beratung buchen'
+              btnLink='/contact'
+            />
+          )}
+          {tab==='dhi' && (
+            <PricingTable 
+              title='Weit fortgeschritten'
+              price='8.000 - 9.000'
+              currency='€'
+              timeline='> 4.500 Grafts'
+              features={['Ausführliche Voruntersuchung', 'DHI Technik', 'Lokale Anästhesie', 'Nachsorgeset inklusive', 'Kontrolluntersuchungen', 'Persönliche Betreuung']}
+              btnText='Beratung buchen'
+              btnLink='/contact'
+            />
+          )}
+          {tab==='prp' && (
+            <PricingTable 
+              title='6er Paket'
+              price='200'
+              currency='€'
+              timeline='pro Sitzung'
+              features={['Eigenblutbehandlung', 'Wachstumsfaktoren', 'Minimal-invasiv', 'Keine Ausfallzeiten', 'Natürliche Behandlung', 'Bester Preis-Vorteil']}
+              btnText='Beratung buchen'
+              btnLink='/contact'
             />
           )}
           <Spacing lg='25' md='25'/>

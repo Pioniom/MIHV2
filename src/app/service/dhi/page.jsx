@@ -88,10 +88,23 @@ export default function DHIPage() {
                 </ul>
               </Div>
             </Div>
+            <Spacing lg='40' md='30'/>
+            <h3 className="cs-font_30 cs-m0">Erweiterte DHI Anwendungen</h3>
+            <Spacing lg='30' md='20'/>
+            <Div className="row">
+              <Div className="col-lg-12">
+                <p className="cs-m0"><strong>Augenbrauentransplantation:</strong> Präzise Augenbrauen-Rekonstruktion mit DHI Choi-Pen Technik für perfekte Kontrolle über Winkel und Richtung.</p>
+                <Spacing lg='15' md='15'/>
+                <p className="cs-m0"><strong>Barttransplantation:</strong> Dichterer Bart durch DHI Transplantation mit direkter Implantation ohne Vorinzision für optimale Barthaardichte.</p>
+                <Spacing lg='15' md='15'/>
+                <p className="cs-m0"><strong>Body Hair Extraction:</strong> Körperhaar-Entnahme mit DHI Technik bei begrenztem Kopfhaar-Spenderbereich für maximale Graft-Ausbeute.</p>
+              </Div>
+            </Div>
           </Div>
         </Div>
       </Div>
       <Spacing lg='150' md='80'/>
+      
       <TestimonialSlider />
       <Spacing lg='145' md='80'/>
       <Div className="container cs-shape_wrap_4">
