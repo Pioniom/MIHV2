@@ -30,11 +30,11 @@ const heroSocialLinks = [
 const funfaceData = [
   {
     title: 'Zufriedene Patienten',
-    factNumber: '2000+',
+    factNumber: '2000',
   },
   {
     title: 'Transplantierte Grafts',
-    factNumber: '500K+',
+    factNumber: '500K',
   },
   {
     title: 'Jahre Erfahrung',

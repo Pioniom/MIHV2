@@ -1,13 +1,63 @@
 .cs-partner_logo_wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 162px;
   margin: 0 -15px;
 }
 .cs-partner_logo {
-  padding: 15px;
+  padding: 0;
+  
+  img {
+    max-height: 108px;
+    max-width: 162px;
+    object-fit: contain;
+  }
+  
+  #provenexpert_circle_widget_ccyht {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 108px !important;
+    width: 162px !important;
+    filter: grayscale(100%) !important;
+    
+    * {
+      max-height: 122px !important;
+      max-width: 122px !important;
+      height: 122px !important;
+      width: 122px !important;
+      filter: grayscale(100%) !important;
+      transform: scale(1) !important;
+    }
+  }
 }
 @media screen and (max-width: 575px) {
   .cs-partner_logo_wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
     margin: 0 -10px;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .cs-partner_logo {
+    img {
+      max-height: 70px;
+      max-width: 100px;
+    }
+    
+    #provenexpert_circle_widget_ccyht {
+      height: 70px !important;
+      width: 100px !important;
+      
+      * {
+        max-height: 70px !important;
+        max-width: 70px !important;
+        height: 70px !important;
+        width: 70px !important;
+      }
+    }
   }
 }

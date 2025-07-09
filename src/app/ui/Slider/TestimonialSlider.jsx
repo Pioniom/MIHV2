@@ -8,34 +8,38 @@ const testimonialData = [
   {
     testimonialThumb: '/images/testimonial_1.jpeg',
     testimonialText:
-      'Die Haartransplantation bei Medical Inn Hair hat mein Leben verändert. Das Team war unglaublich professionell und einfühlsam. Die FUE-Methode war schmerzfrei und die Ergebnisse sind fantastisch. Nach 8 Monaten habe ich wieder volles, natürliches Haar. Kann ich jedem empfehlen!',
-    avatarName: 'Michael Schmidt',
-    avatarDesignation: 'Ingenieur',
+      'Ich bin äußerst zufrieden mit meiner Haartransplantation bei Medical Inn Hair in Düsseldorf! Das Team hat mich von Anfang an sehr professionell und freundlich betreut. Die Beratung war ausführlich und ehrlich... Die Behandlung selbst verlief reibungslos, und das Ergebnis ist einfach großartig. Ich kann Medical Inn Hair in Düsseldorf jedem empfehlen!',
+    avatarName: 'Serkan Sözügecen',
+    avatarDesignation: 'Google Bewertung',
     ratings: '5',
+    googleLink: 'https://g.co/kgs/wCrZoRU',
   },
   {
     testimonialThumb: '/images/testimonial_2.jpeg',
     testimonialText:
-      'Endlich wieder Selbstvertrauen! Ich hatte schon seit Jahren mit Haarausfall zu kämpfen. Bei Medical Inn Hair fühlte ich mich vom ersten Beratungsgespräch an sehr gut aufgehoben. Die DHI-Technik ist wirklich beeindruckend. Das Ergebnis übertrifft alle meine Erwartungen.',
-    avatarName: 'Sarah Müller',
-    avatarDesignation: 'Marketing Managerin',
+      'Mittlerweile ist über ein halbes Jahr vergangen, seitdem ich meine Haartransplantation bei Medical Inn Hair durchgeführt habe und ich könnte mit dem Ergebnis nicht zufriedener sein... Meine transplantierten Haare sind nicht nur dicht, sondern vor allem auch sehr natürlich zusammengewachsen.',
+    avatarName: 'Louis Doehn',
+    avatarDesignation: 'Google Bewertung',
     ratings: '5',
+    googleLink: 'https://g.co/kgs/wCrZoRU',
   },
   {
     testimonialThumb: '/images/testimonial_3.jpeg',
     testimonialText:
-      'Beste Entscheidung meines Lebens! Nach jahrelanger Überlegung habe ich mich für eine Haartransplantation entschieden. Medical Inn Hair in Düsseldorf war die perfekte Wahl. Kompetente Beratung, modernste Technik und ein Ergebnis, das einfach natürlich aussieht.',
-    avatarName: 'Thomas Weber',
-    avatarDesignation: 'Rechtsanwalt',
+      'Als es dann darum ging ich eine Klinik auszusuchen, viel mein Blick sehr schnell auf die Homepage von Medical Inn Hair... Am Tag der OP wurde sich sehr viel Zeit genommen um die perfekte Haarlinie für mich individuell festzulegen. Ich kann sie nur weiterempfehlen!',
+    avatarName: 'Tito',
+    avatarDesignation: 'Google Bewertung',
     ratings: '5',
+    googleLink: 'https://g.co/kgs/wCrZoRU',
   },
   {
     testimonialThumb: '/images/testimonial_1.jpeg',
     testimonialText:
-      'Unglaublich zufrieden mit dem Service und den Ergebnissen. Von der ersten Beratung bis zur Nachsorge war alles perfekt organisiert. Die Ärzte bei Medical Inn Hair sind echte Experten auf ihrem Gebiet. Das neue Haar wächst wunderbar und sieht völlig natürlich aus.',
-    avatarName: 'Andreas Hoffmann',
-    avatarDesignation: 'Geschäftsführer',
+      'Ich habe bereits eine Haartransplantation in der Türkei machen lassen und kann daher gut vergleichen. Die Behandlung bei Medical Inn Hair war deutlich angenehmer... Der Eingriff war wesentlich schmerzärmer und das Team arbeitete sehr präzise und mit äußerster Sorgfalt.',
+    avatarName: 'Flo S.',
+    avatarDesignation: 'Google Bewertung',
     ratings: '5',
+    googleLink: 'https://g.co/kgs/wCrZoRU',
   },
 ];
 
@@ -114,6 +118,7 @@ export default function TestimonialSlider() {
                       avatarName={item.avatarName}
                       avatarDesignation={item.avatarDesignation}
                       ratings={item.ratings}
+                      googleLink={item.googleLink}
                     />
                   </Div>
                 ))}

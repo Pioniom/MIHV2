@@ -7,6 +7,7 @@ export default function Testimonial({
   avatarName,
   avatarDesignation,
   ratings,
+  googleLink,
 }) {
   return (
     <Div className="cs-testimonial cs-style1">
@@ -29,7 +30,22 @@ export default function Testimonial({
       </Div>
       <h2 className="cs-testimonial_avatar_name">{avatarName}</h2>
       <Div className="cs-testimonial_avatar_designation text-uppercase">
-        {avatarDesignation}
+        {googleLink ? (
+          <a 
+            href={googleLink} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ 
+              color: 'inherit', 
+              textDecoration: 'none',
+              cursor: 'pointer'
+            }}
+          >
+            {avatarDesignation}
+          </a>
+        ) : (
+          avatarDesignation
+        )}
       </Div>
     </Div>
   );
