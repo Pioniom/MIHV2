@@ -168,50 +168,61 @@ export default function AIAnalyzerPage() {
   };
 
   const parseAnalysisText = (text) => {
-    // Vereinfachte Parser-Logic
+    // Bessere Parser-Logic mit Markdown-Unterstützung
+    const cleanText = text
+      .replace(/###\s*\d+\.\s*/g, '') // Entferne ### 1., ### 2., etc.
+      .replace(/\*\*([^*]+)\*\*/g, '$1') // Entferne **bold**
+      .replace(/\*([^*]+)\*/g, '$1') // Entferne *italic*
+      .replace(/---/g, ''); // Entferne --- Trennlinien
+    
     const sectionPatterns = [
-      { pattern: /Haarausfall-Typ:|Haarausfall-Muster:/i, type: 'hairloss', title: 'Haarausfall-Typ', icon: 'target' },
-      { pattern: /Benötigte Grafts:|Grafts:/i, type: 'grafts', title: 'Benötigte Grafts', icon: 'calculator' },
-      { pattern: /Empfohlene Methode:|Methode:/i, type: 'method', title: 'Empfohlene Methode', icon: 'settings' },
-      { pattern: /Herausforderungen:|Komplikationen:/i, type: 'challenges', title: 'Mögliche Herausforderungen', icon: 'alert' },
-      { pattern: /Empfehlungen:|Ratschläge:/i, type: 'recommendations', title: 'Empfehlungen', icon: 'lightbulb' }
+      { pattern: /Haarausfall-Typ/i, type: 'hairloss', title: 'Haarausfall-Typ', icon: 'target' },
+      { pattern: /Benötigte Grafts/i, type: 'grafts', title: 'Benötigte Grafts', icon: 'calculator' },
+      { pattern: /Empfohlene Methode/i, type: 'method', title: 'Empfohlene Methode', icon: 'settings' },
+      { pattern: /Herausforderungen/i, type: 'challenges', title: 'Mögliche Herausforderungen', icon: 'alert' },
+      { pattern: /Empfehlungen/i, type: 'recommendations', title: 'Empfehlungen', icon: 'lightbulb' }
     ];
     
     const sections = [];
-    const paragraphs = text.split('\n\n').filter(p => p.trim());
+    const lines = cleanText.split('\n').filter(line => line.trim());
+    let currentSection = null;
     
-    paragraphs.forEach((paragraph) => {
-      const trimmedParagraph = paragraph.trim();
-      if (!trimmedParagraph) return;
+    lines.forEach((line) => {
+      const trimmedLine = line.trim();
+      if (!trimmedLine) return;
       
       // Prüfe auf Sektion-Pattern
       let matched = false;
       for (const { pattern, type, title, icon } of sectionPatterns) {
-        if (pattern.test(trimmedParagraph)) {
+        if (pattern.test(trimmedLine)) {
           // Verhindere Duplikate
           if (!sections.find(s => s.type === type)) {
-            const content = trimmedParagraph.replace(pattern, '').trim();
-            sections.push({ type, title, content, icon });
+            currentSection = { type, title, content: [], icon };
+            sections.push(currentSection);
           }
           matched = true;
           break;
         }
       }
       
-      // Fallback für unstrukturierten Text
-      if (!matched) {
-        if (sections.length === 0) {
-          sections.push({ type: 'general', title: 'Analyse-Ergebnis', content: trimmedParagraph, icon: 'file-text' });
-        } else {
-          // Füge zu letzter Sektion hinzu
-          sections[sections.length - 1].content += '\n\n' + trimmedParagraph;
-        }
+      // Füge Inhalt zur aktuellen Sektion hinzu
+      if (!matched && currentSection) {
+        currentSection.content.push(trimmedLine);
+      } else if (!matched && sections.length === 0) {
+        // Fallback für unstrukturierten Text
+        currentSection = { type: 'general', title: 'Analyse-Ergebnis', content: [trimmedLine], icon: 'file-text' };
+        sections.push(currentSection);
       }
     });
     
     // Fallback wenn keine Sektionen erkannt wurden
     if (sections.length === 0) {
-      sections.push({ type: 'general', title: 'Analyse-Ergebnis', content: text, icon: 'file-text' });
+      sections.push({ 
+        type: 'general', 
+        title: 'Analyse-Ergebnis', 
+        content: cleanText.split('\n').filter(line => line.trim()), 
+        icon: 'file-text' 
+      });
     }
     
     return sections.map((section, index) => (
@@ -223,7 +234,9 @@ export default function AIAnalyzerPage() {
           <h4 className="cs-section_title">{section.title}</h4>
         </Div>
         <Div className="cs-section_content">
-          <p className="cs-section_text">{section.content}</p>
+          {section.content.map((line, lineIndex) => (
+            <p key={lineIndex} className="cs-section_text">{line}</p>
+          ))}
         </Div>
       </Div>
     ));
