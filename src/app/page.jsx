@@ -14,6 +14,7 @@ import BenefitsSlider from '@/app/ui/Slider/TimelineSlider';
 import Spacing from '@/app/ui/Spacing';
 import VideoModal from '@/app/ui/VideoModal';
 import Card from './ui/Card';
+import Link from 'next/link';
 
 // Hero Social Links
 const heroSocialLinks = [
@@ -114,7 +115,15 @@ export default function Home() {
             </Div>
             <Div className="col-xl-8">
               <Div className="row">
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+                <Div className="col-lg-3 col-sm-6">
+                  <Card
+                    title="AI Haar-Analyzer"
+                    link="/ai-analyzer"
+                    src="/images/service_1.webp"
+                    alt="AI Analyse"
+                  />
+                  <Spacing lg="0" md="30" />
+                </Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="FUE Saphir"
@@ -124,7 +133,6 @@ export default function Home() {
                   />
                   <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="DHI Technik"
@@ -143,7 +151,6 @@ export default function Home() {
                   />
                   <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="SMP"
@@ -153,7 +160,6 @@ export default function Home() {
                   />
                   <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
               </Div>
             </Div>
           </Div>
@@ -185,8 +191,57 @@ export default function Home() {
       </Div>
       {/* End Portfolio Section */}
 
+      {/* Start AI Analyzer CTA Section */}
+      <Spacing lg="100" md="60" />
+      <Div className="container">
+        <Div className="row align-items-center">
+          <Div className="col-lg-6">
+            <SectionHeading
+              title="Revolutionäre KI-Haaranalyse"
+              subtitle="Kostenlose Erstanalyse"
+              variant="cs-style1"
+            />
+            <Spacing lg="45" md="30" />
+            <p className="cs-m0">
+              Nutzen Sie unsere fortschrittliche KI-Technologie für eine präzise Analyse Ihrer Haarsituation. 
+              Laden Sie einfach ein Foto hoch und erhalten Sie in wenigen Sekunden eine detaillierte Bewertung 
+              mit Behandlungsempfehlungen von unserem spezialisierten AI-System.
+            </p>
+            <Spacing lg="45" md="30" />
+            <Div className="cs-btn_group">
+              <Link href="/ai-analyzer" className="cs-btn cs-style1">
+                <span>Jetzt AI-Analyse starten</span>
+              </Link>
+              <Link href="/service/ai-analyzer" className="cs-btn cs-style2">
+                <span>Mehr erfahren</span>
+              </Link>
+            </Div>
+          </Div>
+          <Div className="col-lg-6">
+            <Spacing lg="0" md="40" />
+            <Div className="cs-ai_analyzer_preview">
+              <Div className="cs-ai_preview_icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M9 11H5a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h4m-4-7V9a2 2 0 0 1 2-2h4M5 11h4a2 2 0 0 1 2 2v3c0 1.1-.9 2-2 2H5m0-7h4"/>
+                  <path d="M19 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3"/>
+                  <path d="M19 7h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-1"/>
+                </svg>
+              </Div>
+              <h4>🎯 95% Genauigkeit</h4>
+              <p>Trainiert mit über 10.000 Haaranalyse-Bildern</p>
+              <h4>⚡ Sofortige Ergebnisse</h4>
+              <p>Detaillierte Analyse in wenigen Sekunden</p>
+              <h4>📊 Norwood-Skala</h4>
+              <p>Professionelle medizinische Bewertung</p>
+            </Div>
+          </Div>
+        </Div>
+      </Div>
+      <Spacing lg="50" md="40" />
+      {/* End AI Analyzer CTA Section */}
+
       {/* Start Benefits Section */}
-      <Spacing lg="150" md="80" />
+      <Spacing lg="100" md="40" />
       <Div className="cs-shape_wrap_2">
         <Div className="cs-shape_2">
           <Div />
