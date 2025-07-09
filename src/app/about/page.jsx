@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import Slider from 'react-slick';
 import Cta from "@/app/ui/Cta";
 import Div from "@/app/ui/Div";
 import FunFact from "@/app/ui/FunFact";
@@ -35,6 +36,29 @@ const funfaceData = [
 ];
 
 export default function AboutPage() {
+  const aboutSliderSettings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    cssEase: 'linear',
+    customPaging: function(i) {
+      return <button style={{
+        width: '12px',
+        height: '12px',
+        borderRadius: '50%',
+        backgroundColor: '#69cce6',
+        border: 'none',
+        margin: '0 5px'
+      }}></button>;
+    }
+  };
+
   return (
     <>
       {/* Start Page Heading Section */}
@@ -75,19 +99,24 @@ export default function AboutPage() {
             <Spacing lg="25" md="25" />
           </Div>
           <Div className="col-lg-7">
-            <Image
-              src={aboutImg2}
-              alt="FUE Haartransplantation"
-              className="w-100 cs-radius_15"
-            />
-            <Spacing lg="25" md="25" />
-          </Div>
-          <Div className="col-lg-5">
-            <Image
-              src={aboutImg3}
-              alt="DHI Technik"
-              className="w-100 cs-radius_15"
-            />
+            <Div style={{ position: 'relative', paddingBottom: '60px' }}>
+              <Slider {...aboutSliderSettings}>
+                <Div>
+                  <Image
+                    src={aboutImg2}
+                    alt="FUE Haartransplantation"
+                    className="w-100 cs-radius_15"
+                  />
+                </Div>
+                <Div>
+                  <Image
+                    src={aboutImg3}
+                    alt="DHI Technik"
+                    className="w-100 cs-radius_15"
+                  />
+                </Div>
+              </Slider>
+            </Div>
             <Spacing lg="25" md="25" />
           </Div>
         </Div>

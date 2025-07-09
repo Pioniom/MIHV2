@@ -36,7 +36,7 @@ export default function ServicesPage() {
                   <Card
                     title='FUE Saphir'
                     link='/service/fue-saphir'
-                    src='/images/service_1.webp'
+                    src='/images/service_1.jpeg'
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>
@@ -46,7 +46,7 @@ export default function ServicesPage() {
                   <Card
                     title='DHI Technik'
                     link='/service/dhi'
-                    src='/images/service_2.webp'
+                    src='/images/service_2.jpeg'
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>
@@ -55,7 +55,7 @@ export default function ServicesPage() {
                   <Card
                     title='PRP Therapie'
                     link='/service/prp'
-                    src='/images/service_3.webp'
+                    src='/images/service_3.jpeg'
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>
@@ -65,7 +65,7 @@ export default function ServicesPage() {
                   <Card
                     title='SMP'
                     link='/service/smp'
-                    src='/images/service_4.webp'
+                    src='/images/service_4.jpeg'
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>

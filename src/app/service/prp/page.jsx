@@ -9,7 +9,7 @@ import SectionHeading from "@/app/ui/SectionHeading";
 import TestimonialSlider from "@/app/ui/Slider/TestimonialSlider";
 import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
-import serviceImage from '../../../../public/images/service_img_1.jpeg'
+import serviceImage from '../../../../public/images/service_3.webp'
 
 export default function PRPPage() {
   return (
