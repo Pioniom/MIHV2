@@ -1,5 +1,5 @@
 const { generateText } = require('ai');
-const { openrouter } = require('@openrouter/ai-sdk-provider');
+const { createOpenRouter } = require('@openrouter/ai-sdk-provider');
 
 const ENFORCED_MODEL_ID = 'openai/gpt-4.1-mini';
 
@@ -90,17 +90,16 @@ exports.handler = async (event, context) => {
     console.log("Bild Format:", isBase64 ? 'Base64' : 'URL');
 
     // OpenRouter Provider konfigurieren
-    const provider = openrouter({
-      apiKey: apiKey,
-      headers: {
-        'HTTP-Referer': 'https://medicalinnhair.com',
-        'X-Title': 'Medical Inn Hair AI Analyzer'
-      }
+    const openrouter = createOpenRouter({ 
+      apiKey: apiKey
     });
+    
+    // LanguageModel für spezifisches Modell erstellen
+    const openRouterLanguageModel = openrouter(ENFORCED_MODEL_ID);
 
     // AI SDK verwenden
     const result = await generateText({
-      model: provider(ENFORCED_MODEL_ID),
+      model: openRouterLanguageModel,
       messages: [
         {
           role: 'user',
