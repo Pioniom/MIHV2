@@ -79,12 +79,48 @@ export default function DHIPage() {
               </Div>
               <Div className="col-lg-6">
                 <ul className="cs-list cs-style1 cs-mp0">
-                  <li>Keine Vorinzision nötig</li>
-                  <li>Höhere Anwuchsrate</li>
-                  <li>Präzise Winkelkontrolle</li>
-                  <li>Schnellere Heilung</li>
-                  <li>Natürlichere Ergebnisse</li>
-                  <li>Geringere Blutungen</li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#69cce6" strokeWidth="2" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22,4 12,14.01 9,11.01"/>
+                    </svg>
+                    Keine Vorinzision nötig
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#69cce6" strokeWidth="2" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                      <path d="M3 3v18h18"/>
+                      <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                    </svg>
+                    Höhere Anwuchsrate
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#69cce6" strokeWidth="2" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                      <circle cx="12" cy="12" r="10"/>
+                      <circle cx="12" cy="12" r="6"/>
+                      <circle cx="12" cy="12" r="2"/>
+                    </svg>
+                    Präzise Winkelkontrolle
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#69cce6" strokeWidth="2" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                    Schnellere Heilung
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#69cce6" strokeWidth="2" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                      <circle cx="12" cy="12" r="10"/>
+                      <path d="m9 12 2 2 4-4"/>
+                    </svg>
+                    Natürlichere Ergebnisse
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#69cce6" strokeWidth="2" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                      <path d="M7 10v12"/>
+                      <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/>
+                    </svg>
+                    Geringere Blutungen
+                  </li>
                 </ul>
               </Div>
             </Div>

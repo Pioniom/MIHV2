@@ -93,7 +93,7 @@ export default function Home() {
         <FunFact
           variant="cs-type1"
           title="Zertifizierte Qualität"
-          subtitle="Als staatlich anerkannte Privatklinik in Düsseldorf erfüllen wir höchste Hygiene- und Qualitätsstandards nach § 30 GewO. Alle Eingriffe nach deutschen medizinischen Standards für natürliche und dauerhafte Ergebnisse."
+          subtitle="Als staatlich anerkannte Privatklinik in Düsseldorf erfüllen wir höchste Hygiene- und Qualitätsstandards nach § 30 GewO. Alle Eingriffe erfolgen nach deutschen medizinischen Standards für natürliche und dauerhafte Ergebnisse."
           data={funfaceData}
         />
       </div>
@@ -114,51 +114,46 @@ export default function Home() {
               <Spacing lg="90" md="45" />
             </Div>
             <Div className="col-xl-8">
-              <Div className="row">
-                <Div className="col-lg-3 col-sm-6">
+              <Div className="cs-bento_grid">
+                <Div className="cs-bento_item cs-bento_large">
                   <Card
                     title="AI Haar-Analyzer"
                     link="/ai-analyzer"
-                    src="/images/service_1.webp"
+                    src="/images/service_5.webp"
                     alt="AI Analyse"
                   />
-                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6">
+                <Div className="cs-bento_item cs-bento_medium">
                   <Card
                     title="FUE Saphir"
                     link="/service/fue-saphir"
                     src="/images/service_1.webp"
                     alt="Service"
                   />
-                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6">
+                <Div className="cs-bento_item cs-bento_medium">
                   <Card
                     title="DHI Technik"
                     link="/service/dhi"
                     src="/images/service_2.webp"
                     alt="Service"
                   />
-                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6">
+                <Div className="cs-bento_item cs-bento_small">
                   <Card
                     title="PRP Therapie"
                     link="/service/prp"
                     src="/images/service_3.webp"
                     alt="Service"
                   />
-                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6">
+                <Div className="cs-bento_item cs-bento_small">
                   <Card
                     title="SMP"
                     link="/service/smp"
                     src="/images/service_4.webp"
                     alt="Service"
                   />
-                  <Spacing lg="0" md="30" />
                 </Div>
               </Div>
             </Div>
@@ -191,54 +186,6 @@ export default function Home() {
       </Div>
       {/* End Portfolio Section */}
 
-      {/* Start AI Analyzer CTA Section */}
-      <Spacing lg="100" md="60" />
-      <Div className="container">
-        <Div className="row align-items-center">
-          <Div className="col-lg-6">
-            <SectionHeading
-              title="Revolutionäre KI-Haaranalyse"
-              subtitle="Kostenlose Erstanalyse"
-              variant="cs-style1"
-            />
-            <Spacing lg="45" md="30" />
-            <p className="cs-m0">
-              Nutzen Sie unsere fortschrittliche KI-Technologie für eine präzise Analyse Ihrer Haarsituation. 
-              Laden Sie einfach ein Foto hoch und erhalten Sie in wenigen Sekunden eine detaillierte Bewertung 
-              mit Behandlungsempfehlungen von unserem spezialisierten AI-System.
-            </p>
-            <Spacing lg="45" md="30" />
-            <Div className="cs-btn_group">
-              <Link href="/ai-analyzer" className="cs-btn cs-style1">
-                <span>Jetzt AI-Analyse starten</span>
-              </Link>
-              <Link href="/service/ai-analyzer" className="cs-btn cs-style2">
-                <span>Mehr erfahren</span>
-              </Link>
-            </Div>
-          </Div>
-          <Div className="col-lg-6">
-            <Spacing lg="0" md="40" />
-            <Div className="cs-ai_analyzer_preview">
-              <Div className="cs-ai_preview_icon">
-                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M9 11H5a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h4m-4-7V9a2 2 0 0 1 2-2h4M5 11h4a2 2 0 0 1 2 2v3c0 1.1-.9 2-2 2H5m0-7h4"/>
-                  <path d="M19 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3"/>
-                  <path d="M19 7h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-1"/>
-                </svg>
-              </Div>
-              <h4>🎯 95% Genauigkeit</h4>
-              <p>Trainiert mit über 10.000 Haaranalyse-Bildern</p>
-              <h4>⚡ Sofortige Ergebnisse</h4>
-              <p>Detaillierte Analyse in wenigen Sekunden</p>
-              <h4>📊 Norwood-Skala</h4>
-              <p>Professionelle medizinische Bewertung</p>
-            </Div>
-          </Div>
-        </Div>
-      </Div>
-      <Spacing lg="50" md="40" />
-      {/* End AI Analyzer CTA Section */}
 
       {/* Start Benefits Section */}
       <Spacing lg="100" md="40" />
@@ -324,7 +271,7 @@ export default function Home() {
 
       {/* Start MovingText Section */}
       <Spacing lg="125" md="70" />
-      <MovingText text="Vertrauensvolle Partnerschaften für beste Ergebnisse" />
+      <MovingText text="AI Analyzer powered by Web Anomaly" />
       <Spacing lg="105" md="70" />
       {/* End MovingText Section */}
 

@@ -79,12 +79,48 @@ export default function FueSaphirPage() {
               </Div>
               <Div className="col-lg-6">
                 <ul className="cs-list cs-style1 cs-mp0">
-                  <li>Minimale Narbenbildung</li>
-                  <li>Schnelle Heilung</li>
-                  <li>Natürliche Ergebnisse</li>
-                  <li>Geringere Schwellungen</li>
-                  <li>Präzise Implantation</li>
-                  <li>Höhere Anwuchsrate</li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#69cce6" strokeWidth="2" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                      <path d="M9 12l2 2 4-4"/>
+                      <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.54 0 4.83 1.05 6.5 2.75"/>
+                    </svg>
+                    Minimale Narbenbildung
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#69cce6" strokeWidth="2" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                    Schnelle Heilung
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#69cce6" strokeWidth="2" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    Natürliche Ergebnisse
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#69cce6" strokeWidth="2" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                      <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/>
+                      <line x1="16" y1="8" x2="2" y2="22"/>
+                      <line x1="17.5" y1="15" x2="9" y2="15"/>
+                    </svg>
+                    Geringere Schwellungen
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#69cce6" strokeWidth="2" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                      <circle cx="12" cy="12" r="10"/>
+                      <circle cx="12" cy="12" r="6"/>
+                      <circle cx="12" cy="12" r="2"/>
+                    </svg>
+                    Präzise Implantation
+                  </li>
+                  <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#69cce6" strokeWidth="2" style={{marginRight: '8px', verticalAlign: 'middle'}}>
+                      <path d="M3 3v18h18"/>
+                      <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                    </svg>
+                    Höhere Anwuchsrate
+                  </li>
                 </ul>
               </Div>
             </Div>

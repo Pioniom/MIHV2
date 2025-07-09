@@ -213,13 +213,13 @@
 @media screen and (max-width: 767px) {
   .cs-funfacts {
     grid-gap: 15px 15px;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 575px) {
   .cs-funfacts {
     grid-gap: 15px 15px;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .cs-funfact_wrap,
   .cs-funfact_wrap_2 {

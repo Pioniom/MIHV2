@@ -12,6 +12,7 @@ import aboutImg from '../../../public/images/about_img_1.webp'
 import aboutImg2 from '../../../public/images/about_img_2.webp'
 import aboutImg3 from '../../../public/images/about_img_3.webp'
 import aboutImg4 from '../../../public/images/about_img_4.webp'
+import Link from 'next/link'
 
 
 
@@ -84,6 +85,15 @@ export default function AboutPage() {
                 Wir unterscheiden uns durch unsere langjährige Erfahrung, modernste FUE und DHI Techniken 
                 sowie unseren ganzheitlichen Ansatz. Unser Expertenteam sorgt für natürliche und dauerhafte 
                 Ergebnisse mit höchsten Qualitätsstandards.
+              </p>
+              <Spacing lg="20" md="15" />
+              <p className="cs-m0">
+                <strong>Revolutionäre KI-Technologie:</strong> Als innovatives Zentrum bieten wir Ihnen unseren 
+                <Link href="/ai-analyzer" className="cs-accent_color" style={{textDecoration: 'underline', marginLeft: '5px', marginRight: '5px'}}>
+                  AI Haar-Analyzer
+                </Link>
+                für eine präzise Vorabanalyse Ihrer Haarsituation. Diese moderne Technologie ermöglicht es uns, 
+                bereits vor Ihrem Besuch eine detaillierte Ersteinschätzung zu erstellen.
               </p>
               <Spacing lg="30" md="30" />
               <Div className="cs-separator cs-accent_bg"></Div>

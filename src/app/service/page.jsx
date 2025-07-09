@@ -31,7 +31,15 @@ export default function ServicesPage() {
             </Div>
             <Div className='col-xl-8'>
               <Div className='row'>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
+                <Div className='col-lg-3 col-sm-6'>
+                  <Card
+                    title='AI Haar-Analyzer'
+                    link='/ai-analyzer'
+                    src='/images/service_1.webp'
+                    alt='AI Analyse'
+                  />
+                  <Spacing lg='0' md='30'/>
+                </Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
                     title='FUE Saphir'
