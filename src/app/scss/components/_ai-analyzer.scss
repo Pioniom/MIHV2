@@ -513,6 +513,121 @@
   .cs-step {
     justify-content: center;
   }
+  
+  // Mobile optimierte Analyse-Ausgabe
+  .cs-analysis_structured {
+    gap: 12px;
+  }
+  
+  .cs-analysis_section {
+    padding: 15px;
+    border-radius: 8px;
+    margin: 0 -5px;
+  }
+  
+  .cs-section_header {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  
+  .cs-section_icon {
+    width: 32px;
+    height: 32px;
+    
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  
+  .cs-section_title {
+    font-size: 16px;
+  }
+  
+  .cs-section_content {
+    margin-left: 42px;
+  }
+  
+  .cs-section_text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  .cs-analysis_result {
+    padding: 20px;
+    margin: 0 -10px;
+  }
+  
+  .cs-result_title {
+    font-size: 22px;
+    
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+  
+  .cs-result_content {
+    padding: 20px;
+  }
+  
+  // Mobile Upload-Bereich
+  .cs-upload_area {
+    padding: 30px 15px;
+    margin: 0 -5px;
+  }
+  
+  .cs-upload_title {
+    font-size: 18px;
+  }
+  
+  .cs-upload_text {
+    font-size: 13px;
+    line-height: 1.5;
+    br {
+      display: none;
+    }
+  }
+  
+  .cs-preview_image {
+    max-width: 150px;
+    max-height: 150px;
+  }
+  
+  .cs-btn_secondary {
+    font-size: 13px;
+    padding: 10px 20px;
+    
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  
+  // Mobile Disclaimer
+  .cs-analysis_disclaimer {
+    padding: 15px;
+    margin: 0 -5px;
+  }
+  
+  .cs-disclaimer_text {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  
+  // Mobile Badge
+  .cs-badge_link {
+    padding: 6px 12px;
+    gap: 6px;
+  }
+  
+  .cs-badge_main {
+    font-size: 10px;
+  }
+  
+  .cs-badge_sub {
+    font-size: 8px;
+  }
 }
 
 // Button Styles
