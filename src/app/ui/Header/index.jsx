@@ -186,6 +186,22 @@ export default function Header({ variant }) {
                               FAQ
                             </Link>
                           </li>
+                          <li>
+                            <Link
+                              href="/impressum"
+                              onClick={() => setMobileToggle(false)}
+                            >
+                              Impressum
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/datenschutz"
+                              onClick={() => setMobileToggle(false)}
+                            >
+                              Datenschutz
+                            </Link>
+                          </li>
                         </ul>
                       </DropDown>
                     </li>

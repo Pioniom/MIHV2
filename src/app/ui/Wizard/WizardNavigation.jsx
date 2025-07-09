@@ -19,21 +19,23 @@ export default function WizardNavigation({
     <Div className="cs-wizard_navigation">
       <Div className="cs-nav_buttons">
         {showPrev && (
-          <Button
-            btnText={customPrevText || 'Zurück'}
-            variant="cs-type2"
+          <button
+            className="cs-btn cs-type2"
             onClick={onPrev}
             disabled={isSubmitting}
-          />
+          >
+            <span>{customPrevText || 'Zurück'}</span>
+          </button>
         )}
         
         {showNext && (
-          <Button
-            btnText={customNextText || (isLastStep ? 'Absenden' : 'Weiter')}
-            variant="cs-type1"
+          <button
+            className="cs-btn cs-type1"
             onClick={onNext}
             disabled={isSubmitting}
-          />
+          >
+            <span>{customNextText || (isLastStep ? 'Absenden' : 'Weiter')}</span>
+          </button>
         )}
       </Div>
     </Div>

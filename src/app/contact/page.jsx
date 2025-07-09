@@ -152,7 +152,7 @@ export default function ContactPage() {
                     Ideal für erste Informationen und Behandlungsplanung.
                   </p>
                   <button 
-                    className="cs-text_btn cs-type1"
+                    className="cs-btn cs-style1"
                     onClick={() => setActiveWizard('booking')}
                   >
                     <span>Termin vereinbaren</span>
@@ -174,7 +174,7 @@ export default function ContactPage() {
                     Behandlungsvorbereitung. Spart Zeit beim Termin.
                   </p>
                   <button 
-                    className="cs-text_btn cs-type2"
+                    className="cs-btn cs-style1"
                     onClick={() => setActiveWizard('consultation')}
                   >
                     <span>Bogen ausfüllen</span>
