@@ -1,0 +1,196 @@
+// AI Analyzer Styles
+.cs-analyzer_upload {
+  margin-bottom: 40px;
+}
+
+.cs-upload_area {
+  border: 2px dashed #333333;
+  border-radius: 15px;
+  padding: 60px 40px;
+  text-align: center;
+  background: #1a1a1a;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  
+  &:hover {
+    border-color: #69cce6;
+    background: rgba(105, 204, 230, 0.05);
+  }
+  
+  &.cs-drag_active {
+    border-color: #69cce6;
+    background: rgba(105, 204, 230, 0.1);
+    transform: scale(1.02);
+  }
+}
+
+.cs-upload_icon {
+  margin-bottom: 20px;
+  color: #69cce6;
+  
+  svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.cs-upload_title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.cs-upload_text {
+  color: #cccccc;
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.cs-upload_preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cs-preview_image {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cs-error_message {
+  padding: 20px;
+  background: rgba(220, 53, 69, 0.1);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.cs-error_text {
+  color: #ff6b6b;
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+}
+
+.cs-analysis_result {
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 15px;
+  padding: 40px;
+  margin-top: 40px;
+}
+
+.cs-result_title {
+  color: #69cce6;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.cs-result_content {
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 30px;
+  border: 1px solid #333333;
+}
+
+.cs-analysis_text {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  strong {
+    color: #69cce6;
+    font-weight: 600;
+  }
+}
+
+// Loading States
+.cs-btn {
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .cs-upload_area {
+    padding: 40px 20px;
+  }
+  
+  .cs-upload_icon svg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .cs-upload_title {
+    font-size: 20px;
+  }
+  
+  .cs-upload_text {
+    font-size: 14px;
+  }
+  
+  .cs-analysis_result {
+    padding: 20px;
+  }
+  
+  .cs-result_content {
+    padding: 20px;
+  }
+  
+  .cs-analysis_text {
+    font-size: 14px;
+  }
+}
+
+// Animation für Upload
+@keyframes uploadPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cs-upload_area.cs-uploading {
+  animation: uploadPulse 1.5s infinite;
+}
+
+// Hover-Effekte
+.cs-upload_area:hover .cs-upload_icon {
+  animation: bounce 0.6s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+}

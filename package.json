@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@openrouter/ai-sdk-provider": "^0.7.2",
     "bootstrap": "^5.3.5",
     "html-react-parser": "^5.2.3",
     "lightgallery": "^2.8.3",

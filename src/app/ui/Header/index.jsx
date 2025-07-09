@@ -99,6 +99,14 @@ export default function Header({ variant }) {
                               SMP Mikropigmentierung
                             </Link>
                           </li>
+                          <li>
+                            <Link
+                              href="/ai-analyzer"
+                              onClick={() => setMobileToggle(false)}
+                            >
+                              AI Haar-Analyzer
+                            </Link>
+                          </li>
                         </ul>
                       </DropDown>
                     </li>
