@@ -3,6 +3,55 @@
   margin-bottom: 40px;
 }
 
+// AI Info Boxes
+.cs-analysis_info {
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 15px;
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.cs-info_box {
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  h4 {
+    color: #69cce6;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+  
+  p {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.cs-info_icon {
+  color: #69cce6;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(105, 204, 230, 0.1);
+  border-radius: 50%;
+  
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 .cs-upload_area {
   border: 2px dashed #333333;
   border-radius: 15px;
@@ -58,10 +107,13 @@
 }
 
 .cs-preview_image {
-  max-width: 100%;
-  max-height: 300px;
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
 }
 
 .cs-error_message {
@@ -114,6 +166,59 @@
     color: #69cce6;
     font-weight: 600;
   }
+}
+
+// Disclaimer Section
+.cs-analysis_disclaimer {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 10px;
+}
+
+.cs-disclaimer_text {
+  color: #ffc107;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+// Powered by Badge
+.cs-powered_badge {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cs-badge_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.9) 0%, rgba(8, 145, 178, 0.9) 100%);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
+  }
+}
+
+.cs-badge_main {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.cs-badge_sub {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 10px;
 }
 
 // Loading States

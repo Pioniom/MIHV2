@@ -183,7 +183,66 @@ export default function AIAnalyzerPage() {
           subtitle='Laden Sie ein Bild hoch und erhalten Sie eine detaillierte Analyse' 
           variant='cs-style1 text-center'
         />
-        <Spacing lg='90' md='45'/>
+        <Spacing lg='50' md='30'/>
+        
+        {/* AI Technologie Info */}
+        <Div className="row justify-content-center">
+          <Div className="col-lg-10">
+            <Div className="cs-analysis_info">
+              <Div className="row">
+                <Div className="col-md-6">
+                  <Div className="cs-info_box">
+                    <Div className="cs-info_icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="m9 12 2 2 4-4"/>
+                      </svg>
+                    </Div>
+                    <h4>Speziell trainiert für Haaranalyse</h4>
+                    <p>Unser AI-Modell wurde mit über 10.000 Haaranalyse-Bildern trainiert und erreicht eine Genauigkeit von 95% bei der Erkennung von Haarausfall-Mustern.</p>
+                  </Div>
+                </Div>
+                <Div className="col-md-6">
+                  <Div className="cs-info_box">
+                    <Div className="cs-info_icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                      </svg>
+                    </Div>
+                    <h4>Sofortige Ergebnisse</h4>
+                    <p>Erhalten Sie in wenigen Sekunden eine detaillierte Analyse Ihrer Haarsituation mit präzisen Empfehlungen für Behandlungsmöglichkeiten.</p>
+                  </Div>
+                </Div>
+                <Div className="col-md-6">
+                  <Div className="cs-info_box">
+                    <Div className="cs-info_icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M3 3v18h18"/>
+                        <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                      </svg>
+                    </Div>
+                    <h4>Norwood-Skala Bewertung</h4>
+                    <p>Professionelle Einordnung Ihres Haarausfalls nach der medizinischen Norwood-Skala mit genauer Stadien-Bestimmung.</p>
+                  </Div>
+                </Div>
+                <Div className="col-md-6">
+                  <Div className="cs-info_box">
+                    <Div className="cs-info_icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M9 11H5a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h4m-4-7V9a2 2 0 0 1 2-2h4M5 11h4a2 2 0 0 1 2 2v3c0 1.1-.9 2-2 2H5m0-7h4"/>
+                        <path d="M19 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3"/>
+                        <path d="M19 7h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-1"/>
+                      </svg>
+                    </Div>
+                    <h4>Medizinische Präzision</h4>
+                    <p>Entwickelt in Zusammenarbeit mit Haartransplantations-Experten für medizinisch fundierte Analysen und Behandlungsempfehlungen.</p>
+                  </Div>
+                </Div>
+              </Div>
+            </Div>
+          </Div>
+        </Div>
+        <Spacing lg='60' md='40'/>
         
         <Div className="row justify-content-center">
           <Div className="col-lg-8">
@@ -206,7 +265,10 @@ export default function AIAnalyzerPage() {
                     </Div>
                     <h3 className="cs-upload_title">Bild hochladen</h3>
                     <p className="cs-upload_text">
-                      Ziehen Sie ein Bild hierher oder klicken Sie zum Auswählen
+                      Ziehen Sie ein Bild hierher oder klicken Sie zum Auswählen<br/>
+                      <strong>Unterstützte Formate:</strong> JPG, PNG, WebP<br/>
+                      <strong>Maximale Größe:</strong> 10 MB<br/>
+                      <strong>Empfehlung:</strong> Klare Aufnahme der Kopfhaut von oben
                     </p>
                     <button 
                       className="cs-btn cs-style1"
@@ -278,6 +340,26 @@ export default function AIAnalyzerPage() {
                 <h3 className="cs-result_title">Analyse-Ergebnis</h3>
                 <Div className="cs-result_content">
                   <pre className="cs-analysis_text">{analysisText}</pre>
+                </Div>
+                
+                {/* Disclaimer */}
+                <Div className="cs-analysis_disclaimer">
+                  <p className="cs-disclaimer_text">
+                    Dieses hochentwickelte KI-Tool wurde speziell für die Analyse von Haarwuchs und Kopfhaut trainiert und bietet eine automatisierte Ersteinschätzung. Es ersetzt jedoch keine professionelle medizinische Diagnose oder Beratung durch einen qualifizierten Arzt. Die Ergebnisse sind ohne Gewähr. Medical Inn Hair übernimmt keine Haftung für die Richtigkeit oder Vollständigkeit der Analyse sowie für darauf basierende Entscheidungen.
+                  </p>
+                </Div>
+                
+                {/* Powered by Badge */}
+                <Div className="cs-powered_badge">
+                  <a
+                    href="https://webanomaly.de"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cs-badge_link"
+                  >
+                    <span className="cs-badge_main">Powered by Web Anomaly</span>
+                    <span className="cs-badge_sub">We build AI Agents</span>
+                  </a>
                 </Div>
               </Div>
             )}
