@@ -104,8 +104,11 @@ export default function Header({ variant }) {
                     </li>
                     <li className="menu-item-has-children">
                       <Link
-                        href="/portfolio"
-                        onClick={() => setMobileToggle(false)}
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setMobileToggle(false);
+                        }}
                       >
                         Galerie
                       </Link>
