@@ -3,32 +3,26 @@ const { createOpenRouter } = require('@openrouter/ai-sdk-provider');
 
 const ENFORCED_MODEL_ID = 'openai/gpt-4.1-mini';
 
-const DEFAULT_PROMPT = `Du bist ein erfahrener Experte für Haartransplantationen. Analysiere das Bild sorgfältig und gib eine besonders ausführliche, fundierte Ersteinschätzung ab.
+const DEFAULT_PROMPT = `Du bist ein Experte für Haartransplantationen. Analysiere das Bild und gib eine fundierte Ersteinschätzung ab.
 
-WICHTIGE HINWEISE ZUR ANALYSE:
-1. Falls auf dem Bild KEIN Haarausfall erkennbar ist, weise ausdrücklich darauf hin, dass keine Behandlungsnotwendigkeit besteht.
-2. Wenn das Bild ungeeignet ist (z.B. keine Kopfhaut sichtbar, zu dunkel, unscharf), bitte darauf hinweisen.
-3. Bei Verdacht auf Testbilder ohne echten Haarausfall, dies klar kommunizieren.
+WICHTIGE HINWEISE:
+1. Falls KEIN Haarausfall erkennbar ist, weise darauf hin, dass keine Behandlung nötig ist.
+2. Bei ungeeigneten Bildern (unscharf, zu dunkel, keine Kopfhaut) bitte erwähnen.
+3. Graftanzahl nur bei erkennbarem Haarausfall zwischen 2500-5000 angeben.
 
-Wichtige Vorgaben:
-- Die Analyse der Bilder muss präzise, nachvollziehbar und detailliert erfolgen.
-- Die geschätzte benötigte Graftanzahl muss bei erkennbarem Haarausfall zwischen 2500 und 5000 liegen.
-- Bei fehlendem Haarausfall oder nicht erkennbarer Kopfhaut KEINE Graftanzahl angeben.
-- Gehe auf alle relevanten Details und Besonderheiten ein, die auf dem Bild erkennbar sind.
+Strukturiere deine Antwort so:
 
-Berücksichtige dabei folgende Aspekte und erläutere jeden Punkt ausführlich:
+Haarausfall-Typ: Beschreibe den Typ nach Norwood-Skala
 
-Haarausfall-Typ: Beschreibe den Haarausfall-Typ (nach Norwood-Skala, wenn erkennbar)
+Benötigte Grafts: Schätze die benötigten Haarfollikel
 
-Benötigte Grafts: Gib eine Einschätzung der benötigten Haarfollikel
+Empfohlene Methode: Welche Transplantationsmethode (FUE, DHI, etc.)
 
-Empfohlene Methode: Welche Transplantationsmethode (FUE, DHI, etc.) wäre am besten geeignet?
+Mögliche Herausforderungen: Potenzielle Komplikationen
 
-Mögliche Herausforderungen: Beschreibe potenzielle Komplikationen oder Herausforderungen
+Empfehlungen: Ratschläge für optimalen Behandlungserfolg
 
-Empfehlungen: Gib allgemeine Ratschläge für den bestmöglichen Behandlungserfolg
-
-Gib deine Antwort auf Deutsch und strukturiere sie übersichtlich. Die Analyse soll für Laien verständlich, aber fachlich präzise sein.`;
+Antwort auf Deutsch, präzise aber verständlich für Laien.`;
 
 exports.handler = async (event, context) => {
   // CORS-Header
@@ -97,27 +91,32 @@ exports.handler = async (event, context) => {
     // LanguageModel für spezifisches Modell erstellen
     const openRouterLanguageModel = openrouter(ENFORCED_MODEL_ID);
 
-    // AI SDK verwenden
-    const result = await generateText({
-      model: openRouterLanguageModel,
-      messages: [
-        {
-          role: 'user',
-          content: [
-            {
-              type: 'text',
-              text: prompt
-            },
-            {
-              type: 'image',
-              image: formattedImageUrl
-            }
-          ]
-        }
-      ],
-      temperature: 0.6,
-      maxTokens: 2000
-    });
+    // AI SDK verwenden mit Timeout
+    const result = await Promise.race([
+      generateText({
+        model: openRouterLanguageModel,
+        messages: [
+          {
+            role: 'user',
+            content: [
+              {
+                type: 'text',
+                text: prompt
+              },
+              {
+                type: 'image',
+                image: formattedImageUrl
+              }
+            ]
+          }
+        ],
+        temperature: 0.6,
+        maxTokens: 1500
+      }),
+      new Promise((_, reject) => 
+        setTimeout(() => reject(new Error('Timeout nach 25 Sekunden')), 25000)
+      )
+    ]);
 
     console.log('OpenRouter Antwort erhalten');
     const analysis = result.text || 'Keine Analyse verfügbar';
