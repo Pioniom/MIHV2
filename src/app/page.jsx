@@ -10,7 +10,7 @@ import PortfolioSlider from '@/app/ui/Slider/PortfolioSlider';
 import PostSlider from '@/app/ui/Slider/PostSlider';
 import TeamSlider from '@/app/ui/Slider/TeamSlider';
 import TestimonialSlider from '@/app/ui/Slider/TestimonialSlider';
-import TimelineSlider from '@/app/ui/Slider/TimelineSlider';
+import BenefitsSlider from '@/app/ui/Slider/TimelineSlider';
 import Spacing from '@/app/ui/Spacing';
 import VideoModal from '@/app/ui/VideoModal';
 import Card from './ui/Card';
@@ -91,8 +91,8 @@ export default function Home() {
       <div className="container">
         <FunFact
           variant="cs-type1"
-          title="Unsere Erfolge"
-          subtitle="Medical Inn Hair ist Ihr vertrauensvoller Partner für professionelle Haartransplantationen. Mit modernster Technik und langjähriger Erfahrung erzielen wir natürliche und dauerhafte Ergebnisse."
+          title="Zertifizierte Qualität"
+          subtitle="Als staatlich anerkannte Privatklinik in Düsseldorf erfüllen wir höchste Hygiene- und Qualitätsstandards nach § 30 GewO. Alle Eingriffe nach deutschen medizinischen Standards für natürliche und dauerhafte Ergebnisse."
           data={funfaceData}
         />
       </div>
@@ -185,7 +185,7 @@ export default function Home() {
       </Div>
       {/* End Portfolio Section */}
 
-      {/* Start Awards Section */}
+      {/* Start Benefits Section */}
       <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_2">
         <Div className="cs-shape_2">
@@ -195,19 +195,19 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="Auszeichnungen und Zertifikate"
-                subtitle="Unsere Qualität"
+                title="Komfort & Annehmlichkeiten"
+                subtitle="Medical Inn Hair Benefits"
                 variant="cs-style1"
               />
               <Spacing lg="90" md="45" />
             </Div>
             <Div className="col-xl-7 offset-xl-1">
-              <TimelineSlider />
+              <BenefitsSlider />
             </Div>
           </Div>
         </Div>
       </Div>
-      {/* End Awards Section */}
+      {/* End Benefits Section */}
 
       {/* Start Video Block Section */}
       <Spacing lg="130" md="70" />

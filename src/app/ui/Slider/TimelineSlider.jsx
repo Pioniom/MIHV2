@@ -3,52 +3,52 @@ import React from 'react';
 import Slider from 'react-slick';
 import Div from '../Div';
 import Timeline from '../Timeline';
-const timelineData = [
+const benefitsData = [
   [
     {
-      year: '2020',
-      name: 'ISHRS Zertifizierung',
-      position: 'International Society of Hair Restoration Surgery',
-      type: 'FUE Spezialisierung',
+      year: 'Hotel',
+      name: 'Komfortable Unterkünfte',
+      position: 'Partnerhotels in Düsseldorf',
+      type: 'Übernachtung inkludiert',
     },
     {
-      year: '2022',
-      name: 'DHI Zertifikat',
-      position: 'Direct Hair Implantation',
-      type: 'Advanced Technique',
+      year: 'Transport',
+      name: 'Kostenfreie Transfers',
+      position: 'Flughafen & Bahnhof',
+      type: 'Abholung und Rückfahrt',
     },
   ],
   [
     {
-      year: '2021',
-      name: 'Qualitätssiegel Düsseldorf',
-      position: 'Medizinische Exzellenz',
-      type: 'Patientensicherheit',
+      year: 'Parken',
+      name: 'Kostenlose Parkplätze',
+      position: 'Direkt vor der Klinik',
+      type: 'Sichere Stellplätze',
     },
     {
-      year: '2023',
-      name: 'ISO 9001:2015',
-      position: 'Qualitätsmanagement',
-      type: 'Zertifizierte Prozesse',
+      year: 'Barrierefreiheit',
+      name: 'Zugängliche Räumlichkeiten',
+      position: 'Rollstuhlgerechte Ausstattung',
+      type: 'Für alle Patienten',
     },
   ],
   [
     {
-      year: '2019',
-      name: 'Ärztekammer Zertifikat',
-      position: 'Fachbereich Haartransplantation',
-      type: 'Medizinische Qualifikation',
+      year: 'WLAN',
+      name: 'Kostenfreies Internet',
+      position: 'Hochgeschwindigkeits-WLAN',
+      type: 'Überall verfügbar',
     },
     {
-      year: '2024',
-      name: 'Patient Choice Award',
-      position: 'Beste Haarklinik Düsseldorf',
-      type: 'Patientenzufriedenheit',
+      year: 'Sprachen',
+      name: 'Mehrsprachiges Team',
+      position: 'Deutsch, Englisch, Türkisch',
+      type: 'Individuelle Betreuung',
     },
   ],
 ];
 
-export default function TimelineSlider() {
+export default function BenefitsSlider() {
   /** Slider Settings **/
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <div
@@ -95,7 +95,7 @@ export default function TimelineSlider() {
   };
   return (
     <Slider {...settings} className="cs-arrow_style3">
-      {timelineData.map((item, index) => (
+      {benefitsData.map((item, index) => (
         <Div key={index}>
           <Timeline columnData={item} />
         </Div>
