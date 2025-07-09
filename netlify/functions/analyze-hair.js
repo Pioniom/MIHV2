@@ -100,7 +100,7 @@ exports.handler = async (event, context) => {
 
     // AI SDK verwenden
     const result = await generateText({
-      model: provider(ENFORCED_MODEL_ID),
+      model: provider.languageModel(ENFORCED_MODEL_ID),
       messages: [
         {
           role: 'user',
