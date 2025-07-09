@@ -167,6 +167,114 @@ export default function AIAnalyzerPage() {
     }
   };
 
+  const parseAnalysisText = (text) => {
+    const sections = [];
+    const lines = text.split('\n');
+    let currentSection = null;
+    
+    lines.forEach((line) => {
+      line = line.trim();
+      if (!line) return;
+      
+      // Erkenne Überschriften
+      if (line.includes('Haarausfall-Typ') || line.includes('Haarausfall-Muster')) {
+        currentSection = { type: 'hairloss', title: 'Haarausfall-Typ', content: [], icon: 'target' };
+        sections.push(currentSection);
+      } else if (line.includes('Benötigte Grafts') || line.includes('Grafts')) {
+        currentSection = { type: 'grafts', title: 'Benötigte Grafts', content: [], icon: 'calculator' };
+        sections.push(currentSection);
+      } else if (line.includes('Empfohlene Methode') || line.includes('Methode')) {
+        currentSection = { type: 'method', title: 'Empfohlene Methode', content: [], icon: 'settings' };
+        sections.push(currentSection);
+      } else if (line.includes('Herausforderungen') || line.includes('Komplikationen')) {
+        currentSection = { type: 'challenges', title: 'Mögliche Herausforderungen', content: [], icon: 'alert' };
+        sections.push(currentSection);
+      } else if (line.includes('Empfehlungen') || line.includes('Ratschläge')) {
+        currentSection = { type: 'recommendations', title: 'Empfehlungen', content: [], icon: 'lightbulb' };
+        sections.push(currentSection);
+      } else if (currentSection) {
+        currentSection.content.push(line);
+      } else {
+        // Fallback für unstrukturierten Text
+        if (sections.length === 0) {
+          sections.push({ type: 'general', title: 'Allgemeine Analyse', content: [], icon: 'file-text' });
+        }
+        sections[sections.length - 1].content.push(line);
+      }
+    });
+    
+    return sections.map((section, index) => (
+      <Div key={index} className="cs-analysis_section">
+        <Div className="cs-section_header">
+          <Div className="cs-section_icon">
+            {getIconForSection(section.icon)}
+          </Div>
+          <h4 className="cs-section_title">{section.title}</h4>
+        </Div>
+        <Div className="cs-section_content">
+          {section.content.map((line, lineIndex) => (
+            <p key={lineIndex} className="cs-section_text">{line}</p>
+          ))}
+        </Div>
+      </Div>
+    ));
+  };
+  
+  const getIconForSection = (iconType) => {
+    switch (iconType) {
+      case 'target':
+        return (
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="6"/>
+            <circle cx="12" cy="12" r="2"/>
+          </svg>
+        );
+      case 'calculator':
+        return (
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <rect x="4" y="2" width="16" height="20" rx="2"/>
+            <line x1="8" y1="6" x2="16" y2="6"/>
+            <line x1="8" y1="10" x2="16" y2="10"/>
+            <line x1="8" y1="14" x2="16" y2="14"/>
+            <line x1="8" y1="18" x2="16" y2="18"/>
+          </svg>
+        );
+      case 'settings':
+        return (
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+          </svg>
+        );
+      case 'alert':
+        return (
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        );
+      case 'lightbulb':
+        return (
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M9 21h6"/>
+            <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.5 1.02 4.77 2.66 6.41.82.82 1.34 1.96 1.34 3.2V21c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-.39c0-1.24.52-2.38 1.34-3.2C20.98 16.77 22 14.5 22 12c0-4.97-4.03-9-9-9z"/>
+          </svg>
+        );
+      default:
+        return (
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14,2 14,8 20,8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10,9 9,9 8,9"/>
+          </svg>
+        );
+    }
+  };
+
   return (
     <>
       <PageHeading 
@@ -325,6 +433,64 @@ export default function AIAnalyzerPage() {
               </Div>
             )}
             
+            {/* Analysis Progress */}
+            {isAnalyzing && (
+              <Div className="cs-analysis_progress">
+                <Div className="cs-progress_container">
+                  <Div className="cs-progress_header">
+                    <Div className="cs-progress_icon">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M9 11H5a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h4m-4-7V9a2 2 0 0 1 2-2h4M5 11h4a2 2 0 0 1 2 2v3c0 1.1-.9 2-2 2H5m0-7h4"/>
+                        <path d="M19 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3"/>
+                        <path d="M19 7h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-1"/>
+                      </svg>
+                    </Div>
+                    <Div className="cs-progress_text">
+                      <h4>KI-Analyse läuft...</h4>
+                      <p>Ihr Bild wird von unserer spezialisierten Haaranalyse-KI untersucht</p>
+                    </Div>
+                  </Div>
+                  
+                  <Div className="cs-progress_bar">
+                    <Div className="cs-progress_track">
+                      <Div className="cs-progress_fill"></Div>
+                    </Div>
+                  </Div>
+                  
+                  <Div className="cs-progress_steps">
+                    <Div className="cs-step cs-step_active">
+                      <Div className="cs-step_icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <circle cx="12" cy="12" r="10"/>
+                          <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                      </Div>
+                      <span>Bild verarbeiten</span>
+                    </Div>
+                    <Div className="cs-step cs-step_active">
+                      <Div className="cs-step_icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <circle cx="12" cy="12" r="10"/>
+                          <circle cx="12" cy="12" r="6"/>
+                          <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                      </Div>
+                      <span>Haarstruktur analysieren</span>
+                    </Div>
+                    <Div className="cs-step cs-step_processing">
+                      <Div className="cs-step_icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M9 21h6"/>
+                          <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.5 1.02 4.77 2.66 6.41.82.82 1.34 1.96 1.34 3.2V21c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-.39c0-1.24.52-2.38 1.34-3.2C20.98 16.77 22 14.5 22 12c0-4.97-4.03-9-9-9z"/>
+                        </svg>
+                      </Div>
+                      <span>Ergebnisse generieren</span>
+                    </Div>
+                  </Div>
+                </Div>
+              </Div>
+            )}
+            
             <Spacing lg='40' md='30'/>
             
             {/* Fehler Anzeige */}
@@ -337,9 +503,18 @@ export default function AIAnalyzerPage() {
             {/* Analyse Ergebnis */}
             {analysisText && (
               <Div className="cs-analysis_result">
-                <h3 className="cs-result_title">Analyse-Ergebnis</h3>
+                <h3 className="cs-result_title">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M9 11H5a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h4m-4-7V9a2 2 0 0 1 2-2h4M5 11h4a2 2 0 0 1 2 2v3c0 1.1-.9 2-2 2H5m0-7h4"/>
+                    <path d="M19 7V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3"/>
+                    <path d="M19 7h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-1"/>
+                  </svg>
+                  Medizinische Haaranalyse
+                </h3>
                 <Div className="cs-result_content">
-                  <pre className="cs-analysis_text">{analysisText}</pre>
+                  <Div className="cs-analysis_structured">
+                    {parseAnalysisText(analysisText)}
+                  </Div>
                 </Div>
                 
                 {/* Disclaimer */}
