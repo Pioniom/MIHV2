@@ -181,67 +181,64 @@
 .cs-analysis_structured {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
 }
 
 .cs-analysis_section {
   background: #333333;
-  border-radius: 12px;
-  padding: 25px;
-  border-left: 4px solid #69cce6;
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 3px solid #69cce6;
   transition: all 0.3s ease;
   
   &:hover {
     background: #3a3a3a;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 }
 
 .cs-section_header {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 12px;
+  margin-bottom: 15px;
 }
 
 .cs-section_icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background: rgba(105, 204, 230, 0.15);
   border-radius: 50%;
   color: #69cce6;
   flex-shrink: 0;
   
   svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 }
 
 .cs-section_title {
   color: #69cce6;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   margin: 0;
 }
 
 .cs-section_content {
-  margin-left: 55px;
+  margin-left: 48px;
 }
 
 .cs-section_text {
   color: #ffffff;
-  font-size: 15px;
-  line-height: 1.7;
-  margin-bottom: 12px;
-  
-  &:last-child {
-    margin-bottom: 0;
-  }
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre-wrap;
   
   strong {
     color: #69cce6;
@@ -515,6 +512,36 @@
   
   .cs-step {
     justify-content: center;
+  }
+}
+
+// Button Styles
+.cs-btn_secondary {
+  background: transparent;
+  border: 2px solid #69cce6;
+  color: #69cce6;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    background: rgba(105, 204, 230, 0.1);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(105, 204, 230, 0.2);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  svg {
+    flex-shrink: 0;
   }
 }
 

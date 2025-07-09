@@ -168,40 +168,51 @@ export default function AIAnalyzerPage() {
   };
 
   const parseAnalysisText = (text) => {
-    const sections = [];
-    const lines = text.split('\n');
-    let currentSection = null;
+    // Vereinfachte Parser-Logic
+    const sectionPatterns = [
+      { pattern: /Haarausfall-Typ:|Haarausfall-Muster:/i, type: 'hairloss', title: 'Haarausfall-Typ', icon: 'target' },
+      { pattern: /Benötigte Grafts:|Grafts:/i, type: 'grafts', title: 'Benötigte Grafts', icon: 'calculator' },
+      { pattern: /Empfohlene Methode:|Methode:/i, type: 'method', title: 'Empfohlene Methode', icon: 'settings' },
+      { pattern: /Herausforderungen:|Komplikationen:/i, type: 'challenges', title: 'Mögliche Herausforderungen', icon: 'alert' },
+      { pattern: /Empfehlungen:|Ratschläge:/i, type: 'recommendations', title: 'Empfehlungen', icon: 'lightbulb' }
+    ];
     
-    lines.forEach((line) => {
-      line = line.trim();
-      if (!line) return;
+    const sections = [];
+    const paragraphs = text.split('\n\n').filter(p => p.trim());
+    
+    paragraphs.forEach((paragraph) => {
+      const trimmedParagraph = paragraph.trim();
+      if (!trimmedParagraph) return;
       
-      // Erkenne Überschriften
-      if (line.includes('Haarausfall-Typ') || line.includes('Haarausfall-Muster')) {
-        currentSection = { type: 'hairloss', title: 'Haarausfall-Typ', content: [], icon: 'target' };
-        sections.push(currentSection);
-      } else if (line.includes('Benötigte Grafts') || line.includes('Grafts')) {
-        currentSection = { type: 'grafts', title: 'Benötigte Grafts', content: [], icon: 'calculator' };
-        sections.push(currentSection);
-      } else if (line.includes('Empfohlene Methode') || line.includes('Methode')) {
-        currentSection = { type: 'method', title: 'Empfohlene Methode', content: [], icon: 'settings' };
-        sections.push(currentSection);
-      } else if (line.includes('Herausforderungen') || line.includes('Komplikationen')) {
-        currentSection = { type: 'challenges', title: 'Mögliche Herausforderungen', content: [], icon: 'alert' };
-        sections.push(currentSection);
-      } else if (line.includes('Empfehlungen') || line.includes('Ratschläge')) {
-        currentSection = { type: 'recommendations', title: 'Empfehlungen', content: [], icon: 'lightbulb' };
-        sections.push(currentSection);
-      } else if (currentSection) {
-        currentSection.content.push(line);
-      } else {
-        // Fallback für unstrukturierten Text
-        if (sections.length === 0) {
-          sections.push({ type: 'general', title: 'Allgemeine Analyse', content: [], icon: 'file-text' });
+      // Prüfe auf Sektion-Pattern
+      let matched = false;
+      for (const { pattern, type, title, icon } of sectionPatterns) {
+        if (pattern.test(trimmedParagraph)) {
+          // Verhindere Duplikate
+          if (!sections.find(s => s.type === type)) {
+            const content = trimmedParagraph.replace(pattern, '').trim();
+            sections.push({ type, title, content, icon });
+          }
+          matched = true;
+          break;
         }
-        sections[sections.length - 1].content.push(line);
+      }
+      
+      // Fallback für unstrukturierten Text
+      if (!matched) {
+        if (sections.length === 0) {
+          sections.push({ type: 'general', title: 'Analyse-Ergebnis', content: trimmedParagraph, icon: 'file-text' });
+        } else {
+          // Füge zu letzter Sektion hinzu
+          sections[sections.length - 1].content += '\n\n' + trimmedParagraph;
+        }
       }
     });
+    
+    // Fallback wenn keine Sektionen erkannt wurden
+    if (sections.length === 0) {
+      sections.push({ type: 'general', title: 'Analyse-Ergebnis', content: text, icon: 'file-text' });
+    }
     
     return sections.map((section, index) => (
       <Div key={index} className="cs-analysis_section">
@@ -212,9 +223,7 @@ export default function AIAnalyzerPage() {
           <h4 className="cs-section_title">{section.title}</h4>
         </Div>
         <Div className="cs-section_content">
-          {section.content.map((line, lineIndex) => (
-            <p key={lineIndex} className="cs-section_text">{line}</p>
-          ))}
+          <p className="cs-section_text">{section.content}</p>
         </Div>
       </Div>
     ));
@@ -396,14 +405,19 @@ export default function AIAnalyzerPage() {
                       className="cs-preview_image"
                     />
                     <button 
-                      className="cs-btn cs-style2"
+                      className="cs-btn cs-btn_secondary"
                       onClick={() => {
                         setImageUrl(null);
                         setAnalysisText('');
                         setError(null);
                       }}
                     >
-                      <span>Neues Bild</span>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{marginRight: '8px'}}>
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="17,8 12,3 7,8"/>
+                        <line x1="12" y1="3" x2="12" y2="15"/>
+                      </svg>
+                      Neues Bild auswählen
                     </button>
                   </Div>
                 )}
