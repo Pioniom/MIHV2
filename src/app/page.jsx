@@ -217,7 +217,7 @@ export default function Home() {
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
-          videoSrc="https://www.youtube.com/watch?v=VcaAVWtP48A"
+          videoSrc="https://www.youtube.com/watch?v=p4kKWn5s93E"
           bgUrl="/images/video_bg.webp"
         />
       </Div>
