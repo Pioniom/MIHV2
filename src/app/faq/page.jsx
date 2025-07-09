@@ -27,7 +27,7 @@ export default function FaqPage() {
                   <Button
                     variant="cs-type2"
                     btnLink="/faq"
-                    btnText="Behandlungsmethoden"
+                    btnText="FUE & DHI Methoden"
                     icon={
                       <Icon icon="material-symbols:content-copy-outline-rounded" />
                     }
@@ -57,7 +57,7 @@ export default function FaqPage() {
                   <Button
                     variant="cs-type2"
                     btnLink="/faq"
-                    btnText="Allgemeine Fragen"
+                    btnText="SMP & PRP Therapie"
                     icon={
                       <Icon icon="material-symbols:content-copy-outline-rounded" />
                     }

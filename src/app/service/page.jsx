@@ -24,7 +24,7 @@ export default function ServicesPage() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title='Behandlungen die wir anbieten' 
+                title='Medical Inn Hair Services' 
                 subtitle='Unsere Leistungen'
               />
               <Spacing lg='90' md='45'/>
@@ -34,9 +34,9 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='FUE Methode'
-                    link='/service/ui-ux-design'
-                    src='/images/service_1.jpeg'
+                    title='FUE Saphir'
+                    link='/service/fue-saphir'
+                    src='/images/service_1.webp'
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>
@@ -45,8 +45,8 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
                     title='DHI Technik'
-                    link='/service/reactjs-development'
-                    src='/images/service_2.jpeg'
+                    link='/service/dhi'
+                    src='/images/service_2.webp'
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>
@@ -54,8 +54,8 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
                     title='PRP Therapie'
-                    link='/service/digital-marketing'
-                    src='/images/service_3.jpeg'
+                    link='/service/prp'
+                    src='/images/service_3.webp'
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>
@@ -63,9 +63,9 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
                   <Card
-                    title='Nachsorge'
-                    link='/service/technology'
-                    src='/images/service_4.jpeg'
+                    title='SMP'
+                    link='/service/smp'
+                    src='/images/service_4.webp'
                     alt='Service'
                   />
                   <Spacing lg='0' md='30'/>
@@ -73,22 +73,10 @@ export default function ServicesPage() {
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    title='Haarpigmentierung'
-                    link='/service/consultancy'
-                    src='/images/service_5.jpeg'
-                    alt='Service'
-                  />
                   <Spacing lg='0' md='30'/>
                 </Div>
                 <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
                 <Div className='col-lg-3 col-sm-6'>
-                  <Card
-                    title='Haaranalyse'
-                    link='/service/creative-design'
-                    src='/images/service_6.jpeg'
-                    alt='Service'
-                  />
                   <Spacing lg='0' md='30'/>
                 </Div>
               </Div>

@@ -57,8 +57,11 @@ export default function Header({ variant }) {
                     </li>
                     <li className="menu-item-has-children">
                       <Link
-                        href="/service"
-                        onClick={() => setMobileToggle(false)}
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setMobileToggle(false);
+                        }}
                       >
                         Behandlungen
                       </Link>

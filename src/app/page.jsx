@@ -105,7 +105,7 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="Behandlungen die wir anbieten"
+                title="Medical Inn Hair Services"
                 subtitle="Unsere Leistungen"
                 btnText="Alle Behandlungen"
                 btnLink="/service"
@@ -117,8 +117,8 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="FUE Methode"
-                    link="/service/service-details"
+                    title="FUE Saphir"
+                    link="/service/fue-saphir"
                     src="/images/service_1.webp"
                     alt="Service"
                   />
@@ -128,7 +128,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="DHI Technik"
-                    link="/service/service-details"
+                    link="/service/dhi"
                     src="/images/service_2.webp"
                     alt="Service"
                   />
@@ -137,7 +137,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6">
                   <Card
                     title="PRP Therapie"
-                    link="/service/service-details"
+                    link="/service/prp"
                     src="/images/service_3.webp"
                     alt="Service"
                   />
@@ -146,8 +146,8 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Nachsorge"
-                    link="/service/service-details"
+                    title="SMP"
+                    link="/service/smp"
                     src="/images/service_4.webp"
                     alt="Service"
                   />
