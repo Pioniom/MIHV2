@@ -293,6 +293,7 @@ Newsletter: ${formData.newsletterConsent ? 'Ja' : 'Nein'}`
               title="Beratungstermin buchen"
               subtitle="In nur 3 Schritten zu Ihrem persönlichen Beratungstermin"
               className="cs-booking_wizard"
+              isSubmitting={isSubmitting}
             />
           </>
         )}
@@ -313,6 +314,7 @@ Newsletter: ${formData.newsletterConsent ? 'Ja' : 'Nein'}`
               title="Beratungsbogen"
               subtitle="Detaillierte Bedarfsanalyse für Ihre optimale Behandlungsplanung"
               className="cs-consultation_wizard"
+              isSubmitting={isSubmitting}
             />
           </>
         )}

@@ -41,6 +41,14 @@ export default function WizardContainer({
     }
   };
 
+  const handleNextOrComplete = () => {
+    if (currentStep === steps.length - 1) {
+      handleComplete(formData);
+    } else {
+      nextStep();
+    }
+  };
+
   const currentStepComponent = steps[currentStep];
 
   return (
@@ -73,7 +81,7 @@ export default function WizardContainer({
       <WizardNavigation
         currentStep={currentStep}
         totalSteps={steps.length}
-        onNext={nextStep}
+        onNext={handleNextOrComplete}
         onPrev={prevStep}
         isSubmitting={isSubmitting}
         showPrev={currentStep > 0}

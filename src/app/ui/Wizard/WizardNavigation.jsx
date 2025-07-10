@@ -18,7 +18,7 @@ export default function WizardNavigation({
   return (
     <Div className="cs-wizard_navigation">
       <Div className="cs-nav_buttons">
-        {showPrev && (
+        {showPrev && currentStep > 0 && (
           <button
             className="cs-btn cs-type2"
             onClick={onPrev}
@@ -28,15 +28,14 @@ export default function WizardNavigation({
           </button>
         )}
         
-        {showNext && (
-          <button
-            className="cs-btn cs-type1"
-            onClick={onNext}
-            disabled={isSubmitting}
-          >
-            <span>{customNextText || (isLastStep ? 'Absenden' : 'Weiter')}</span>
-          </button>
-        )}
+        <button
+          className="cs-btn cs-type1"
+          onClick={onNext}
+          disabled={isSubmitting}
+          type={isLastStep ? 'submit' : 'button'}
+        >
+          <span>{isSubmitting ? 'Wird gesendet...' : (customNextText || (isLastStep ? 'Absenden' : 'Weiter'))}</span>
+        </button>
       </Div>
     </Div>
   );
