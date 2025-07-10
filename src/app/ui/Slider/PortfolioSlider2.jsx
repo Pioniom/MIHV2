@@ -1,7 +1,7 @@
 import React from 'react';
 import Portfolio from '../Portfolio';
 import Div from '../Div';
-import Slider from 'react-slick';
+import AccessibleSlider from '../AccessibleSlider/AccessibleSlider';
 import { Icon } from '@iconify/react';
 const portfolioData = [
   {
@@ -115,7 +115,7 @@ export default function PortfolioSlider2() {
   };
 
   return (
-    <Slider {...settings} className="cs-gap-12 cs-arrow_style4">
+    <AccessibleSlider {...settings} className="cs-gap-12 cs-arrow_style4">
       {portfolioData.map((item, index) => (
         <Div key={index}>
           <Portfolio
@@ -127,6 +127,6 @@ export default function PortfolioSlider2() {
           />
         </Div>
       ))}
-    </Slider>
+    </AccessibleSlider>
   );
 }

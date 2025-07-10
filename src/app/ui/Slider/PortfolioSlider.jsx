@@ -1,7 +1,7 @@
 import React from 'react';
 import Portfolio from '../Portfolio';
 import Div from '../Div';
-import Slider from 'react-slick';
+import AccessibleSlider from '../AccessibleSlider/AccessibleSlider';
 
 export default function PortfolioSlider({ data }) {
   /** Slider Settings **/
@@ -25,7 +25,7 @@ export default function PortfolioSlider({ data }) {
   };
 
   return (
-    <Slider {...settings} className="cs-slider cs-style3 cs-gap-24">
+    <AccessibleSlider {...settings} className="cs-slider cs-style3 cs-gap-24">
       {data.map((item, index) => (
         <Div key={index}>
           <Portfolio
@@ -36,6 +36,6 @@ export default function PortfolioSlider({ data }) {
           />
         </Div>
       ))}
-    </Slider>
+    </AccessibleSlider>
   );
 }

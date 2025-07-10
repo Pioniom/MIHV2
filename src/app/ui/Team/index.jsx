@@ -23,22 +23,22 @@ export default function Team({
       </Div>
       <Div className="cs-member_social cs-primary_color">
         {memberSocial.linkedin && (
-          <Link href={memberSocial.linkedin}>
+          <Link href={memberSocial.linkedin} aria-label={`${memberName} auf LinkedIn`}>
             <Icon icon="fa6-brands:linkedin-in" />
           </Link>
         )}
         {memberSocial.twitter && (
-          <Link href={memberSocial.twitter}>
+          <Link href={memberSocial.twitter} aria-label={`${memberName} auf Twitter`}>
             <Icon icon="fa-brands:twitter" />
           </Link>
         )}
         {memberSocial.youtube && (
-          <Link href={memberSocial.youtube}>
+          <Link href={memberSocial.youtube} aria-label={`${memberName} auf YouTube`}>
             <Icon icon="fa-brands:youtube" />
           </Link>
         )}
         {memberSocial.facebook && (
-          <Link href={memberSocial.facebook}>
+          <Link href={memberSocial.facebook} aria-label={`${memberName} auf Facebook`}>
             <Icon icon="fa-brands:facebook-f" />
           </Link>
         )}

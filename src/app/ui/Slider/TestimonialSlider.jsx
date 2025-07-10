@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Slider from 'react-slick';
+import AccessibleSlider from '../AccessibleSlider/AccessibleSlider';
 import { Icon } from '@iconify/react';
 import Testimonial from '../Testimonial';
 import Div from '../Div';
@@ -82,7 +82,7 @@ export default function TestimonialSlider() {
         <Div className="container">
           <Div className="cs-testimonial_slider">
             <Div className="cs-testimonial_slider_left">
-              <Slider
+              <AccessibleSlider
                 asNavFor={nav1}
                 ref={slider2 => setNav2(slider2)}
                 slidesToShow={3}
@@ -101,10 +101,10 @@ export default function TestimonialSlider() {
                     </Div>
                   </Div>
                 ))}
-              </Slider>
+              </AccessibleSlider>
             </Div>
             <Div className="cs-testimonial_slider_right">
-              <Slider
+              <AccessibleSlider
                 asNavFor={nav2}
                 ref={slider1 => setNav1(slider1)}
                 prevArrow={<SlickArrowLeft />}
@@ -122,7 +122,7 @@ export default function TestimonialSlider() {
                     />
                   </Div>
                 ))}
-              </Slider>
+              </AccessibleSlider>
             </Div>
           </Div>
         </Div>

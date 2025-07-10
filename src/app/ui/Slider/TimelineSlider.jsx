@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
 import React from 'react';
-import Slider from 'react-slick';
+import AccessibleSlider from '../AccessibleSlider/AccessibleSlider';
 import Div from '../Div';
 import Timeline from '../Timeline';
 const benefitsData = [
@@ -94,12 +94,12 @@ export default function BenefitsSlider() {
     ],
   };
   return (
-    <Slider {...settings} className="cs-arrow_style3">
+    <AccessibleSlider {...settings} className="cs-arrow_style3">
       {benefitsData.map((item, index) => (
         <Div key={index}>
           <Timeline columnData={item} />
         </Div>
       ))}
-    </Slider>
+    </AccessibleSlider>
   );
 }

@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
 import React from 'react';
-import Slider from 'react-slick';
+import AccessibleSlider from '../AccessibleSlider';
 import Div from '../Div';
 import Team from '../Team';
 const teamData = [
@@ -103,7 +103,7 @@ export default function TeamSlider() {
   };
 
   return (
-    <Slider {...settings} className="cs-gap-24 cs-arrow_style2">
+    <AccessibleSlider {...settings} className="cs-gap-24 cs-arrow_style2">
       {teamData.map((item, index) => (
         <Div key={index}>
           <Team
@@ -114,6 +114,6 @@ export default function TeamSlider() {
           />
         </Div>
       ))}
-    </Slider>
+    </AccessibleSlider>
   );
 }

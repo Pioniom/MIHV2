@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from 'react-slick';
+import AccessibleSlider from '../AccessibleSlider/AccessibleSlider';
 import Div from '../Div';
 import Post from '../Post';
 const postData = [
@@ -66,7 +66,7 @@ export default function PostSlider() {
   };
 
   return (
-    <Slider {...settings} className="cs-gap-24">
+    <AccessibleSlider {...settings} className="cs-gap-24">
       {postData.map((item, index) => (
         <Div key={index}>
           <Post
@@ -78,6 +78,6 @@ export default function PostSlider() {
           />
         </Div>
       ))}
-    </Slider>
+    </AccessibleSlider>
   );
 }

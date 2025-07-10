@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
 import React from 'react';
-import Slider from 'react-slick';
+import AccessibleSlider from '../AccessibleSlider/AccessibleSlider';
 import Div from '../Div';
 import TestimonialStyle2 from '../Testimonial/TestimonialStyle2';
 const testimonialData = [
@@ -108,12 +108,12 @@ export default function TestimonialSliderStyle4() {
   };
 
   return (
-    <Slider {...settings} className="cs-gap-24 cs-arrow_style2">
+    <AccessibleSlider {...settings} className="cs-gap-24 cs-arrow_style2">
       {testimonialData.map((item, index) => (
         <Div key={index}>
           <TestimonialStyle2 {...item} />
         </Div>
       ))}
-    </Slider>
+    </AccessibleSlider>
   );
 }

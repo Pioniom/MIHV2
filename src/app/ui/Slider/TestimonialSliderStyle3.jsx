@@ -1,6 +1,6 @@
 import React from 'react';
 import Div from '../Div';
-import Slider from 'react-slick';
+import AccessibleSlider from '../AccessibleSlider/AccessibleSlider';
 import TestimonialStyle2 from '../Testimonial/TestimonialStyle2';
 const testimonialData = [
   {
@@ -61,12 +61,12 @@ export default function TestimonialSliderStyle3() {
     ],
   };
   return (
-    <Slider {...settings} className="cs-slider cs-gap-24">
+    <AccessibleSlider {...settings} className="cs-slider cs-gap-24">
       {testimonialData.map((item, index) => (
         <Div key={index}>
           <TestimonialStyle2 {...item} />
         </Div>
       ))}
-    </Slider>
+    </AccessibleSlider>
   );
 }
