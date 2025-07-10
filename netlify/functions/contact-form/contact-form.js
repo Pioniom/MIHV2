@@ -3,7 +3,7 @@
 
 const nodemailer = require('nodemailer');
 
-// Konfiguration des E-Mail-Transporters
+// Konfiguration des E-Mail-Transporters mit erweiterten Optionen
 const createTransporter = () => {
   return nodemailer.createTransporter({
     host: process.env.SMTP_HOST || 'smtp.hostinger.com',
@@ -12,7 +12,13 @@ const createTransporter = () => {
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS
-    }
+    },
+    tls: {
+      rejectUnauthorized: false // Für Hostinger SMTP
+    },
+    connectionTimeout: 10000, // 10 Sekunden
+    greetingTimeout: 5000, // 5 Sekunden  
+    socketTimeout: 10000 // 10 Sekunden
   });
 };
 
@@ -44,15 +50,24 @@ exports.handler = async function(event, context) {
   }
 
   try {
+    // Debug-Logging für Umgebungsvariablen (ohne Passwörter)
+    console.log('SMTP Config Check:', {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      user: process.env.SMTP_USER,
+      hasPassword: !!process.env.SMTP_PASS,
+      recipient: process.env.RECIPIENT_EMAIL
+    });
+
     // Formular-Daten aus dem Request-Body parsen
     const formData = JSON.parse(event.body);
     const { firstName, lastName, email, phone, subject, message } = formData;
 
     // Absender-E-Mail-Adresse
-    const fromEmail = process.env.SMTP_FROM || process.env.SMTP_USER || 'info@medicalinnhair.com';
+    const fromEmail = process.env.SMTP_FROM || process.env.SMTP_USER || 'kontakt@medicalinnhair.com';
     
     // E-Mail-Empfänger - kann in den Umgebungsvariablen konfiguriert werden
-    const toEmail = process.env.RECIPIENT_EMAIL || process.env.SMTP_USER || 'info@medicalinnhair.com';
+    const toEmail = process.env.RECIPIENT_EMAIL || process.env.SMTP_USER || 'kontakt@medicalinnhair.com';
 
     // Überprüfen, ob alle erforderlichen Felder vorhanden sind
     if (!firstName || !lastName || !email || !message) {
@@ -66,8 +81,24 @@ exports.handler = async function(event, context) {
       };
     }
 
+    // SMTP-Konfiguration validieren
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+      console.error('SMTP credentials missing');
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ 
+          success: false, 
+          message: 'E-Mail-Konfiguration unvollständig' 
+        })
+      };
+    }
+
     // Transporter erstellen
     const transporter = createTransporter();
+    
+    // Verbindung testen
+    await transporter.verify();
     
     // E-Mail-Inhalt
     const mailOptions = {
@@ -101,7 +132,8 @@ ${message}
     };
 
     // E-Mail senden
-    await transporter.sendMail(mailOptions);
+    const result = await transporter.sendMail(mailOptions);
+    console.log('E-Mail erfolgreich gesendet:', result.messageId);
 
     // Erfolgreiche Antwort senden
     return {
@@ -113,7 +145,23 @@ ${message}
       })
     };
   } catch (error) {
-    console.error('Fehler beim Senden der E-Mail:', error);
+    console.error('Fehler beim Senden der E-Mail:', {
+      message: error.message,
+      code: error.code,
+      command: error.command,
+      stack: error.stack
+    });
+    
+    // Spezifische Fehlermeldungen für verschiedene Fehlertypen
+    let errorMessage = 'Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.';
+    
+    if (error.code === 'EAUTH') {
+      errorMessage = 'E-Mail-Authentifizierung fehlgeschlagen.';
+    } else if (error.code === 'ECONNECTION') {
+      errorMessage = 'Verbindung zum E-Mail-Server fehlgeschlagen.';
+    } else if (error.code === 'ETIMEOUT') {
+      errorMessage = 'E-Mail-Server Zeitüberschreitung.';
+    }
     
     // Fehler zurückgeben
     return {
@@ -121,7 +169,8 @@ ${message}
       headers,
       body: JSON.stringify({ 
         success: false, 
-        message: 'Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.' 
+        message: errorMessage,
+        error: process.env.NODE_ENV === 'development' ? error.message : undefined
       })
     };
   }
