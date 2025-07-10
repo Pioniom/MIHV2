@@ -183,8 +183,288 @@
     &::placeholder {
       color: #999999;
     }
+    
+    // Modern date input styling
+    &[type="date"] {
+      position: relative;
+      cursor: pointer;
+      
+      &::-webkit-datetime-edit {
+        color: #ffffff;
+        padding: 0;
+      }
+      
+      &::-webkit-datetime-edit-fields-wrapper {
+        padding: 0;
+      }
+      
+      &::-webkit-datetime-edit-text {
+        color: #69cce6;
+        padding: 0 2px;
+      }
+      
+      &::-webkit-datetime-edit-month-field,
+      &::-webkit-datetime-edit-day-field,
+      &::-webkit-datetime-edit-year-field {
+        color: #ffffff;
+        background: transparent;
+        border: none;
+        padding: 0;
+        
+        &:focus {
+          background: rgba(105, 204, 230, 0.1);
+          border-radius: 4px;
+          outline: none;
+        }
+      }
+      
+      &::-webkit-calendar-picker-indicator {
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%2369cce6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>') no-repeat center;
+        color: #69cce6;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        margin-left: 10px;
+        filter: none;
+        
+        &:hover {
+          background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%234db8d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>') no-repeat center;
+        }
+      }
+      
+      // Empty state placeholder
+      &:invalid {
+        color: #999999;
+      }
+      
+      &:valid {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// Custom DatePicker Component
+.cs-date-picker {
+  position: relative;
+  
+  .cs-date-picker-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    
+    .cs-date-selected {
+      color: #ffffff;
+    }
+    
+    .cs-date-placeholder {
+      color: #999999;
+    }
+    
+    .cs-date-picker-icon {
+      color: #69cce6;
+      transition: color 0.3s ease;
+    }
+    
+    &:hover .cs-date-picker-icon {
+      color: #4db8d4;
+    }
   }
   
+  .cs-date-picker-dropdown {
+    position: fixed;
+    z-index: 9999;
+    background: #2a2a2a;
+    border: 2px solid #333333;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-top: 8px;
+    animation: fadeInDown 0.3s ease-out;
+    max-height: 400px;
+    overflow: visible;
+    min-width: 300px;
+  }
+  
+  .cs-date-picker-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+    .cs-date-picker-nav {
+      background: transparent;
+      border: none;
+      color: #69cce6;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: rgba(105, 204, 230, 0.1);
+        color: #4db8d4;
+      }
+    }
+    
+    .cs-date-picker-month-btn {
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: rgba(105, 204, 230, 0.1);
+        color: #69cce6;
+      }
+    }
+  }
+  
+  .cs-date-picker-year-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 8px;
+    
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: #333333;
+      border-radius: 3px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: #69cce6;
+      border-radius: 3px;
+      
+      &:hover {
+        background: #4db8d4;
+      }
+    }
+    
+    .cs-date-picker-year {
+      background: transparent;
+      border: 1px solid #333333;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: rgba(105, 204, 230, 0.1);
+        border-color: #69cce6;
+        color: #69cce6;
+      }
+      
+      &--selected {
+        background: #69cce6;
+        border-color: #69cce6;
+        color: #1a1a1a;
+        font-weight: 600;
+        
+        &:hover {
+          background: #4db8d4;
+          border-color: #4db8d4;
+        }
+      }
+    }
+  }
+  
+  .cs-date-picker-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-bottom: 10px;
+    
+    .cs-date-picker-weekday {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: #999999;
+      padding: 8px 0;
+    }
+  }
+  
+  .cs-date-picker-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    
+    .cs-date-picker-day {
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: rgba(105, 204, 230, 0.1);
+        color: #69cce6;
+      }
+      
+      &--other-month {
+        color: #666666;
+      }
+      
+      &--today {
+        background: rgba(105, 204, 230, 0.2);
+        color: #69cce6;
+        font-weight: 600;
+      }
+      
+      &--selected {
+        background: #69cce6;
+        color: #1a1a1a;
+        font-weight: 600;
+        
+        &:hover {
+          background: #4db8d4;
+        }
+      }
+      
+      &--disabled {
+        color: #444444;
+        cursor: not-allowed;
+        
+        &:hover {
+          background: transparent;
+          color: #444444;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cs-step_content {
   .cs-form_group {
     margin-bottom: 25px;
     

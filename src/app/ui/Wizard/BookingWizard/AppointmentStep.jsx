@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Div from '../../Div';
 import WizardStep from '../WizardStep';
+import DatePicker from '../../DatePicker/DatePicker';
 
 export default function AppointmentStep({ formData, updateFormData, onNext, onPrev }) {
   const [data, setData] = useState({
@@ -93,12 +94,11 @@ export default function AppointmentStep({ formData, updateFormData, onNext, onPr
       <Div className="cs-field_group">
         <Div className="cs-form_group">
           <label>Wunschtermin *</label>
-          <input
-            type="date"
-            className="cs-form_field"
+          <DatePicker
             value={data.preferredDate}
-            onChange={(e) => handleChange('preferredDate', e.target.value)}
-            min={new Date().toISOString().split('T')[0]}
+            onChange={(value) => handleChange('preferredDate', value)}
+            placeholder="Wunschtermin wählen"
+            minDate={new Date().toISOString().split('T')[0]}
           />
         </Div>
         
@@ -119,12 +119,11 @@ export default function AppointmentStep({ formData, updateFormData, onNext, onPr
 
       <Div className="cs-form_group">
         <label>Alternativtermin (optional)</label>
-        <input
-          type="date"
-          className="cs-form_field"
+        <DatePicker
           value={data.alternativeDate}
-          onChange={(e) => handleChange('alternativeDate', e.target.value)}
-          min={new Date().toISOString().split('T')[0]}
+          onChange={(value) => handleChange('alternativeDate', value)}
+          placeholder="Alternativtermin wählen"
+          minDate={new Date().toISOString().split('T')[0]}
         />
       </Div>
 

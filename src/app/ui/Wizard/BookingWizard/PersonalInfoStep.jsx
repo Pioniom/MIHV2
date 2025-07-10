@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Div from '../../Div';
 import WizardStep from '../WizardStep';
+import DatePicker from '../../DatePicker/DatePicker';
 
 export default function PersonalInfoStep({ formData, updateFormData, onNext, onPrev, isFirstStep }) {
   const [data, setData] = useState({
@@ -96,11 +97,11 @@ export default function PersonalInfoStep({ formData, updateFormData, onNext, onP
       <Div className="cs-field_group">
         <Div className="cs-form_group">
           <label>Geburtsdatum *</label>
-          <input
-            type="date"
-            className="cs-form_field"
+          <DatePicker
             value={data.birthDate}
-            onChange={(e) => handleChange('birthDate', e.target.value)}
+            onChange={(value) => handleChange('birthDate', value)}
+            placeholder="Geburtsdatum wählen"
+            maxDate={new Date().toISOString().split('T')[0]}
           />
         </Div>
         
