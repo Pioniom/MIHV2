@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         <meta name="keywords" content="Haartransplantation, FUE, DHI, PRP, Düsseldorf, Medical Inn Hair, Haarausfall, Haarverpflanzung" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#69cce6" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <link rel="icon" href="/images/favicon.ico" sizes="any" />
         <title>Medical Inn Hair - Haartransplantation Düsseldorf</title>
       </head>
