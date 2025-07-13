@@ -9,7 +9,6 @@ import SectionHeading from "@/app/ui/SectionHeading";
 import TestimonialSlider from "@/app/ui/Slider/TestimonialSlider";
 import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
-import serviceImage from '../../../../public/images/service_1.webp'
 
 export default function FueSaphirPage() {
   return (
@@ -59,7 +58,7 @@ export default function FueSaphirPage() {
         <Div className="row align-items-center">
           <Div className="col-xl-5 col-lg-6">
             <Div className="cs-radius_15 cs-shine_hover_1">
-              <Image src={serviceImage} alt="FUE Saphir" className='cs-radius_15 w-100' placeholder="blur" />
+              <Image src="/images/service_1.webp" alt="FUE Saphir" width={800} height={600} className='cs-radius_15 w-100' />
             </Div>
             <Spacing lg='0' md='40'/>
           </Div>

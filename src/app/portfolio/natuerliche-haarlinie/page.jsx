@@ -6,7 +6,6 @@ import PageHeading from "@/app/ui/PageHeading";
 import SectionHeading from "@/app/ui/SectionHeading";
 import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
-import imgUrl from '../../../../public/images/portfolio_details_3.webp'
 
 export default function NatuerlicheHaarliniePage() {
   return (
@@ -18,7 +17,7 @@ export default function NatuerlicheHaarliniePage() {
       />
       <Spacing lg='150' md='80'/>
       <Div className="container">
-        <Image src={imgUrl} alt="Natürliche Haarlinie" placeholder="blur" className="cs-radius_15 w-100" />
+        <Image src="/images/portfolio_details_3.webp" alt="Natürliche Haarlinie" width={800} height={600} className="cs-radius_15 w-100" />
         <Spacing lg='90' md='40'/>
         <Div className="row">
           <Div className="col-lg-6">
