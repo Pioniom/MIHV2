@@ -64,13 +64,13 @@ const portfolioData = [
     title: 'Natürliche Haarlinie',
     subtitle: 'Details ansehen',
     href: '/portfolio/natuerliche-haarlinie',
-    src: '/images/portfolio_3webp.webp',
+    src: '/images/portfolio_3.webp',
   },
   {
     title: 'Vollständige Abdeckung',
     subtitle: 'Details ansehen',
     href: '/portfolio/vollstaendige-abdeckung',
-    src: '/images/portfolio_0.webp',
+    src: '/images/portfolio_4.webp',
   },
 ];
 
