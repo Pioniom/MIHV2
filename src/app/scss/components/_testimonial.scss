@@ -36,6 +36,9 @@
       border-radius: 3px;
       margin-right: 10px;
     }
+    @media (max-width: 420px) {
+      display: none;
+    }
   }
 }
 .cs-testimonial_slider_2 {

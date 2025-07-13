@@ -10,7 +10,7 @@ const testimonialData = [
     testimonialText:
       'Ich bin äußerst zufrieden mit meiner Haartransplantation bei Medical Inn Hair in Düsseldorf! Das Team hat mich von Anfang an sehr professionell und freundlich betreut. Die Beratung war ausführlich und ehrlich... Die Behandlung selbst verlief reibungslos, und das Ergebnis ist einfach großartig. Ich kann Medical Inn Hair in Düsseldorf jedem empfehlen!',
     avatarName: 'Serkan Sözügecen',
-    avatarDesignation: 'Google Bewertung - vor 2 Monaten',
+    avatarDesignation: 'Google Bewertung',
     ratings: '5',
     googleLink: 'https://g.co/kgs/wCrZoRU',
   },
@@ -19,7 +19,7 @@ const testimonialData = [
     testimonialText:
       'Mittlerweile ist über ein halbes Jahr vergangen, seitdem ich meine Haartransplantation bei Medical Inn Hair durchgeführt habe und ich könnte mit dem Ergebnis nicht zufriedener sein... Meine transplantierten Haare sind nicht nur dicht, sondern vor allem auch sehr natürlich zusammengewachsen.',
     avatarName: 'Louis Doehn',
-    avatarDesignation: 'Google Bewertung - vor 1 Monat',
+    avatarDesignation: 'Google Bewertung',
     ratings: '5',
     googleLink: 'https://g.co/kgs/wCrZoRU',
   },
@@ -28,7 +28,7 @@ const testimonialData = [
     testimonialText:
       'Als es dann darum ging ich eine Klinik auszusuchen, viel mein Blick sehr schnell auf die Homepage von Medical Inn Hair... Am Tag der OP wurde sich sehr viel Zeit genommen um die perfekte Haarlinie für mich individuell festzulegen. Ich kann sie nur weiterempfehlen!',
     avatarName: 'Tito',
-    avatarDesignation: 'Google Bewertung - vor 2 Monaten',
+    avatarDesignation: 'Google Bewertung',
     ratings: '5',
     googleLink: 'https://g.co/kgs/wCrZoRU',
   },
@@ -37,7 +37,7 @@ const testimonialData = [
     testimonialText:
       'Ich habe bereits eine Haartransplantation in der Türkei machen lassen und kann daher gut vergleichen. Die Behandlung bei Medical Inn Hair war deutlich angenehmer... Der Eingriff war wesentlich schmerzärmer und das Team arbeitete sehr präzise und mit äußerster Sorgfalt.',
     avatarName: 'Flo S.',
-    avatarDesignation: 'Google Bewertung - vor 3 Monaten',
+    avatarDesignation: 'Google Bewertung',
     ratings: '5',
     googleLink: 'https://g.co/kgs/wCrZoRU',
   },
