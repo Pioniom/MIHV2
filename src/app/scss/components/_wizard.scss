@@ -653,3 +653,25 @@
     }
   }
 }
+
+@media (max-width: 420px) {
+  .cs-progress_steps {
+    gap: 2px !important;
+  }
+  
+  .cs-progress_step {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 20px !important;
+  }
+  
+  .cs-step_circle {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 8px !important;
+  }
+  
+  .cs-step_label {
+    display: none !important;
+  }
+}

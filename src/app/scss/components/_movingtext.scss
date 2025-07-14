@@ -59,14 +59,16 @@
 .cs-moving_text_wrap.cs-type3 {
   background: #181818;
   padding: 40px 0;
-  color: #333;
+  color: #1c1c1c;
   -webkit-text-stroke: initial;
+  font-size: 180px;
   
   .cs-moving_text {
-    color: #333;
+    color: #1c1c1c;
     background: none;
-    -webkit-text-fill-color: #333;
+    -webkit-text-fill-color: #1c1c1c;
     animation: slide-left 25s linear infinite;
+    font-weight: 700;
   }
 }
 .cs-reverse_animation {
@@ -85,16 +87,25 @@
   .cs-moving_text_wrap {
     font-size: 100px;
   }
+  .cs-moving_text_wrap.cs-type3 {
+    font-size: 150px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
   .cs-moving_text_wrap {
     font-size: 80px;
   }
+  .cs-moving_text_wrap.cs-type3 {
+    font-size: 120px;
+  }
 }
 
 @media screen and (max-width: 575px) {
   .cs-moving_text_wrap {
     font-size: 56px;
+  }
+  .cs-moving_text_wrap.cs-type3 {
+    font-size: 90px;
   }
 }

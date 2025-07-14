@@ -3,6 +3,16 @@ import { Icon } from '@iconify/react';
 import Link from 'next/link';
 import Div from '../Div';
 
+function getTeamSlug(memberName) {
+  const slugMap = {
+    'Nükhet Önal Taylan': '/team/nukhet-onal-taylan',
+    'Prof. Ch. Dr. med. Mehmet Atila': '/team/prof-mehmet-atila',
+    'Dr. med. Christian Josephs': '/team/dr-christian-josephs',
+    'Fabiana Carvalho': '/team/fabiana-carvalho'
+  };
+  return slugMap[memberName] || '/team/team-details';
+}
+
 export default function Team({
   memberImage,
   memberName,
@@ -17,7 +27,7 @@ export default function Team({
       </Div>
       <Div className="cs-member_info">
         <h2 className="cs-member_name">
-          <Link href="/team/team-details">{memberName}</Link>
+          <Link href={getTeamSlug(memberName)}>{memberName}</Link>
         </h2>
         <Div className="cs-member_designation">{memberDesignation}</Div>
       </Div>

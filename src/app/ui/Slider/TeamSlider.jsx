@@ -17,7 +17,7 @@ const teamData = [
   },
   {
     memberImage: '/images/member_2.webp',
-    memberName: 'Dr. med. Mehmet Atila',
+    memberName: 'Prof. Ch. Dr. med. Mehmet Atila',
     memberDesignation: 'CEO Medical Inn',
     memberSocial: {
       linkedin: '/',
@@ -28,8 +28,19 @@ const teamData = [
   },
   {
     memberImage: '/images/member_3.webp',
-    memberName: 'Dr. Michael Schmidt',
+    memberName: 'Dr. med. Christian Josephs',
     memberDesignation: 'Spezialist FUE & DHI',
+    memberSocial: {
+      linkedin: '/',
+      twitter: '/',
+      youtube: '/',
+      facebook: '/',
+    },
+  },
+  {
+    memberImage: '/images/member_4.webp',
+    memberName: 'Fabiana Carvalho',
+    memberDesignation: 'SMP Spezialistin',
     memberSocial: {
       linkedin: '/',
       twitter: '/',
