@@ -65,37 +65,47 @@
     height: 100%;
     width: 100%;
     border-radius: inherit;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
   }
   .cs-portfolio_info {
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    padding: 105px 20px 80px 65px;
-    bottom: -60px;
-    left: -40px;
-    position: absolute;
-    z-index: 2;
-  }
-  .cs-portfolio_info_bg {
-    position: absolute;
     height: 100%;
     width: 100%;
-    border-radius: inherit;
+    border-radius: 0;
+    padding: 30px 25px;
+    bottom: 0;
     left: 0;
-    top: 0;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      transparent 100%
+    );
+    opacity: 1;
+    transition: all 0.4s ease;
+  }
+  .cs-portfolio_info_bg {
+    display: none;
   }
   .cs-portfolio_title {
     font-size: 22px;
     margin-bottom: 5px;
     position: relative;
     z-index: 2;
+    color: #ffffff;
   }
   .cs-portfolio_subtitle {
     display: inline-block;
     position: relative;
     z-index: 2;
     padding-right: 30px;
-    color: $secondary;
+    color: rgba(255, 255, 255, 0.8);
     &::after {
       content: '';
       height: 1px;
@@ -110,19 +120,6 @@
   }
   &.cs-type1 {
     height: 465px;
-    .cs-portfolio_info_bg {
-      left: -50px;
-      top: 50px;
-      opacity: 0;
-      transition: all 0.4s ease;
-    }
-    &:hover {
-      .cs-portfolio_info_bg {
-        left: 0px;
-        top: 0px;
-        opacity: 1;
-      }
-    }
   }
   .cs-lightbox_item {
     > div > img {
