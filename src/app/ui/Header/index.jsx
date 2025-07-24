@@ -265,13 +265,13 @@ export default function Header({ variant }) {
             </h2>
           </Div>
           <Div className="cs-side_header_box">
-            <ContactInfoWidget title="Contact Us" withIcon />
+            <ContactInfoWidget title="Kontakt" withIcon />
           </Div>
           <Div className="cs-side_header_box">
             <Newsletter
-              title="Subscribe"
-              subtitle="At vero eos et accusamus et iusto odio as part dignissimos ducimus qui blandit."
-              placeholder="example@gmail.com"
+              title="Newsletter"
+              subtitle="Bleiben Sie über neue Behandlungsmethoden und Angebote informiert."
+              placeholder="ihre@email.de"
             />
           </Div>
           <Div className="cs-side_header_box">

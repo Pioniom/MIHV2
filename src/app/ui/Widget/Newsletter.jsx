@@ -91,7 +91,7 @@ export default function Newsletter({title, subtitle, placeholder}) {
             className="cs-newsletter_btn" 
             disabled={isSubmitting}
           >
-            <span>{isSubmitting ? 'Senden...' : 'Send'}</span>
+            <span>{isSubmitting ? 'Senden...' : 'Anmelden'}</span>
           </button>
         </form>
         <Div className="cs-newsletter_text">{subtitle}</Div>

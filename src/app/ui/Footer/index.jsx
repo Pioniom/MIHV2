@@ -8,31 +8,31 @@ import TextWidget from '../Widget/TextWidget';
 
 const copyrightLinks = [
   {
-    title: 'Nutzungsbedingungen',
-    href: '/',
+    title: 'Impressum',
+    href: '/impressum',
   },
   {
     title: 'Datenschutz',
-    href: '/',
+    href: '/datenschutz',
   },
 ];
 
 const serviceMenu = [
   {
-    title: 'FUE Methode',
-    href: '/service/service-details',
+    title: 'FUE Saphir',
+    href: '/service/fue-saphir',
   },
   {
     title: 'DHI Technik',
-    href: '/service/service-details',
+    href: '/service/dhi',
   },
   {
     title: 'PRP Therapie',
-    href: '/service/service-details',
+    href: '/service/prp',
   },
   {
-    title: 'Nachsorge',
-    href: '/service/service-details',
+    title: 'SMP Mikropigmentierung',
+    href: '/service/smp',
   },
 ];
 
