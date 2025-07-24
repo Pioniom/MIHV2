@@ -1,60 +1,38 @@
-// Wizard Container
+// PROFESSIONELLER WIZARD - DUNKELGRAU
 .cs-wizard_container {
   background: #1a1a1a;
-  border-radius: 20px;
-  padding: 60px 50px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgba(105, 204, 230, 0.2);
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #69cce6 0%, #4db8d4 100%);
-  }
+  border-radius: 12px;
+  padding: 48px;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  border: 1px solid #2d2d2d;
 }
 
-// Wizard Header
 .cs-wizard_header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 }
 
 .cs-wizard_title {
-  color: #ffffff;
-  margin-bottom: 15px;
+  color: #e0e0e0;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: -0.025em;
 }
 
 .cs-wizard_subtitle {
-  color: #cccccc;
+  color: #d1d5db;
   font-size: 16px;
-  margin-bottom: 40px;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 1.5;
 }
 
-// Progress Bar
+// PROGRESS
 .cs-wizard_progress {
-  position: relative;
-  margin-bottom: 40px;
-}
-
-.cs-progress_line {
-  height: 3px;
-  background: #333333;
-  border-radius: 2px;
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.cs-progress_fill {
-  height: 100%;
-  background: linear-gradient(90deg, #69cce6 0%, #4db8d4 100%);
-  border-radius: 2px;
-  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 48px;
 }
 
 .cs-progress_steps {
@@ -72,606 +50,733 @@
 }
 
 .cs-step_circle {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
   font-size: 14px;
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 2;
+  margin-bottom: 12px;
+  border: 2px solid #4b5563;
   
   .cs-step_pending & {
-    background: #333333;
-    color: #ffffff;
-    border: 2px solid #333333;
+    background: #2d2d2d;
+    color: #888888;
   }
   
   .cs-step_active & {
-    background: #69cce6;
-    color: #1a1a1a;
-    border: 2px solid #69cce6;
-    box-shadow: 0 0 0 4px rgba(105, 204, 230, 0.3);
-    transform: scale(1.1);
+    background: #666666;
+    color: #ffffff;
+    border-color: #666666;
   }
   
   .cs-step_completed & {
-    background: #4db8d4;
-    color: white;
-    border: 2px solid #4db8d4;
+    background: #555555;
+    color: #ffffff;
+    border-color: #555555;
   }
-}
-
-.cs-step_check {
-  font-size: 16px;
-  font-weight: bold;
 }
 
 .cs-step_label {
-  margin-top: 15px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   text-align: center;
-  transition: color 0.3s ease;
   
   .cs-step_pending & {
-    color: #999999;
+    color: #888888;
   }
   
   .cs-step_active & {
-    color: #69cce6;
-    font-weight: 600;
+    color: #cccccc;
   }
   
   .cs-step_completed & {
-    color: #4db8d4;
+    color: #aaaaaa;
   }
 }
 
-// Wizard Content
+// CONTENT
 .cs-wizard_content {
-  min-height: 400px;
-  margin-bottom: 40px;
+  min-height: 320px;
+  margin-bottom: 48px;
 }
 
 .cs-wizard_step {
-  animation: fadeInSlide 0.5s ease-out;
-}
-
-@keyframes fadeInSlide {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  position: relative;
+  z-index: 1;
 }
 
 .cs-step_title {
-  color: #ffffff;
+  color: #e0e0e0;
   text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  letter-spacing: -0.025em;
+  position: relative;
+  z-index: 1;
+  line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
 }
 
 .cs-step_subtitle {
-  color: #cccccc;
+  color: #d1d5db;
   text-align: center;
   font-size: 16px;
-  line-height: 1.6;
-}
-
-.cs-step_content {
-  .cs-form_field {
-    border: 2px solid #333333;
-    border-radius: 12px;
-    padding: 15px 20px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    background: #2a2a2a;
-    color: #ffffff;
-    
-    &:focus {
-      border-color: #69cce6;
-      box-shadow: 0 0 0 3px rgba(105, 204, 230, 0.2);
-      outline: none;
-    }
-    
-    &::placeholder {
-      color: #999999;
-    }
-    
-    // Modern date input styling
-    &[type="date"] {
-      position: relative;
-      cursor: pointer;
-      
-      &::-webkit-datetime-edit {
-        color: #ffffff;
-        padding: 0;
-      }
-      
-      &::-webkit-datetime-edit-fields-wrapper {
-        padding: 0;
-      }
-      
-      &::-webkit-datetime-edit-text {
-        color: #69cce6;
-        padding: 0 2px;
-      }
-      
-      &::-webkit-datetime-edit-month-field,
-      &::-webkit-datetime-edit-day-field,
-      &::-webkit-datetime-edit-year-field {
-        color: #ffffff;
-        background: transparent;
-        border: none;
-        padding: 0;
-        
-        &:focus {
-          background: rgba(105, 204, 230, 0.1);
-          border-radius: 4px;
-          outline: none;
-        }
-      }
-      
-      &::-webkit-calendar-picker-indicator {
-        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%2369cce6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>') no-repeat center;
-        color: #69cce6;
-        cursor: pointer;
-        width: 20px;
-        height: 20px;
-        padding: 0;
-        margin-left: 10px;
-        filter: none;
-        
-        &:hover {
-          background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%234db8d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>') no-repeat center;
-        }
-      }
-      
-      // Empty state placeholder
-      &:invalid {
-        color: #999999;
-      }
-      
-      &:valid {
-        color: #ffffff;
-      }
-    }
-  }
-}
-
-// Custom DatePicker Component
-.cs-date-picker {
+  font-weight: 400;
+  margin-bottom: 32px;
+  line-height: 1.5;
   position: relative;
-  
-  .cs-date-picker-trigger {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    
-    .cs-date-selected {
-      color: #ffffff;
-    }
-    
-    .cs-date-placeholder {
-      color: #999999;
-    }
-    
-    .cs-date-picker-icon {
-      color: #69cce6;
-      transition: color 0.3s ease;
-    }
-    
-    &:hover .cs-date-picker-icon {
-      color: #4db8d4;
-    }
-  }
-  
-  .cs-date-picker-dropdown {
-    position: fixed;
-    z-index: 9999;
-    background: #2a2a2a;
-    border: 2px solid #333333;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    margin-top: 8px;
-    animation: fadeInDown 0.3s ease-out;
-    max-height: 400px;
-    overflow: visible;
-    min-width: 300px;
-  }
-  
-  .cs-date-picker-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    
-    .cs-date-picker-nav {
-      background: transparent;
-      border: none;
-      color: #69cce6;
-      cursor: pointer;
-      padding: 8px;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-      
-      &:hover {
-        background: rgba(105, 204, 230, 0.1);
-        color: #4db8d4;
-      }
-    }
-    
-    .cs-date-picker-month-btn {
-      background: transparent;
-      border: none;
-      color: #ffffff;
-      cursor: pointer;
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 16px;
-      transition: all 0.3s ease;
-      
-      &:hover {
-        background: rgba(105, 204, 230, 0.1);
-        color: #69cce6;
-      }
-    }
-  }
-  
-  .cs-date-picker-year-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-    max-height: 200px;
-    overflow-y: auto;
-    padding-right: 8px;
-    
-    &::-webkit-scrollbar {
-      width: 6px;
-    }
-    
-    &::-webkit-scrollbar-track {
-      background: #333333;
-      border-radius: 3px;
-    }
-    
-    &::-webkit-scrollbar-thumb {
-      background: #69cce6;
-      border-radius: 3px;
-      
-      &:hover {
-        background: #4db8d4;
-      }
-    }
-    
-    .cs-date-picker-year {
-      background: transparent;
-      border: 1px solid #333333;
-      color: #ffffff;
-      cursor: pointer;
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-size: 14px;
-      transition: all 0.3s ease;
-      
-      &:hover {
-        background: rgba(105, 204, 230, 0.1);
-        border-color: #69cce6;
-        color: #69cce6;
-      }
-      
-      &--selected {
-        background: #69cce6;
-        border-color: #69cce6;
-        color: #1a1a1a;
-        font-weight: 600;
-        
-        &:hover {
-          background: #4db8d4;
-          border-color: #4db8d4;
-        }
-      }
-    }
-  }
-  
-  .cs-date-picker-weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 2px;
-    margin-bottom: 10px;
-    
-    .cs-date-picker-weekday {
-      text-align: center;
-      font-size: 12px;
-      font-weight: 600;
-      color: #999999;
-      padding: 8px 0;
-    }
-  }
-  
-  .cs-date-picker-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 2px;
-    
-    .cs-date-picker-day {
-      background: transparent;
-      border: none;
-      color: #ffffff;
-      cursor: pointer;
-      padding: 10px;
-      border-radius: 6px;
-      font-size: 14px;
-      transition: all 0.3s ease;
-      
-      &:hover {
-        background: rgba(105, 204, 230, 0.1);
-        color: #69cce6;
-      }
-      
-      &--other-month {
-        color: #666666;
-      }
-      
-      &--today {
-        background: rgba(105, 204, 230, 0.2);
-        color: #69cce6;
-        font-weight: 600;
-      }
-      
-      &--selected {
-        background: #69cce6;
-        color: #1a1a1a;
-        font-weight: 600;
-        
-        &:hover {
-          background: #4db8d4;
-        }
-      }
-      
-      &--disabled {
-        color: #444444;
-        cursor: not-allowed;
-        
-        &:hover {
-          background: transparent;
-          color: #444444;
-        }
-      }
-    }
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  z-index: 1;
 }
 
 .cs-step_content {
-  .cs-form_group {
-    margin-bottom: 25px;
-    
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: #ffffff;
-      font-size: 14px;
-    }
-  }
+  position: relative;
+  z-index: 1;
+  clear: both;
+  overflow: hidden;
 }
 
-// Navigation
+// FORMS
+.cs-form_group {
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+  clear: both;
+}
+
+.cs-form_group label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 500;
+  color: #f3f4f6;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.cs-form_field {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #3d3d3d;
+  background: #2d2d2d;
+  color: #e0e0e0;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cs-form_field:focus {
+  border-color: #777777;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background: #3d3d3d;
+}
+
+.cs-form_field::placeholder {
+  color: #9ca3af;
+}
+
+// SELECT
+select.cs-form_field {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%239ca3af" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+select.cs-form_field:focus {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%233b82f6" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>');
+}
+
+// TEXTAREA
+textarea.cs-form_field {
+  resize: vertical;
+  min-height: 96px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+// RADIO/CHECKBOX
+.cs-radio_group,
+.cs-checkbox_group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.cs-radio_item,
+.cs-checkbox_item {
+  position: relative;
+}
+
+.cs-radio_item input,
+.cs-checkbox_item input {
+  position: absolute;
+  opacity: 0;
+}
+
+.cs-radio_item label,
+.cs-checkbox_item label {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid #3d3d3d;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #f3f4f6;
+  background: #2d2d2d;
+  transition: all 0.2s ease;
+  font-weight: 400;
+  line-height: 1.8;
+  min-height: 70px;
+  word-spacing: 0.2em;
+  letter-spacing: 0.5px;
+}
+
+.cs-radio_item label:hover,
+.cs-checkbox_item label:hover {
+  border-color: #777777;
+  background: #3d3d3d;
+}
+
+.cs-radio_item input:checked + label,
+.cs-checkbox_item input:checked + label {
+  border-color: #777777;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.cs-radio_item label::before,
+.cs-checkbox_item label::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6b7280;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-top: 2px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.cs-checkbox_item label::before {
+  border-radius: 4px;
+}
+
+.cs-radio_item input:checked + label::before,
+.cs-checkbox_item input:checked + label::before {
+  background: #777777;
+  border-color: #777777;
+}
+
+.cs-radio_item input:checked + label::after,
+.cs-checkbox_item input:checked + label::after {
+  content: '✓';
+  position: absolute;
+  left: 26px;
+  top: 20px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+// BUTTONS
 .cs-wizard_navigation {
   display: flex;
   justify-content: center;
-  padding-top: 30px;
-  border-top: 1px solid #333333;
+  padding-top: 32px;
+  border-top: 1px solid #4b5563;
 }
 
 .cs-nav_buttons {
   display: flex;
-  gap: 20px;
-  
-  .cs-btn {
-    min-width: 120px;
-    padding: 12px 30px;
-    border-radius: 10px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    
-    &.cs-type2 {
-      background: transparent;
-      border: 2px solid #333333;
-      color: #cccccc;
-      
-      &:hover {
-        border-color: #69cce6;
-        color: #69cce6;
-        transform: translateY(-2px);
-      }
-    }
-    
-    &.cs-type1 {
-      background: linear-gradient(135deg, #69cce6 0%, #4db8d4 100%);
-      border: none;
-      color: #1a1a1a;
-      font-weight: 700;
-      
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(105, 204, 230, 0.4);
-      }
-    }
-  }
+  gap: 12px;
 }
 
-// Validation Errors
-.cs-validation_errors {
-  .cs-error_message {
-    font-size: 14px;
-    padding: 8px 15px;
-    background: rgba(220, 53, 69, 0.1);
-    border-left: 4px solid #dc3545;
-    border-radius: 4px;
-    margin-bottom: 8px;
-  }
+.cs-btn.cs-style1 {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  min-width: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-// Form Field Groups
+.cs-btn.cs-style1:not(.cs-secondary) {
+  background: #777777;
+  color: #ffffff;
+  border-color: #777777;
+}
+
+.cs-btn.cs-style1:not(.cs-secondary):hover {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.cs-btn.cs-style1.cs-secondary {
+  background: #2d2d2d;
+  border-color: #6b7280;
+  color: #f3f4f6;
+}
+
+.cs-btn.cs-style1.cs-secondary:hover {
+  border-color: #9ca3af;
+  background: #3d3d3d;
+}
+
+.cs-btn.cs-style1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cs-btn.cs-style1:disabled:hover {
+  background: #777777;
+  border-color: #777777;
+}
+
+.cs-btn.cs-style1.cs-secondary:disabled:hover {
+  background: #2d2d2d;
+  border-color: #6b7280;
+}
+
+// FIELD GROUPS
 .cs-field_group {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  
-  @media (max-width: 767px) {
-    grid-template-columns: 1fr;
-  }
+  gap: 24px;
 }
 
 .cs-field_group_three {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  
-  @media (max-width: 991px) {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  @media (max-width: 767px) {
-    grid-template-columns: 1fr;
-  }
+  gap: 24px;
 }
 
-// Radio and Checkbox Groups
-.cs-radio_group,
-.cs-checkbox_group {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  
-  .cs-radio_item,
-  .cs-checkbox_item {
-    position: relative;
+// VALIDATION ERRORS
+.cs-validation_errors {
+  margin-top: 16px;
+}
+
+.cs-error_message {
+  color: #f87171;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+// PHOTO UPLOAD SECTION
+.cs-photo_guidelines {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     
-    input {
-      position: absolute;
-      opacity: 0;
-      
-      &:checked + label {
-        background: rgba(105, 204, 230, 0.2);
-        border-color: #69cce6;
-        color: #69cce6;
-        
-        &::before {
-          background: #69cce6;
-          border-color: #69cce6;
-        }
-      }
-    }
-    
-    label {
+    li {
+      color: #d1d5db;
+      padding: 6px 0;
+      font-size: 14px;
       display: flex;
       align-items: center;
-      padding: 15px 20px;
-      border: 2px solid #333333;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 500;
-      color: #ffffff;
-      background: #2a2a2a;
-      
-      &:hover {
-        border-color: #69cce6;
-        background: rgba(105, 204, 230, 0.1);
-      }
       
       &::before {
-        content: '';
-        width: 18px;
-        height: 18px;
-        border: 2px solid #333333;
-        border-radius: 50%;
-        margin-right: 12px;
-        transition: all 0.3s ease;
+        content: '•';
+        color: #3b82f6;
+        font-weight: bold;
+        width: 20px;
+        margin-right: 8px;
       }
     }
-  }
-  
-  .cs-checkbox_item label::before {
-    border-radius: 4px;
   }
 }
 
-// Responsive Design
-@media (max-width: 991px) {
-  .cs-wizard_container {
-    padding: 40px 30px;
+.cs-photo_upload_area {
+  border: 2px dashed #4b5563;
+  border-radius: 8px;
+  padding: 48px 24px;
+  text-align: center;
+  background: #2d2d2d;
+  transition: all 0.2s ease;
+  position: relative;
+  cursor: pointer;
+  
+  &:hover {
+    border-color: #777777;
+    background: #3d3d3d;
   }
   
-  .cs-progress_steps {
-    .cs-step_label {
-      font-size: 11px;
+  &.cs-drag_active {
+    border-color: #777777;
+    background: rgba(59, 130, 246, 0.1);
+    border-style: solid;
+  }
+}
+
+.cs-upload_content {
+  pointer-events: none;
+  
+  svg {
+    color: #3b82f6;
+    margin-bottom: 16px;
+  }
+  
+  p {
+    color: #f3f4f6;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  small {
+    color: #9ca3af;
+    font-size: 14px;
+  }
+}
+
+.cs-file_input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.cs-photo_preview_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.cs-photo_preview_item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #3d3d3d;
+  border: 1px solid #6b7280;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.cs-photo_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  
+  .cs-photo_preview_item:hover & {
+    opacity: 1;
+  }
+}
+
+.cs-remove_photo {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: #dc2626;
+    transform: scale(1.1);
+  }
+}
+
+.cs-photo_name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cs-info_box {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 24px;
+  
+  p {
+    color: #d1d5db;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    
+    strong {
+      color: #60a5fa;
     }
+  }
+}
+
+// DATEPICKER STYLES
+.cs-date-picker {
+  position: relative;
+  width: 100%;
+}
+
+.cs-date-picker-trigger {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  text-align: left;
+  
+  .cs-date-selected {
+    color: #e0e0e0;
+  }
+  
+  .cs-date-placeholder {
+    color: #9ca3af;
+  }
+}
+
+.cs-date-picker-icon {
+  color: #9ca3af;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.cs-date-picker-trigger:hover .cs-date-picker-icon {
+  color: #3b82f6;
+}
+
+.cs-date-picker-dropdown {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  min-width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.cs-date-picker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #374151;
+}
+
+.cs-date-picker-nav {
+  background: #2d2d2d;
+  border: 1px solid #3d3d3d;
+  border-radius: 6px;
+  color: #f3f4f6;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: #3d3d3d;
+    border-color: #777777;
+    color: #3b82f6;
+  }
+}
+
+.cs-date-picker-month-btn {
+  background: transparent;
+  border: none;
+  color: #e0e0e0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: #2d2d2d;
+    color: #3b82f6;
+  }
+}
+
+.cs-date-picker-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.cs-date-picker-weekday {
+  color: #9ca3af;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px 4px;
+  text-transform: uppercase;
+}
+
+.cs-date-picker-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.cs-date-picker-day {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #f3f4f6;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  height: 36px;
+  transition: all 0.2s ease;
+  width: 36px;
+  
+  &:hover:not(.cs-date-picker-day--disabled) {
+    background: #2d2d2d;
+    border-color: #777777;
+    color: #3b82f6;
+  }
+  
+  &.cs-date-picker-day--other-month {
+    color: #6b7280;
+  }
+  
+  &.cs-date-picker-day--today {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: #777777;
+    color: #3b82f6;
+    font-weight: 600;
+  }
+  
+  &.cs-date-picker-day--selected {
+    background: #777777;
+    border-color: #777777;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  &.cs-date-picker-day--disabled {
+    color: #4b5563;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.cs-date-picker-year-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.cs-date-picker-year {
+  background: transparent;
+  border: 1px solid #3d3d3d;
+  border-radius: 6px;
+  color: #f3f4f6;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 8px;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: #2d2d2d;
+    border-color: #777777;
+    color: #3b82f6;
+  }
+  
+  &.cs-date-picker-year--selected {
+    background: #777777;
+    border-color: #777777;
+    color: #ffffff;
+    font-weight: 600;
+  }
+}
+
+// RESPONSIVE
+@media (max-width: 991px) {
+  .cs-wizard_container {
+    padding: 32px 24px;
+  }
+  
+  .cs-field_group_three {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 767px) {
   .cs-wizard_container {
-    padding: 30px 20px;
+    padding: 24px 16px;
   }
   
-  .cs-step_circle {
-    width: 35px;
-    height: 35px;
-    font-size: 12px;
+  .cs-field_group,
+  .cs-field_group_three {
+    grid-template-columns: 1fr;
   }
   
   .cs-nav_buttons {
     flex-direction: column;
-    
-    .cs-btn {
-      width: 100%;
-    }
-  }
-}
-
-@media (max-width: 420px) {
-  .cs-progress_steps {
-    gap: 2px !important;
+    width: 100%;
   }
   
-  .cs-progress_step {
-    flex: 0 0 auto !important;
-    width: auto !important;
-    min-width: 20px !important;
+  .cs-nav_buttons .cs-btn {
+    width: 100%;
   }
   
   .cs-step_circle {
-    width: 20px !important;
-    height: 20px !important;
-    font-size: 8px !important;
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
   }
   
   .cs-step_label {
-    display: none !important;
+    font-size: 12px;
   }
 }

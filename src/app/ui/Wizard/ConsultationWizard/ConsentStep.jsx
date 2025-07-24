@@ -156,7 +156,7 @@ export default function ConsentStep({ formData, updateFormData, onNext, onPrev }
         </p>
         <p>
           <strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit per E-Mail an 
-          datenschutz@medicaliinnhair.de oder telefonisch unter +49 211 123456 widerrufen.
+          info@medical-inn-hair.com oder telefonisch unter 0211 26159 299 widerrufen.
         </p>
       </Div>
 
