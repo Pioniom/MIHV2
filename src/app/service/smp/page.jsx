@@ -9,8 +9,30 @@ import SectionHeading from "@/app/ui/SectionHeading";
 import TestimonialSlider from "@/app/ui/Slider/TestimonialSlider";
 import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
+import { FeatureSteps } from "@/app/ui/FeatureSteps";
 
 export default function SMPPage() {
+  const smpApplications = [
+    {
+      step: "Glatze & Buzz Cut Look",
+      title: "Glatze & Buzz Cut Look",
+      content: "Komplette Kopfhaut-Pigmentierung für den perfekten Glatze-Look mit Simulation von frisch rasierten Haaren.",
+      image: "/images/service_4.webp"
+    },
+    {
+      step: "Haardichte-Simulation", 
+      title: "Haardichte-Simulation",
+      content: "Verdichtung von dünnem Haar durch Mikropigmentierung zwischen vorhandenen Haarfollikeln für natürliche Fülle.",
+      image: "/images/service_5.webp"
+    },
+    {
+      step: "Narbenkaschierung",
+      title: "Narbenkaschierung", 
+      content: "Kaschierung von Narben durch Haartransplantationen oder Unfälle mit Mikropigmentierung für einheitliche Kopfhaut-Optik.",
+      image: "/images/portfolio_1.webp"
+    }
+  ];
+
   return (
     <>
       <PageHeading 
@@ -122,22 +144,18 @@ export default function SMPPage() {
                 </ul>
               </Div>
             </Div>
-            <Spacing lg='40' md='30'/>
-            <h3 className="cs-font_30 cs-m0">Vielseitige SMP Anwendungen</h3>
-            <Spacing lg='30' md='20'/>
-            <Div className="row">
-              <Div className="col-lg-12">
-                <p className="cs-m0"><strong>Glatze & Buzz Cut Look:</strong> Komplette Kopfhaut-Pigmentierung für den perfekten Glatze-Look mit Simulation von frisch rasierten Haaren.</p>
-                <Spacing lg='15' md='15'/>
-                <p className="cs-m0"><strong>Haardichte-Simulation:</strong> Verdichtung von dünnem Haar durch Mikropigmentierung zwischen vorhandenen Haarfollikeln für natürliche Fülle.</p>
-                <Spacing lg='15' md='15'/>
-                <p className="cs-m0"><strong>Narbenkaschierung:</strong> Kaschierung von Narben durch Haartransplantationen oder Unfälle mit Mikropigmentierung für einheitliche Kopfhaut-Optik.</p>
-              </Div>
-            </Div>
           </Div>
         </Div>
       </Div>
       <Spacing lg='150' md='80'/>
+      
+      {/* SMP Applications Section */}
+      <FeatureSteps 
+        features={smpApplications}
+        title="Vielseitige SMP Anwendungen"
+        autoPlayInterval={4000}
+      />
+      <Spacing lg='50' md='30'/>
       
       <TestimonialSlider />
       <Spacing lg='145' md='80'/>

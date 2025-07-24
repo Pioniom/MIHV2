@@ -9,8 +9,30 @@ import SectionHeading from "@/app/ui/SectionHeading";
 import TestimonialSlider from "@/app/ui/Slider/TestimonialSlider";
 import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
+import { FeatureSteps } from "@/app/ui/FeatureSteps";
 
 export default function FueSaphirPage() {
+  const extendedApplications = [
+    {
+      step: "Augenbrauentransplantation",
+      title: "Augenbrauentransplantation",
+      content: "Präzise Wiederherstellung der Augenbrauen mit FUE Saphir Technik für natürliche Wuchsrichtung und dichte Augenbrauen.",
+      image: "/images/service_1.webp"
+    },
+    {
+      step: "Barttransplantation", 
+      title: "Barttransplantation",
+      content: "Vollerer Bart durch FUE Saphir Transplantation aus dem Kopfhaar-Spenderbereich für natürliche Bartverdichtung.",
+      image: "/images/service_2.webp"
+    },
+    {
+      step: "Body Hair Extraction",
+      title: "Body Hair Extraction", 
+      content: "Verwendung von Körperhaar als Spenderbereich bei begrenztem Kopfhaar für optimale Graft-Ausbeute.",
+      image: "/images/service_3.webp"
+    }
+  ];
+
   return (
     <>
       <PageHeading 
@@ -123,22 +145,18 @@ export default function FueSaphirPage() {
                 </ul>
               </Div>
             </Div>
-            <Spacing lg='40' md='30'/>
-            <h3 className="cs-font_30 cs-m0">Erweiterte Anwendungsbereiche</h3>
-            <Spacing lg='30' md='20'/>
-            <Div className="row">
-              <Div className="col-lg-12">
-                <p className="cs-m0"><strong>Augenbrauentransplantation:</strong> Präzise Wiederherstellung der Augenbrauen mit FUE Saphir Technik für natürliche Wuchsrichtung und dichte Augenbrauen.</p>
-                <Spacing lg='15' md='15'/>
-                <p className="cs-m0"><strong>Barttransplantation:</strong> Vollerer Bart durch FUE Saphir Transplantation aus dem Kopfhaar-Spenderbereich für natürliche Bartverdichtung.</p>
-                <Spacing lg='15' md='15'/>
-                <p className="cs-m0"><strong>Body Hair Extraction:</strong> Verwendung von Körperhaar als Spenderbereich bei begrenztem Kopfhaar für optimale Graft-Ausbeute.</p>
-              </Div>
-            </Div>
           </Div>
         </Div>
       </Div>
       <Spacing lg='150' md='80'/>
+      
+      {/* Extended Applications Section */}
+      <FeatureSteps 
+        features={extendedApplications}
+        title="Erweiterte Anwendungsbereiche"
+        autoPlayInterval={4000}
+      />
+      <Spacing lg='50' md='30'/>
       
       <TestimonialSlider />
       <Spacing lg='145' md='80'/>

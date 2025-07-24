@@ -1,0 +1,107 @@
+.cs-feature_steps_list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cs-feature_step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+  
+  &.cs-active {
+    background: rgba(105, 204, 230, 0.1);
+    transform: translateX(10px);
+  }
+}
+
+.cs-feature_step_icon {
+  flex-shrink: 0;
+}
+
+.cs-step_circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(105, 204, 230, 0.1);
+  border: 2px solid rgba(105, 204, 230, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #666;
+  transition: all 0.5s ease;
+  
+  &.cs-active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+    transform: scale(1.1);
+  }
+}
+
+.cs-feature_step_content {
+  flex: 1;
+}
+
+.cs-feature_image_container {
+  position: relative;
+  height: 550px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.cs-feature_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cs-feature_step {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .cs-step_circle {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .cs-feature_image_container {
+    height: 400px;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .cs-feature_steps_list {
+    gap: 20px;
+  }
+  
+  .cs-feature_step {
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .cs-step_circle {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+  
+  .cs-feature_image_container {
+    height: 300px;
+  }
+}

@@ -9,8 +9,30 @@ import SectionHeading from "@/app/ui/SectionHeading";
 import TestimonialSlider from "@/app/ui/Slider/TestimonialSlider";
 import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
+import { FeatureSteps } from "@/app/ui/FeatureSteps";
 
 export default function PRPPage() {
+  const prpApplications = [
+    {
+      step: "Nachbehandlung Haartransplantation",
+      title: "Nachbehandlung Haartransplantation",
+      content: "PRP als optimale Nachbehandlung nach FUE/DHI Transplantationen für bessere Graft-Anwachsrate und schnellere Heilung.",
+      image: "/images/service_3.webp"
+    },
+    {
+      step: "Diffuser Haarausfall", 
+      title: "Diffuser Haarausfall",
+      content: "Behandlung von dünner werdendem Haar durch Stärkung vorhandener Haarfollikel und natürliche Wachstumsförderung.",
+      image: "/images/service_1.webp"
+    },
+    {
+      step: "Vielseitige Anwendungsbereiche",
+      title: "Vielseitige Anwendungsbereiche", 
+      content: "PRP findet erfolgreich Anwendung in vielen Bereichen - von Bartbereich und Augenbrauen bis hin zu Anti-Aging und anderen medizinischen Behandlungsfeldern.",
+      image: "/images/portfolio_3.webp"
+    }
+  ];
+
   return (
     <>
       <PageHeading 
@@ -122,22 +144,18 @@ export default function PRPPage() {
                 </ul>
               </Div>
             </Div>
-            <Spacing lg='40' md='30'/>
-            <h3 className="cs-font_30 cs-m0">Vielseitige PRP Anwendungen</h3>
-            <Spacing lg='30' md='20'/>
-            <Div className="row">
-              <Div className="col-lg-12">
-                <p className="cs-m0"><strong>Nachbehandlung Haartransplantation:</strong> PRP als optimale Nachbehandlung nach FUE/DHI Transplantationen für bessere Graft-Anwachsrate und schnellere Heilung.</p>
-                <Spacing lg='15' md='15'/>
-                <p className="cs-m0"><strong>Diffuser Haarausfall:</strong> Behandlung von dünner werdendem Haar durch Stärkung vorhandener Haarfollikel und natürliche Wachstumsförderung.</p>
-                <Spacing lg='15' md='15'/>
-                <p className="cs-m0"><strong>Bartbereich & Augenbrauen:</strong> PRP Therapie zur Verdichtung und Stärkung vorhandener Haare für vollere Augenbrauen und dichteren Bart.</p>
-              </Div>
-            </Div>
           </Div>
         </Div>
       </Div>
       <Spacing lg='150' md='80'/>
+      
+      {/* PRP Applications Section */}
+      <FeatureSteps 
+        features={prpApplications}
+        title="Vielseitige PRP Anwendungen"
+        autoPlayInterval={4000}
+      />
+      <Spacing lg='50' md='30'/>
       
       <TestimonialSlider />
       <Spacing lg='145' md='80'/>
