@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 
 // Konfiguration des E-Mail-Transporters (gleich wie in send-email.js)
 const createTransporter = () => {
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     host: process.env.SMTP_HOST || 'smtp.hostinger.com',
     port: parseInt(process.env.SMTP_PORT) || 465,
     secure: true,

@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 
 // Konfiguration des E-Mail-Transporters mit erweiterten Optionen
 const createTransporter = () => {
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     host: process.env.SMTP_HOST || 'smtp.hostinger.com',
     port: parseInt(process.env.SMTP_PORT) || 465,
     secure: true, // true für Port 465
