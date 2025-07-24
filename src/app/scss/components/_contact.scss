@@ -153,6 +153,39 @@
   margin-right: auto;
 }
 
+// Dark Mode Support for Success Message
+@media (prefers-color-scheme: dark) {
+  .cs-success_message {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border: 1px solid #333;
+  }
+  
+  .cs-success_title {
+    color: #ffffff;
+  }
+  
+  .cs-success_desc {
+    color: #cccccc;
+  }
+}
+
+// Manual Dark Mode Class Support
+.dark .cs-success_message,
+[data-theme="dark"] .cs-success_message {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border: 1px solid #333;
+}
+
+.dark .cs-success_title,
+[data-theme="dark"] .cs-success_title {
+  color: #ffffff;
+}
+
+.dark .cs-success_desc,
+[data-theme="dark"] .cs-success_desc {
+  color: #cccccc;
+}
+
 // Wizard Specific Styles
 .cs-booking_wizard {
   .cs-wizard_progress {
