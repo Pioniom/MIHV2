@@ -9,10 +9,10 @@ const teamData = [
     memberName: 'Nükhet Önal Taylan',
     memberDesignation: 'CEO Medical Inn Hair',
     memberSocial: {
-      linkedin: '/',
+      linkedin: 'https://de.linkedin.com/in/n%C3%BCkhet-%C3%B6nal-taylan-365277118',
       twitter: '/',
-      youtube: '/',
-      facebook: '/',
+      youtube: 'https://www.youtube.com/channel/UCpjjB57nA9B03D1h61vzdPQ/about',
+      facebook: 'https://www.facebook.com/medicalinnhair/',
     },
   },
   {
@@ -20,10 +20,10 @@ const teamData = [
     memberName: 'Prof. Ch. Dr. med. Mehmet Atila',
     memberDesignation: 'CEO Medical Inn',
     memberSocial: {
-      linkedin: '/',
+      linkedin: 'https://de.linkedin.com/in/prof-ch-dr-med-mehmet-atila-4b6172b8',
       twitter: '/',
-      youtube: '/',
-      facebook: '/',
+      youtube: 'https://www.youtube.com/channel/UCpjjB57nA9B03D1h61vzdPQ/about',
+      facebook: 'https://www.facebook.com/MehmetAtila1/?locale=de_DE',
     },
   },
   {
@@ -33,8 +33,8 @@ const teamData = [
     memberSocial: {
       linkedin: '/',
       twitter: '/',
-      youtube: '/',
-      facebook: '/',
+      youtube: 'https://www.youtube.com/channel/UCpjjB57nA9B03D1h61vzdPQ/about',
+      facebook: 'https://www.facebook.com/medicalinnhair/',
     },
   },
   {
