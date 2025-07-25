@@ -5,7 +5,7 @@ import Pagination from "@/app/ui/Pagination";
 import PostStyle2 from "@/app/ui/Post/PostStyle2";
 import Sidebar from "@/app/ui/Sidebar.jsx/index.jsx";
 import Spacing from "@/app/ui/Spacing";
-import { getAllPosts } from "@/app/lib/blogData";
+import { getAllPosts, formatDateGerman } from "@/app/lib/blogData";
 
 export const metadata = {
   title: 'Ratgeber - Haartransplantation & Haarausfall | Medical Inn Hair',
@@ -35,7 +35,10 @@ export const metadata = {
   }
 };
 
-const postData = getAllPosts();
+const postData = getAllPosts().map(post => ({
+  ...post,
+  date: formatDateGerman(post.date)
+}));
 
 export default function BlogPage() {
   return (

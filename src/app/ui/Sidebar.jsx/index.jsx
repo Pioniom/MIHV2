@@ -5,7 +5,7 @@ import RecentPost from '../Widget/RecentPost'
 import SearchWidget from '../Widget/SearchWidget'
 import SideMenuWidget from '../Widget/SideMenuWidget'
 import TagWidget from '../Widget/TagWidget'
-import { getCategories, getRecentPosts } from '@/app/lib/blogData'
+import { getCategories, getRecentPosts, formatDateGerman } from '@/app/lib/blogData'
 
 export default function Sidebar() {
   const categories = getCategories();
@@ -20,7 +20,7 @@ export default function Sidebar() {
     title: post.title.length > 30 ? post.title.substring(0, 30) + '...' : post.title,
     thumb: post.thumb,
     href: `/blog/${post.slug}`,
-    date: post.date
+    date: formatDateGerman(post.date)
   }));
   
   const medicalTags = [

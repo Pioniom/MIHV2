@@ -2,7 +2,7 @@ import React from 'react';
 import AccessibleSlider from '../AccessibleSlider/AccessibleSlider';
 import Div from '../Div';
 import Post from '../Post';
-import { getRecentPosts } from '@/app/lib/blogData';
+import { getRecentPosts, formatDateGerman } from '@/app/lib/blogData';
 
 // Verwende die echten Blog-Daten
 const blogPosts = getRecentPosts(3);
@@ -10,7 +10,7 @@ const postData = blogPosts.map(post => ({
   url: `/blog/${post.slug}`,
   src: post.thumb,
   alt: post.title,
-  date: post.date,
+  date: formatDateGerman(post.date),
   title: post.title,
 }));
 

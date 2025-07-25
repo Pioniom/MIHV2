@@ -4,7 +4,7 @@ const blogPosts = [
     thumb: '/images/service_1.webp',
     title: 'FUE vs. DHI: Welche Haartransplantations-Methode ist die richtige für Sie?',
     subtitle: 'Die Wahl der richtigen Haartransplantations-Methode ist entscheidend für ein optimales Ergebnis. FUE und DHI sind die modernsten Techniken, die jeweils ihre spezifischen Vorteile bieten. In diesem Ratgeber erklären wir die Unterschiede, Vor- und Nachteile beider Methoden und helfen Ihnen bei der Entscheidung für die passende Behandlung.',
-    date: '15 März 2024',
+    date: '2024-03-15',
     category: 'Behandlungsmethoden',
     categoryHref: '/blog/kategorie/behandlungsmethoden',
     content: `
@@ -28,7 +28,7 @@ const blogPosts = [
     thumb: '/images/service_2.webp',
     title: 'Nachsorge bei Haartransplantation: 10 wichtige Tipps für optimale Ergebnisse',
     subtitle: 'Die richtige Nachsorge ist entscheidend für den Erfolg Ihrer Haartransplantation. Von der ersten Woche nach dem Eingriff bis zu den folgenden Monaten gibt es wichtige Regeln zu beachten. Erfahren Sie, wie Sie die Heilung fördern, Komplikationen vermeiden und das bestmögliche Ergebnis erzielen.',
-    date: '20 Februar 2024',
+    date: '2024-02-20',
     category: 'Nachsorge',
     categoryHref: '/blog/kategorie/nachsorge',
     content: `
@@ -60,7 +60,7 @@ const blogPosts = [
     thumb: '/images/service_3.webp',
     title: 'PRP-Therapie: Natürliche Haarwachstumsförderung ohne Operation',
     subtitle: 'Die PRP-Therapie (Platelet Rich Plasma) ist eine innovative, nicht-operative Behandlung zur Förderung des Haarwachstums. Mit Ihrem eigenen Blutplasma stimulieren wir die Haarfollikel natürlich. Erfahren Sie mehr über den Ablauf, die Vorteile und für wen diese Therapie geeignet ist.',
-    date: '05 Januar 2024',
+    date: '2024-01-05',
     category: 'Therapien',
     categoryHref: '/blog/kategorie/therapien',
     content: `
@@ -99,7 +99,7 @@ const blogPosts = [
     thumb: '/images/service_4.webp',
     title: 'Haartransplantation Kosten: Faktoren, Preise und Finanzierungsmöglichkeiten',
     subtitle: 'Was kostet eine Haartransplantation und welche Faktoren beeinflussen den Preis? Erfahren Sie alles über Kostenfaktoren, Preisunterschiede zwischen FUE und DHI sowie unsere flexiblen Finanzierungsoptionen für Ihre Traumfrisur.',
-    date: '28 Dezember 2023',
+    date: '2023-12-28',
     category: 'Kosten & Finanzierung',
     categoryHref: '/blog/kategorie/kosten-finanzierung',
     content: `
@@ -149,7 +149,7 @@ const blogPosts = [
     thumb: '/images/service_5.webp',
     title: 'Haarausfall verstehen: Ursachen, Arten und moderne Behandlungsmöglichkeiten',
     subtitle: 'Haarausfall betrifft Millionen von Menschen weltweit. Von genetischen Faktoren bis zu hormonellen Veränderungen - die Ursachen sind vielfältig. Lernen Sie die verschiedenen Arten von Haarausfall kennen und entdecken Sie moderne, effektive Behandlungsmöglichkeiten.',
-    date: '12 Dezember 2023',
+    date: '2023-12-12',
     category: 'Haarausfall',
     categoryHref: '/blog/kategorie/haarausfall',
     content: `
@@ -194,7 +194,7 @@ const blogPosts = [
     thumb: '/images/portfolio_1.webp',
     title: 'Wenn die Haare schwinden: Warum Haartransplantation auch für Frauen eine Lösung sein kann',
     subtitle: 'Es ist ein Thema, über das kaum gesprochen wird, obwohl es Millionen betrifft: Haarausfall bei Frauen. Während Männer oft offen über ihre schwindende Haarpracht scherzen, leiden Frauen meist im Stillen. Dabei ist Haarausfall bei Frauen häufiger, als viele denken – und eine Haartransplantation kann auch hier die Lösung sein.',
-    date: '08 April 2024',
+    date: '2024-04-08',
     category: 'Frauen',
     categoryHref: '/blog/kategorie/frauen',
     content: `
@@ -252,7 +252,7 @@ const blogPosts = [
     thumb: '/images/portfolio_2.webp',
     title: 'Der feine Unterschied: Warum eine staatlich anerkannte Privatklinik nach § 30 GewO Ihre erste Wahl sein sollte',
     subtitle: 'Stellen Sie sich vor, Sie betreten eine Klinik für Ihre Haartransplantation. Die Räume sind hell, das Personal freundlich, und alles macht einen professionellen Eindruck. Doch woran erkennen Sie wirklich, ob Sie in den besten Händen sind? Die Antwort liegt oft in einem unscheinbaren Detail: der staatlichen Anerkennung nach § 30 GewO.',
-    date: '22 Mai 2024',
+    date: '2024-05-22',
     category: 'Qualität & Sicherheit',
     categoryHref: '/blog/kategorie/qualitaet-sicherheit',
     content: `
@@ -298,7 +298,7 @@ const blogPosts = [
     thumb: '/images/portfolio_3.webp',
     title: 'Die Zukunft beginnt heute: Wie unsere KI-Analyse Ihre Haartransplantation revolutioniert',
     subtitle: 'Stellen Sie sich vor, Sie könnten mit wenigen Klicks eine erste professionelle Einschätzung für Ihre Haartransplantation erhalten. Keine langen Wartezeiten, kein Terminsstress, keine Unsicherheit. Genau das macht unsere innovative KI-Analyse bei Medical Inn Hair möglich – und das "Inn" in unserem Namen steht nicht umsonst für Innovation.',
-    date: '15 Juni 2024',
+    date: '2024-06-15',
     category: 'Innovation & Technologie',
     categoryHref: '/blog/kategorie/innovation-technologie',
     content: `
@@ -348,7 +348,7 @@ const blogPosts = [
     thumb: '/images/portfolio_4.webp',
     title: 'Die ersten 10 Tage nach der Haartransplantation: Was Sie wirklich erwartet',
     subtitle: 'Der Eingriff ist geschafft. Jetzt beginnt die entscheidende Phase: die ersten zehn Tage nach Ihrer Haartransplantation. Diese Zeit ist geprägt von klaren Abläufen, vorhersehbaren Heilungsphasen und wichtigen Verhaltensregeln. Hier erfahren Sie, was Tag für Tag passiert und worauf es wirklich ankommt.',
-    date: '10 Juli 2024',
+    date: '2024-07-10',
     category: 'Nachsorge',
     categoryHref: '/blog/kategorie/nachsorge',
     content: `
@@ -430,7 +430,7 @@ const blogPosts = [
     thumb: '/images/about_img_1.webp',
     title: 'Das Märchen vom Haartransplantations-Paradies: Warum Düsseldorf die bessere Wahl ist',
     subtitle: 'Es klingt wie ein unschlagbares Angebot: Haartransplantation zum Schnäppchenpreis, inklusive Flug und Luxushotel. Die sozialen Medien sind voll davon. Hochglanzbilder von Kliniken, die aussehen wie Fünf-Sterne-Resorts. Doch hinter der glänzenden Fassade verbirgt sich oft eine andere Realität.',
-    date: '28 August 2024',
+    date: '2024-08-28',
     category: 'Qualität & Sicherheit',
     categoryHref: '/blog/kategorie/qualitaet-sicherheit',
     content: `
@@ -495,6 +495,12 @@ const blogPosts = [
 ];
 
 // Helper functions for blog data
+export function formatDateGerman(dateString) {
+  const date = new Date(dateString);
+  const options = { day: 'numeric', month: 'long', year: 'numeric' };
+  return date.toLocaleDateString('de-DE', options);
+}
+
 export function getAllPosts() {
   return blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 }

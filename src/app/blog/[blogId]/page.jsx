@@ -6,7 +6,7 @@ import Spacing from "@/app/ui/Spacing";
 import CommentForm from "@/app/ui/CommentForm";
 import Image from "next/image";
 import Link from "next/link";
-import { getPostBySlug } from "@/app/lib/blogData";
+import { getPostBySlug, formatDateGerman } from "@/app/lib/blogData";
 import { notFound } from 'next/navigation';
 
 export async function generateMetadata({ params }) {
@@ -86,7 +86,7 @@ export default async function BlogDetailsPage({ params }) {
               </Div>
               <Div className="cs-post_info">
                 <Div className="cs-post_meta cs-style1 cs-ternary_color cs-semi_bold cs-primary_font">
-                  <span className="cs-posted_by">{post.date}</span>
+                  <span className="cs-posted_by">{formatDateGerman(post.date)}</span>
                   <Link href={post.categoryHref} className="cs-post_avatar">{post.category}</Link>
                 </Div>
                 <h1 className="cs-post_title">{post.title}</h1>
