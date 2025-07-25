@@ -1,5 +1,3 @@
-'use client'
-
 import Cta from "@/app/ui/Cta";
 import Div from "@/app/ui/Div";
 import PageHeading from "@/app/ui/PageHeading";
@@ -7,39 +5,37 @@ import Pagination from "@/app/ui/Pagination";
 import PostStyle2 from "@/app/ui/Post/PostStyle2";
 import Sidebar from "@/app/ui/Sidebar.jsx/index.jsx";
 import Spacing from "@/app/ui/Spacing";
+import { getAllPosts } from "@/app/lib/blogData";
 
-const postData = [
-  {
-    thumb: '/images/post_4.jpeg',
-    title: 'FUE vs. DHI: Welche Haartransplantations-Methode ist die richtige für Sie?',
-    subtitle:
-      'Die Wahl der richtigen Haartransplantations-Methode ist entscheidend für ein optimales Ergebnis. FUE und DHI sind die modernsten Techniken, die jeweils ihre spezifischen Vorteile bieten. In diesem Ratgeber erklären wir die Unterschiede, Vor- und Nachteile beider Methoden und helfen Ihnen bei der Entscheidung für die passende Behandlung.',
-    date: '15 März 2024',
-    category: 'Behandlungsmethoden',
-    categoryHref: '/blog',
-    href: '/blog/blog-details',
+export const metadata = {
+  title: 'Ratgeber - Haartransplantation & Haarausfall | Medical Inn Hair',
+  description: 'Expertenwissen zu Haartransplantation, Haarausfall & Behandlungsmethoden ✓ FUE & DHI ✓ PRP Therapie ✓ Jetzt informieren!',
+  keywords: 'Haartransplantation Ratgeber, Haarausfall, FUE, DHI, PRP Therapie, SMP, Haartransplantation Düsseldorf, Medical Inn Hair Blog',
+  openGraph: {
+    title: 'Ratgeber - Haartransplantation & Haarausfall | Medical Inn Hair',
+    description: 'Expertenwissen zu Haartransplantation, Haarausfall & Behandlungsmethoden ✓ FUE & DHI ✓ PRP Therapie ✓ Jetzt informieren!',
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Medical Inn Hair',
+    images: [{
+      url: '/images/blog_hero_bg.jpeg',
+      width: 1200,
+      height: 630,
+      alt: 'Haartransplantation Ratgeber Medical Inn Hair'
+    }]
   },
-  {
-    thumb: '/images/post_5.jpeg',
-    title: 'Nachsorge bei Haartransplantation: 10 wichtige Tipps für optimale Ergebnisse',
-    subtitle:
-      'Die richtige Nachsorge ist entscheidend für den Erfolg Ihrer Haartransplantation. Von der ersten Woche nach dem Eingriff bis zu den folgenden Monaten gibt es wichtige Regeln zu beachten. Erfahren Sie, wie Sie die Heilung fördern, Komplikationen vermeiden und das bestmögliche Ergebnis erzielen.',
-    date: '20 Februar 2024',
-    category: 'Nachsorge',
-    categoryHref: '/blog',
-    href: '/blog/blog-details',
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ratgeber - Haartransplantation & Haarausfall | Medical Inn Hair',
+    description: 'Expertenwissen zu Haartransplantation, Haarausfall & Behandlungsmethoden ✓ FUE & DHI ✓ PRP Therapie ✓ Jetzt informieren!',
+    images: ['/images/blog_hero_bg.jpeg']
   },
-  {
-    thumb: '/images/post_6.jpeg',
-    title: 'PRP-Therapie: Natürliche Haarwachstumsförderung ohne Operation',
-    subtitle:
-      'Die PRP-Therapie (Platelet Rich Plasma) ist eine innovative, nicht-operative Behandlung zur Förderung des Haarwachstums. Mit Ihrem eigenen Blutplasma stimulieren wir die Haarfollikel natürlich. Erfahren Sie mehr über den Ablauf, die Vorteile und für wen diese Therapie geeignet ist.',
-    date: '05 Januar 2024',
-    category: 'Therapien',
-    categoryHref: '/blog',
-    href: '/blog/blog-details',
-  },
-];
+  alternates: {
+    canonical: 'https://medical-inn-hair.de/blog'
+  }
+};
+
+const postData = getAllPosts();
 
 export default function BlogPage() {
   return (
@@ -62,7 +58,7 @@ export default function BlogPage() {
                   date={item.date}
                   category={item.category}
                   categoryHref={item.categoryHref}
-                  href={item.href}
+                  href={`/blog/${item.slug}`}
                 />
                 {postData.length > index + 1 && <Spacing lg="95" md="60" />}
               </Div>

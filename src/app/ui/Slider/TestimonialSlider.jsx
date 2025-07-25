@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react';
 import AccessibleSlider from '../AccessibleSlider/AccessibleSlider';
 import { Icon } from '@iconify/react';

@@ -1,4 +1,3 @@
-'use client'
 import Accordion from "@/app/ui/Accordion";
 import Button from "@/app/ui/Button";
 import Cta from "@/app/ui/Cta";
@@ -10,6 +9,34 @@ import TestimonialSlider from "@/app/ui/Slider/TestimonialSlider";
 import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
 import { FeatureSteps } from "@/app/ui/FeatureSteps";
+
+export const metadata = {
+  title: 'FUE Saphir Haartransplantation - Präzise Technik | Medical Inn Hair',
+  description: 'FUE Saphir Haartransplantation ✓ Saphir-Klingen ✓ Minimale Narbenbildung ✓ Natürliche Ergebnisse ✓ Jetzt Beratung buchen in Düsseldorf',
+  keywords: 'FUE Saphir Haartransplantation, Saphir-Klingen, FUE Technik, Haartransplantation Düsseldorf, Augenbrauentransplantation, Barttransplantation, Body Hair Extraction, minimale Narben',
+  openGraph: {
+    title: 'FUE Saphir Haartransplantation - Präzise Technik | Medical Inn Hair',
+    description: 'FUE Saphir Haartransplantation ✓ Saphir-Klingen ✓ Minimale Narbenbildung ✓ Natürliche Ergebnisse ✓ Jetzt Beratung buchen in Düsseldorf',
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Medical Inn Hair',
+    images: [{
+      url: '/images/service_1.webp',
+      width: 1200,
+      height: 630,
+      alt: 'FUE Saphir Haartransplantation Medical Inn Hair Düsseldorf'
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FUE Saphir Haartransplantation - Präzise Technik | Medical Inn Hair',
+    description: 'FUE Saphir Haartransplantation ✓ Saphir-Klingen ✓ Minimale Narbenbildung ✓ Natürliche Ergebnisse ✓ Jetzt Beratung buchen in Düsseldorf',
+    images: ['/images/service_1.webp']
+  },
+  alternates: {
+    canonical: 'https://medical-inn-hair.de/service/fue-saphir'
+  }
+};
 
 export default function FueSaphirPage() {
   const extendedApplications = [

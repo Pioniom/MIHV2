@@ -5,106 +5,52 @@ import RecentPost from '../Widget/RecentPost'
 import SearchWidget from '../Widget/SearchWidget'
 import SideMenuWidget from '../Widget/SideMenuWidget'
 import TagWidget from '../Widget/TagWidget'
+import { getCategories, getRecentPosts } from '@/app/lib/blogData'
 
 export default function Sidebar() {
-  const tagData = [
+  const categories = getCategories();
+  const recentPosts = getRecentPosts(4);
+  
+  const categoryData = categories.map(category => ({
+    title: category.name,
+    url: `/blog/kategorie/${category.slug}`
+  }));
+  
+  const recentPostData = recentPosts.map(post => ({
+    title: post.title.length > 30 ? post.title.substring(0, 30) + '...' : post.title,
+    thumb: post.thumb,
+    href: `/blog/${post.slug}`,
+    date: post.date
+  }));
+  
+  const medicalTags = [
     {
-      title: 'Business',
-      url:'/'
+      title: 'Haartransplantation',
+      url: '/blog'
     },
     {
-      title: 'Agency',
-      url:'/'
+      title: 'FUE Technik',
+      url: '/blog'
     },
     {
-      title: 'Artwork',
-      url:'/'
+      title: 'DHI Methode',
+      url: '/blog'
     },
     {
-      title: 'Marketing',
-      url:'/'
+      title: 'PRP Therapie',
+      url: '/blog'
     },
     {
-      title: 'Information',
-      url:'/'
+      title: 'Nachsorge',
+      url: '/blog'
     },
     {
-      title: 'Design',
-      url:'/'
+      title: 'Haarausfall',
+      url: '/blog'
     },
     {
-      title: 'Wordpress',
-      url:'/'
-    },
-  ]
-  const archiveData = [
-    {
-      title: 'Archives',
-      url:'/'
-    },
-    {
-      title: '15 Aug 2022',
-      url:'/'
-    },
-    {
-      title: '20 Sep 2021',
-      url:'/'
-    },
-    {
-      title: '11 Dec 2020',
-      url:'/'
-    },
-    {
-      title: '25 jun 2020',
-      url:'/'
-    }
-  ]
-  const categoryData = [
-    {
-      title: 'Corporate',
-      url:'/'
-    },
-    {
-      title: 'Company',
-      url:'/'
-    },
-    {
-      title: 'Search Engine',
-      url:'/'
-    },
-    {
-      title: 'Information',
-      url:'/'
-    },
-    {
-      title: 'Painting',
-      url:'/'
-    }
-  ]
-  const recentPostData = [
-    {
-      title: 'How to studio setup...',
-      thumb: '/images/recent_post_1.jpeg',
-      href: '/blog/blog-details',
-      date: '15 Aug 2022'
-    },
-    {
-      title: 'Creative people mind...',
-      thumb: '/images/recent_post_2.jpeg',
-      href: '/blog/blog-details',
-      date: '14 Aug 2022'
-    },
-    {
-      title: 'AI take over human...',
-      thumb: '/images/recent_post_3.jpeg',
-      href: '/blog/blog-details',
-      date: '13 Aug 2022'
-    },
-    {
-      title: 'You should now add...',
-      thumb: '/images/recent_post_4.jpeg',
-      href: '/blog/blog-details',
-      date: '12 Aug 2022'
+      title: 'Düsseldorf',
+      url: '/blog'
     },
   ]
   return (
@@ -112,24 +58,21 @@ export default function Sidebar() {
       <Div className="cs-sidebar_item">
         <AuthorWidget 
           src='/images/avatar_1.png'
-          name='Kuber Jontra' 
-          description='At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.'
+          name='Medical Inn Hair' 
+          description='Ihr Spezialist für moderne Haartransplantationen in Düsseldorf. Natürliche Ergebnisse mit FUE-Saphir und DHI-Technik.'
         />
       </Div>
       <Div className="cs-sidebar_item">
-        <SearchWidget title='Search'/>
+        <SearchWidget title='Suche'/>
       </Div>
       <Div className="cs-sidebar_item">
-        <SideMenuWidget title='Categories' data={categoryData}/>
+        <SideMenuWidget title='Kategorien' data={categoryData}/>
       </Div>
       <Div className="cs-sidebar_item">
-        <RecentPost title='Archives' data={recentPostData}/>
+        <RecentPost title='Aktuelle Artikel' data={recentPostData}/>
       </Div>
       <Div className="cs-sidebar_item">
-        <SideMenuWidget title='Archives' data={archiveData}/>
-      </Div>
-      <Div className="cs-sidebar_item">
-        <TagWidget title='Tags' data={tagData}/>
+        <TagWidget title='Tags' data={medicalTags}/>
       </Div>
     </>
   )

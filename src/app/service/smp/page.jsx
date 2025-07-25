@@ -1,4 +1,3 @@
-'use client'
 import Accordion from "@/app/ui/Accordion";
 import Button from "@/app/ui/Button";
 import Cta from "@/app/ui/Cta";
@@ -10,6 +9,34 @@ import TestimonialSlider from "@/app/ui/Slider/TestimonialSlider";
 import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
 import { FeatureSteps } from "@/app/ui/FeatureSteps";
+
+export const metadata = {
+  title: 'SMP Mikropigmentierung - Scalp Micro Pigmentation | Medical Inn Hair',
+  description: 'SMP Mikropigmentierung ✓ Sofort sichtbare Ergebnisse ✓ Natürliches Aussehen ✓ Keine Ausfallzeit ✓ Jetzt Beratung buchen in Düsseldorf',
+  keywords: 'SMP Mikropigmentierung, Scalp Micro Pigmentation, Haarverdichtung, Glatze Look, Buzz Cut, Narbenkaschierung, Haardichte-Simulation, Düsseldorf',
+  openGraph: {
+    title: 'SMP Mikropigmentierung - Scalp Micro Pigmentation | Medical Inn Hair',
+    description: 'SMP Mikropigmentierung ✓ Sofort sichtbare Ergebnisse ✓ Natürliches Aussehen ✓ Keine Ausfallzeit ✓ Jetzt Beratung buchen in Düsseldorf',
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Medical Inn Hair',
+    images: [{
+      url: '/images/service_4.webp',
+      width: 1200,
+      height: 630,
+      alt: 'SMP Mikropigmentierung Medical Inn Hair Düsseldorf'
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SMP Mikropigmentierung - Scalp Micro Pigmentation | Medical Inn Hair',
+    description: 'SMP Mikropigmentierung ✓ Sofort sichtbare Ergebnisse ✓ Natürliches Aussehen ✓ Keine Ausfallzeit ✓ Jetzt Beratung buchen in Düsseldorf',
+    images: ['/images/service_4.webp']
+  },
+  alternates: {
+    canonical: 'https://medical-inn-hair.de/service/smp'
+  }
+};
 
 export default function SMPPage() {
   const smpApplications = [

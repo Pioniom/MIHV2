@@ -1,4 +1,3 @@
-'use client'
 import Accordion from "@/app/ui/Accordion";
 import Button from "@/app/ui/Button";
 import Cta from "@/app/ui/Cta";
@@ -10,6 +9,34 @@ import TestimonialSlider from "@/app/ui/Slider/TestimonialSlider";
 import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
 import { FeatureSteps } from "@/app/ui/FeatureSteps";
+
+export const metadata = {
+  title: 'PRP Therapie - Platelet Rich Plasma Behandlung | Medical Inn Hair',
+  description: 'PRP Therapie ✓ 100% natürlich ✓ Eigenblut-Behandlung ✓ Haarwurzeln stärken ✓ Haarausfall stoppen ✓ Jetzt Beratung buchen in Düsseldorf',
+  keywords: 'PRP Therapie, Platelet Rich Plasma, Eigenblut-Behandlung, Haarwurzeln stärken, Haarausfall Düsseldorf, natürliche Haarwuchsförderung, diffuser Haarausfall, Nachbehandlung Haartransplantation',
+  openGraph: {
+    title: 'PRP Therapie - Platelet Rich Plasma Behandlung | Medical Inn Hair',
+    description: 'PRP Therapie ✓ 100% natürlich ✓ Eigenblut-Behandlung ✓ Haarwurzeln stärken ✓ Haarausfall stoppen ✓ Jetzt Beratung buchen in Düsseldorf',
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Medical Inn Hair',
+    images: [{
+      url: '/images/service_3.webp',
+      width: 1200,
+      height: 630,
+      alt: 'PRP Therapie Medical Inn Hair Düsseldorf'
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PRP Therapie - Platelet Rich Plasma Behandlung | Medical Inn Hair',
+    description: 'PRP Therapie ✓ 100% natürlich ✓ Eigenblut-Behandlung ✓ Haarwurzeln stärken ✓ Haarausfall stoppen ✓ Jetzt Beratung buchen in Düsseldorf',
+    images: ['/images/service_3.webp']
+  },
+  alternates: {
+    canonical: 'https://medical-inn-hair.de/service/prp'
+  }
+};
 
 export default function PRPPage() {
   const prpApplications = [

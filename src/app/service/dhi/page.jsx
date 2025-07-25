@@ -1,4 +1,3 @@
-'use client'
 import Accordion from "@/app/ui/Accordion";
 import Button from "@/app/ui/Button";
 import Cta from "@/app/ui/Cta";
@@ -10,6 +9,34 @@ import TestimonialSlider from "@/app/ui/Slider/TestimonialSlider";
 import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
 import { FeatureSteps } from "@/app/ui/FeatureSteps";
+
+export const metadata = {
+  title: 'DHI Haartransplantation - Direct Hair Implantation | Medical Inn Hair',
+  description: 'DHI Haartransplantation mit Choi-Pen Technik ✓ Keine Vorinzision ✓ Präzise Kontrolle ✓ Schnelle Heilung ✓ Jetzt Beratung buchen in Düsseldorf',
+  keywords: 'DHI Haartransplantation, Direct Hair Implantation, Choi-Pen Technik, Haartransplantation Düsseldorf, DHI Methode, Augenbrauentransplantation, Barttransplantation, Body Hair Extraction',
+  openGraph: {
+    title: 'DHI Haartransplantation - Direct Hair Implantation | Medical Inn Hair',
+    description: 'DHI Haartransplantation mit Choi-Pen Technik ✓ Keine Vorinzision ✓ Präzise Kontrolle ✓ Schnelle Heilung ✓ Jetzt Beratung buchen in Düsseldorf',
+    type: 'website',
+    locale: 'de_DE',
+    siteName: 'Medical Inn Hair',
+    images: [{
+      url: '/images/service_2.webp',
+      width: 1200,
+      height: 630,
+      alt: 'DHI Haartransplantation Medical Inn Hair Düsseldorf'
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'DHI Haartransplantation - Direct Hair Implantation | Medical Inn Hair',
+    description: 'DHI Haartransplantation mit Choi-Pen Technik ✓ Keine Vorinzision ✓ Präzise Kontrolle ✓ Schnelle Heilung ✓ Jetzt Beratung buchen in Düsseldorf',
+    images: ['/images/service_2.webp']
+  },
+  alternates: {
+    canonical: 'https://medical-inn-hair.de/service/dhi'
+  }
+};
 
 export default function DHIPage() {
   const dhiApplications = [

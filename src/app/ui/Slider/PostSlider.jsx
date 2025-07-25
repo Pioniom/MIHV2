@@ -2,29 +2,17 @@ import React from 'react';
 import AccessibleSlider from '../AccessibleSlider/AccessibleSlider';
 import Div from '../Div';
 import Post from '../Post';
-const postData = [
-  {
-    url: '/blog/blog-details',
-    src: '/images/post_1.webp',
-    alt: 'Post',
-    date: '15 März 2024',
-    title: 'FUE vs. DHI: Welche Haartransplantations-Methode ist die richtige für Sie?',
-  },
-  {
-    url: '/blog/blog-details',
-    src: '/images/post_2.webp',
-    alt: 'Post',
-    date: '20 Februar 2024',
-    title: 'Nachsorge bei Haartransplantation: 10 wichtige Tipps für optimale Ergebnisse',
-  },
-  {
-    url: '/blog/blog-details',
-    src: '/images/post_3.webp',
-    alt: 'Post',
-    date: '05 Januar 2024',
-    title: 'PRP-Therapie: Natürliche Haarwachstumsförderung ohne Operation',
-  },
-];
+import { getRecentPosts } from '@/app/lib/blogData';
+
+// Verwende die echten Blog-Daten
+const blogPosts = getRecentPosts(3);
+const postData = blogPosts.map(post => ({
+  url: `/blog/${post.slug}`,
+  src: post.thumb,
+  alt: post.title,
+  date: post.date,
+  title: post.title,
+}));
 
 export default function PostSlider() {
   /** Slider Settings **/
