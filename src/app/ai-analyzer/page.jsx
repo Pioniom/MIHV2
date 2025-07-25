@@ -635,7 +635,7 @@ export default function AIAnalyzerPage() {
                 <Div className="cs-email_section">
                   <Div className="text-center">
                     <button 
-                      className="cs-btn cs-style2"
+                      className="cs-btn cs-style1"
                       onClick={() => setShowEmailForm(true)}
                     >
                       <span>📧 Analyse per E-Mail erhalten</span>
