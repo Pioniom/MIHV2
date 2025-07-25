@@ -6,13 +6,20 @@ import { getRecentPosts, formatDateGerman } from '@/app/lib/blogData';
 
 // Verwende die echten Blog-Daten
 const blogPosts = getRecentPosts(3);
-const postData = blogPosts.map(post => ({
-  url: `/blog/${post.slug}`,
-  src: post.thumb,
-  alt: post.title,
-  date: formatDateGerman(post.date),
-  title: post.title,
-}));
+const postData = blogPosts.map(post => {
+  // Titel für konsistente Darstellung kürzen (max 60 Zeichen)
+  const truncatedTitle = post.title.length > 60 
+    ? post.title.substring(0, 60) + '...' 
+    : post.title;
+    
+  return {
+    url: `/blog/${post.slug}`,
+    src: post.thumb,
+    alt: post.title,
+    date: formatDateGerman(post.date),
+    title: truncatedTitle,
+  };
+});
 
 export default function PostSlider() {
   /** Slider Settings **/

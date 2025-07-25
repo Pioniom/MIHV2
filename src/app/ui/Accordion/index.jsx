@@ -21,7 +21,7 @@ const accordionData = [
   {
     question: 'Wie erreiche ich Medical Inn Hair für eine Beratung?',
     answer:
-      'Sie können uns telefonisch unter +49 211 123456 erreichen oder über unser Kontaktformular. Wir bieten kostenlose Erstberatungen an, sowohl persönlich in unserer Düsseldorfer Praxis als auch per Video-Call. Termine sind auch abends und am Wochenende möglich.',
+      'Sie können uns telefonisch unter 0211 26159 299 erreichen oder über unser Kontaktformular. Wir bieten kostenlose Erstberatungen an, sowohl persönlich in unserer Düsseldorfer Praxis als auch per Video-Call. Termine sind auch abends und am Wochenende möglich.',
   },
   {
     question: 'Bietet Medical Inn Hair auch SMP und PRP Therapie an?',

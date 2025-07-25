@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
                 "longitude": 6.7735
               },
               "url": "https://medical-inn-hair.de",
-              "telephone": "+49 211 123456",
+              "telephone": "0211 26159 299",
               "openingHoursSpecification": [
                 {
                   "@type": "OpeningHoursSpecification",

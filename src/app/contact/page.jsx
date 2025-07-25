@@ -346,8 +346,8 @@ Newsletter: ${formData.newsletterConsent ? 'Ja' : 'Nein'}`
       <Div className="container">
         <Cta
           title="Haben Sie noch Fragen? <br />Rufen Sie uns an!"
-          btnText="+49 211 123456"
-          btnLink="tel:+49211123456"
+          btnText="0211 26159 299"
+          btnLink="tel:+492112615929"
           bgSrc="/images/cta_bg.jpeg"
         />
       </Div>
