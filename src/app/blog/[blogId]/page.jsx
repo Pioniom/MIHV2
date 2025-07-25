@@ -3,7 +3,6 @@ import Div from "@/app/ui/Div";
 import PageHeading from "@/app/ui/PageHeading";
 import Sidebar from "@/app/ui/Sidebar.jsx/index.jsx";
 import Spacing from "@/app/ui/Spacing";
-import CommentForm from "@/app/ui/CommentForm";
 import Image from "next/image";
 import Link from "next/link";
 import { getPostBySlug, formatDateGerman } from "@/app/lib/blogData";
@@ -95,8 +94,6 @@ export default async function BlogDetailsPage({ params }) {
               </Div>
             </Div>
             {/* End Details Post Content */}
-
-            <CommentForm />
           </Div>
           <Div className="col-xl-3 col-lg-4 offset-xl-1">
             {/* Start Sidebar */}
