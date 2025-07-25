@@ -57,8 +57,8 @@ export default function VorherNachherFUEPage() {
                 <Spacing lg='30' md='30'/>
               </Div>
               <Div className="col-6">
-                <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Arzt:</h3>
-                <p className='cs-m0'>Dr. med. Mehmet Atila</p>
+                <h3 className='cs-accent_color cs-font_22 cs-font_18_sm cs-m0'>Spezialistin:</h3>
+                <p className='cs-m0'>Nükhet Önal Taylan</p>
                 <Spacing lg='30' md='30'/>
               </Div>
               <Div className="col-6">
