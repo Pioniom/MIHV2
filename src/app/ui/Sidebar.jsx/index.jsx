@@ -57,7 +57,7 @@ export default function Sidebar() {
     <>
       <Div className="cs-sidebar_item">
         <AuthorWidget 
-          src='/images/avatar_1.png'
+          src='/images/testimonial_1.png'
           name='Medical Inn Hair' 
           description='Ihr Spezialist für moderne Haartransplantationen in Düsseldorf. Natürliche Ergebnisse mit FUE-Saphir und DHI-Technik.'
         />
