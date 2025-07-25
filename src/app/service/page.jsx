@@ -30,62 +30,46 @@ export default function ServicesPage() {
               <Spacing lg='90' md='45'/>
             </Div>
             <Div className='col-xl-8'>
-              <Div className='row'>
-                <Div className='col-lg-3 col-sm-6'>
+              <Div className='cs-bento_grid'>
+                <Div className='cs-bento_item cs-bento_large'>
                   <Card
                     title='AI Haar-Analyzer'
                     link='/ai-analyzer'
-                    src='/images/service_1.webp'
+                    src='/images/service_5.webp'
                     alt='AI Analyse'
                   />
-                  <Spacing lg='0' md='30'/>
                 </Div>
-                <Div className='col-lg-3 col-sm-6'>
+                <Div className='cs-bento_item cs-bento_medium'>
                   <Card
                     title='FUE Saphir'
                     link='/service/fue-saphir'
-                    src='/images/service_1.jpeg'
+                    src='/images/service_1.webp'
                     alt='Service'
                   />
-                  <Spacing lg='0' md='30'/>
                 </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
+                <Div className='cs-bento_item cs-bento_medium'>
                   <Card
                     title='DHI Technik'
                     link='/service/dhi'
-                    src='/images/service_2.jpeg'
+                    src='/images/service_2.webp'
                     alt='Service'
                   />
-                  <Spacing lg='0' md='30'/>
                 </Div>
-                <Div className='col-lg-3 col-sm-6'>
+                <Div className='cs-bento_item cs-bento_small'>
                   <Card
                     title='PRP Therapie'
                     link='/service/prp'
-                    src='/images/service_3.jpeg'
+                    src='/images/service_3.webp'
                     alt='Service'
                   />
-                  <Spacing lg='0' md='30'/>
                 </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
+                <Div className='cs-bento_item cs-bento_small'>
                   <Card
                     title='SMP'
                     link='/service/smp'
-                    src='/images/service_4.jpeg'
+                    src='/images/service_4.webp'
                     alt='Service'
                   />
-                  <Spacing lg='0' md='30'/>
-                </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
-                  <Spacing lg='0' md='30'/>
-                </Div>
-                <Div className='col-lg-3 col-sm-6 cs-hidden_mobile'></Div>
-                <Div className='col-lg-3 col-sm-6'>
-                  <Spacing lg='0' md='30'/>
                 </Div>
               </Div>
             </Div>
