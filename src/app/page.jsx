@@ -93,7 +93,13 @@ export default function Home() {
         <FunFact
           variant="cs-type1"
           title="Zertifizierte Qualität"
-          subtitle="Als staatlich anerkannte Privatklinik in Düsseldorf erfüllen wir höchste Hygiene- und Qualitätsstandards nach § 30 GewO. Alle Eingriffe erfolgen nach deutschen medizinischen Standards für natürliche und dauerhafte Ergebnisse."
+          subtitle={
+            <>
+              <Link href="/blog/staatlich-anerkannte-privatklinik-paragraf-30-gewo" className="cs-link">
+                Als staatlich anerkannte Privatklinik in Düsseldorf erfüllen wir höchste Hygiene- und Qualitätsstandards nach § 30 GewO. Alle Eingriffe erfolgen nach deutschen medizinischen Standards für natürliche und dauerhafte Ergebnisse.
+              </Link>
+            </>
+          }
           data={funfaceData}
         />
       </div>
